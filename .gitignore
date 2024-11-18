@@ -1,0 +1,58 @@
+# Node Modules
+node_modules/
+
+# Build Output
+dist/
+
+# IDE Settings
+.idea/
+.vscode/
+
+# macOS System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Variables
+.env
+.env.*.local
+
+# Tailwind Cache
+.tailwindcache/
+
+# Dependency Archives
+*.tgz
+
+# Lock Files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Temporary Files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Generated Files
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage Reports
+coverage/
+
+# Output of Editors or Tools
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# Other System Files
+Thumbs.db
+desktop.ini
