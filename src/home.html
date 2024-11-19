@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Navbar</title>
+    <link rel="stylesheet" href="../dist/style.css">
+    <script>
+        // JavaScript to handle navbar visibility on scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector("#navbar");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("bg-black", "shadow-md");
+                    navbar.classList.remove("bg-transparent");
+                } else {
+                    navbar.classList.add("bg-transparent");
+                    navbar.classList.remove("bg-black", "shadow-md");
+                }
+            });
+        });
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+<!-- Transparent Navigation Bar -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-300">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <img src="your-logo-path.png" alt="Logo" class="h-8">
+            <span class="font-bold text-lg text-white">IGNATEV ESTATE</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex space-x-8 font-semibold">
+            <a href="#listings" class="text-white hover:text-gray-300">Listings</a>
+            <a href="#insider-club" class="text-white hover:text-gray-300">Insider Club</a>
+            <a href="#services" class="text-white hover:text-gray-300">Services</a>
+            <a href="#about-us" class="text-white hover:text-gray-300">About Us</a>
+            <a href="#tools" class="text-white hover:text-gray-300">Tools</a>
+        </nav>
+
+        <!-- Utilities -->
+        <div class="flex items-center space-x-4">
+            <!-- Language and Currency -->
+            <div class="flex items-center space-x-2">
+                <button class="text-white hover:text-gray-300">EN</button>
+                <button class="text-white hover:text-gray-300">USD</button>
+            </div>
+            <!-- User and Theme Buttons -->
+            <div class="flex items-center space-x-3">
+                <button class="text-white hover:text-gray-300">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="bg-yellow-500 p-2 rounded-full"></button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Content Sections -->
+<main>
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-cover bg-center h-screen" style="background-image: url('https://images.unsplash.com/photo-1728607424960-329fa60f73d9?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-center text-center text-white">
+            <h1 class="text-4xl font-bold">Clarity for Investors.<br>Visibility for Developers.</h1>
+            <div class="mt-4">
+                <button class="bg-blue-600 px-6 py-2 rounded text-white mr-2">Watch Video</button>
+                <button class="bg-white px-6 py-2 rounded text-blue-600">Contact Us</button>
+            </div>
+        </div>
+        <!-- Search bar -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-md w-3/4 p-4 flex items-center justify-between space-x-4">
+            <input type="text" placeholder="Enter Keyword" class="flex-grow p-2 border border-gray-300 rounded">
+            <select class="p-2 border border-gray-300 rounded">
+                <option>Location</option>
+            </select>
+            <select class="p-2 border border-gray-300 rounded">
+                <option>Type</option>
+            </select>
+            <select class="p-2 border border-gray-300 rounded">
+                <option>Price</option>
+            </select>
+            <button class="bg-blue-600 px-4 py-2 rounded text-white">Search</button>
+        </div>
+    </section>
+
+    <section id="we-solve" class="flex flex-col items-center justify-center h-screen bg-gray-100">
+        <div class="container bg-white p-8 rounded shadow-lg mb-8">
+            <h1 class="text-2xl font-bold text-left">The Problem We Solve</h1>
+            <p class="mt-4 text-left text-gray-600">
+                We transform off-plan real estate sales by showcasing projects based on their true merit and potential, not just an agent’s reputation or glossy brochures. We provide comprehensive, data-driven insights that empower investors to make decisions based on a project’s actual value, fostering a more transparent and efficient marketplace where quantified and holistically proven quality speaks louder than sales pitches.
+            </p>
+            <div class="mt-4">
+                <span>How we serve</span>
+                <button class="bg-gray-500 px-6 py-2 rounded text-black mr-2">Investors</button>
+                <button class="bg-gray-200 px-6 py-2 rounded text-black">Developers</button>
+            </div>
+        </div>
+
+        <!-- Container with Three Columns -->
+        <div class="container bg-white p-8 rounded shadow-lg">
+            <div class="flex justify-between gap-4">
+                <!-- Small Container 1 -->
+                <div class="flex-1 bg-gray-200 p-4 rounded">
+                    <h1 class="font-bold text-lg">Container 1</h1>
+                    <p class="text-gray-600">Description for the first container.</p>
+                </div>
+                <!-- Small Container 2 -->
+                <div class="flex-1 bg-gray-200 p-4 rounded">
+                    <h1 class="font-bold text-lg">Container 2</h1>
+                    <p class="text-gray-600">Description for the second container.</p>
+                </div>
+                <!-- Small Container 3 -->
+                <div class="flex-1 bg-gray-200 p-4 rounded">
+                    <h1 class="font-bold text-lg">Container 3</h1>
+                    <p class="text-gray-600">Description for the third container.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ticker Section -->
+        <div class="container bg-white p-4 rounded shadow-lg w-full">
+            <div class="relative overflow-hidden rounded">
+                <h1 class="text-2xl font-bold text-left mb-6">Media about us</h1> <!-- Added margin -->
+                <div class="flex ticker-content items-center h-20">
+                    <!-- Individual Boxes in the Ticker -->
+                    <div class="flex items-center justify-center bg-gray-200 rounded h-full px-8 mx-2">
+                        <img src="image.svg" alt="Icon 1" class="h-12 w-12">
+                    </div>
+                    <div class="flex items-center justify-center bg-gray-200 rounded h-full px-8 mx-2">
+                        <img src="image.svg" alt="Icon 2" class="h-12 w-12">
+                    </div>
+                    <div class="flex items-center justify-center bg-gray-200 rounded h-full px-8 mx-2">
+                        <img src="image.svg" alt="Icon 3" class="h-12 w-12">
+                    </div>
+                    <div class="flex items-center justify-center bg-gray-200 rounded h-full px-8 mx-2">
+                        <img src="image.svg" alt="Icon 4" class="h-12 w-12">
+                    </div>
+                    <div class="flex items-center justify-center bg-gray-200 rounded h-full px-8 mx-2">
+                        <img src="image.svg" alt="Icon 5" class="h-12 w-12">
+                    </div>
+                    <div class="flex items-center justify-center bg-gray-200 rounded h-full px-8 mx-2">
+                        <img src="image.svg" alt="Icon 6" class="h-12 w-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* Ticker Animation */
+            .ticker-content {
+                animation: ticker-scroll 12s linear infinite;
+                white-space: nowrap;
+            }
+
+            @keyframes ticker-scroll {
+                from {
+                    transform: translateX(100%);
+                }
+                to {
+                    transform: translateX(-100%);
+                }
+            }
+
+            /* Larger Boxes and Increased Spacing */
+            .ticker-content .flex {
+                height: 64px; /* Adjusted height */
+                margin-left: 16px; /* Increased spacing between boxes */
+                margin-right: 16px; /* Same spacing on both sides */
+                padding-left: 32px; /* Larger padding inside the boxes */
+                padding-right: 32px;
+            }
+
+            /* Spacing for "Media about us" Section */
+            h1 {
+                margin-bottom: 1.5rem; /* Adds space below the title */
+            }
+        </style>
+    </section>
+
+
+
+
+    <section id="ie-verified" class="flex flex-col items-center justify-center h-screen bg-gray-100">
+        <div class="container bg-white p-8 rounded shadow-lg mb-8">
+            <h1 class="text-2xl font-bold text-left">The Problem We Solve</h1>
+            <p class="mt-4 text-left text-gray-600">
+                We transform off-plan real estate sales by showcasing projects based on their true merit and potential, not just an agent’s reputation or glossy brochures. We provide comprehensive, data-driven insights that empower investors to make decisions based on a project’s actual value, fostering a more transparent and efficient marketplace where quantified and holistically proven quality speaks louder than sales pitches.
+            </p>
+            <div class="mt-4">
+                <span>How we serve</span>
+                <button class="bg-gray-500 px-6 py-2 rounded text-black mr-2">Investors</button>
+                <button class="bg-gray-200 px-6 py-2 rounded text-black">Developers</button>
+            </div>
+        </div>
+
+        <!-- Container with Three Columns -->
+        <div class="container bg-white p-8 rounded shadow-lg">
+            <div class="flex justify-between gap-4">
+                <!-- Small Container 1 -->
+                <div class="flex-1 bg-gray-200 p-4 rounded">
+                    <h2 class="font-bold text-lg">Container 1</h2>
+                    <p class="text-gray-600">Description for the first container.</p>
+                </div>
+                <!-- Small Container 2 -->
+                <div class="flex-1 bg-gray-200 p-4 rounded">
+                    <h2 class="font-bold text-lg">Container 2</h2>
+                    <p class="text-gray-600">Description for the second container.</p>
+                </div>
+                <!-- Small Container 3 -->
+                <div class="flex-1 bg-gray-200 p-4 rounded">
+                    <h2 class="font-bold text-lg">Container 3</h2>
+                    <p class="text-gray-600">Description for the third container.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="h-screen bg-gray-400 flex items-center justify-center">
+        <h2 class="text-3xl font-bold">Section 3</h2>
+    </section>
+    <section id="about-us" class="h-screen bg-gray-500 flex items-center justify-center">
+        <h2 class="text-3xl font-bold">Section 4</h2>
+    </section>
+    <section id="tools" class="h-screen bg-gray-600 flex items-center justify-center">
+        <h2 class="text-3xl font-bold">Section 5</h2>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-6">
+    <!-- Main Container -->
+    <div class="container mx-auto px-6">
+        <!-- Navigation Links -->
+        <nav class="mb-8">
+            <ul class="flex justify-center space-x-8 font-semibold uppercase">
+                <li><a href="#listings" class="hover:text-gray-400">Listings</a></li>
+                <li><a href="#insider-club" class="hover:text-gray-400">Insider Club</a></li>
+                <li><a href="#services" class="hover:text-gray-400">Services</a></li>
+                <li><a href="#about-us" class="hover:text-gray-400">About Us</a></li>
+                <li><a href="#tools" class="hover:text-gray-400">Tools</a></li>
+                <li><a href="#terms-of-use" class="hover:text-gray-400">Terms of Use</a></li>
+                <li><a href="#privacy-policy" class="hover:text-gray-400">Privacy Policy</a></li>
+            </ul>
+        </nav>
+
+        <!-- Social Media and Contact Section -->
+        <div class="flex justify-center items-center space-x-6 mb-8">
+            <!-- Social Media Icons -->
+            <div class="flex space-x-3">
+                <a href="#" class="bg-white text-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-200">
+                    <i class="fab fa-facebook-f"></i> <!-- Replace with SVG or icon -->
+                </a>
+                <a href="#" class="bg-white text-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-200">
+                    <i class="fab fa-twitter"></i> <!-- Replace with SVG or icon -->
+                </a>
+                <a href="#" class="bg-white text-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-200">
+                    <i class="fab fa-instagram"></i> <!-- Replace with SVG or icon -->
+                </a>
+                <a href="#" class="bg-white text-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-200">
+                    <i class="fab fa-linkedin-in"></i> <!-- Replace with SVG or icon -->
+                </a>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="bg-white text-gray-800 px-6 py-3 rounded-full shadow-lg">
+                <span class="font-bold">Call Us:</span> +1 1 1 1 1
+            </div>
+        </div>
+
+        <!-- Footer Bottom Text -->
+        <div class="text-center text-sm text-gray-400">
+            &copy; 2024 Your Company. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
