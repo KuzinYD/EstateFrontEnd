@@ -1,0 +1,434 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar Styles */
+#navbar {
+  position: fixed; /* Keep navbar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; /* Start as transparent */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+  z-index: 1000;
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: none;
+  gap: 24px;
+  font-weight: 600;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #718096;
+}
+
+/* Medium and Larger Screens */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+/* Currency and Language Switch */
+.currency-language {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.currency-language a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.currency-language a:hover {
+  color: #718096;
+}
+
+/* Scrolled Navbar Styles */
+#navbar.scrolled {
+  background-color: #1a202c; /* Dark background on scroll */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* Search Bar Container */
+#search-bar {
+  background-color: white; /* bg-white */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  border-radius: 8px; /* rounded-md */
+  padding: 16px; /* p-4 */
+  display: flex; /* Align items horizontally */
+  gap: 8px; /* Add spacing between elements */
+  align-items: center; /* Center items vertically */
+}
+
+/* Input Field */
+#search-bar input {
+  padding: 8px; /* p-2 */
+  border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+  border-radius: 4px; /* rounded */
+  flex: 1; /* Allow the input to grow */
+  font-size: 16px; /* Adjust font size for better readability */
+}
+
+/* Dropdown Selects */
+#search-bar select {
+  padding: 8px; /* p-2 */
+  border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+  border-radius: 4px; /* rounded */
+  background-color: white; /* Ensure consistent background */
+  font-size: 16px; /* Adjust font size */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Search Button */
+#search-bar button {
+  background-color: #2563eb; /* Tailwind's bg-blue-600 */
+  color: white; /* Text color */
+  padding: 8px 16px; /* px-4 py-2 */
+  border-radius: 4px; /* rounded */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Adjust font size */
+}
+
+/* Search Button Hover Effect */
+#search-bar button:hover {
+  background-color: #1d4ed8; /* Slightly darker blue */
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding-top: 2rem; /* Space to prevent overlap with header */
+  padding-bottom: 2rem;
+}
+
+main section {
+  background-color: white;
+  padding: 2rem; /* Adjusted padding */
+  border-radius: 0.5rem; /* Tailwind's rounded */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+  text-align: center;
+}
+
+/* Hero Section Styling */
+#hero {
+  background-image: url("https://images.unsplash.com/photo-1728607424960-329fa60f73d9?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  padding: 50px 20px; /* Add some padding */
+  text-align: center; /* Center-align text */
+  color: white; /* Ensure text is readable */
+}
+
+/* Heading Styling */
+.hero-heading {
+  font-size: 2.5rem; /* Equivalent to text-4xl */
+  font-weight: bold; /* Equivalent to font-bold */
+  line-height: 1.5; /* Adjust line height for better readability */
+  margin: 0; /* Reset margin */
+}
+
+/* Button Container */
+.hero-buttons {
+  margin-top: 20px; /* Equivalent to mt-4 */
+}
+
+/* Primary Button Styling */
+.btn-primary {
+  background-color: #2563eb; /* Tailwind's bg-blue-600 */
+  color: white;
+  padding: 10px 20px; /* px-6 py-2 */
+  border-radius: 5px; /* rounded */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor to pointer */
+  margin-right: 10px; /* mr-2 */
+}
+
+/* Secondary Button Styling */
+.btn-secondary {
+  background-color: white;
+  color: #2563eb; /* Tailwind's text-blue-600 */
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Button Hover Effects */
+.btn-primary:hover {
+  background-color: #1d4ed8; /* Slightly darker blue */
+}
+
+.btn-secondary:hover {
+  background-color: #f3f4f6; /* Light grey */
+}
+
+.card {
+  padding: 2rem;
+  border: 1px solid rgb(75, 82, 94);
+  border-radius: 10px;
+  background-color: #d3daeb;
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  justify-content: center;
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+}
+.logos-slide {
+  display: flex;
+  align-items: center; /* Centers logos vertically */
+  justify-content: center; /* Optional: centers logos horizontally */
+  white-space: nowrap; /* Keeps logos in a single row */
+  gap: 40px; /* Replaces margin between images */
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+.logos h2 {
+  text-align: left;
+}
+
+.ie-verified h2 {
+  text-align: left;
+}
+
+.no-strings h2 {
+  text-align: left;
+}
+.no-strings p {
+  text-align: left;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.faq h2 {
+  text-align: left;
+}
+
+.contact-us h2 {
+  text-align: left;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.our-clients h2 {
+  text-align: left;
+  margin: 0;
+}
+
+.our-clients {
+  display: flex;
+  align-items: center; /* Center align content vertically */
+  justify-content: space-between; /* Space between h2 and button */
+}
+
+#add-review {
+  background-color: #001f3f; /* Dark blue background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for a button-like shape */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Adjust text size */
+}
+
+#add-review:hover {
+  background-color: #003366; /* Slightly lighter blue on hover */
+}
+
+.discuss-project h2 {
+  text-align: left;
+  margin: 0;
+}
+
+.discuss-project {
+  display: flex;
+  align-items: center; /* Center align content vertically */
+  justify-content: space-between; /* Space between h2 and button */
+}
+
+#contact-button {
+  background-color: #001f3f; /* Dark blue background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for a button-like shape */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Adjust text size */
+}
+
+#contact-button:hover {
+  background-color: #003366; /* Slightly lighter blue on hover */
+}
+
+/* Footer */
+/* Footer Section */
+.footer {
+  background-color: #1a202c; /* bg-gray-900 */
+  color: white; /* text-white */
+  padding: 24px 0; /* py-6 */
+  width: 100%; /* Full width */
+}
+
+.footer-container {
+  max-width: 1280px; /* Tailwind's mx-auto */
+  margin: 0 auto;
+  padding: 0 24px; /* px-6 */
+  text-align: center;
+}
+
+/* Footer Navigation */
+.footer-nav {
+  margin-bottom: 32px; /* mb-8 */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px; /* space-x-8 */
+  font-weight: 600; /* font-semibold */
+  text-transform: uppercase; /* uppercase */
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: white; /* text-white */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #718096; /* Tailwind's text-gray-400 */
+}
+
+/* Social Links and Contact */
+.footer-social-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* space-x-6 */
+  margin-bottom: 32px; /* mb-8 */
+}
+
+.social-links {
+  display: flex;
+  gap: 12px; /* space-x-3 */
+}
+
+.social-links a {
+  color: white; /* text-white */
+  font-size: 20px; /* Adjust icon size */
+  transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+  color: #d1d5db; /* Light gray hover effect */
+}
+
+.contact {
+  font-size: 16px; /* Adjust text size */
+  font-weight: bold; /* Bold "Call Us:" */
+  color: white; /* Text color */
+}
+
+/* Footer Bottom Text */
+.footer-bottom {
+  font-size: 14px; /* text-sm */
+  color: #718096; /* Tailwind's text-gray-400 */
+  margin-top: 16px;
+}
