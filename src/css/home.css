@@ -299,11 +299,6 @@ main section {
   text-align: left;
 }
 
-#map {
-  height: 400px;
-  width: 100%;
-}
-
 .our-clients h2 {
   text-align: left;
   margin: 0;
@@ -352,6 +347,11 @@ main section {
 
 #contact-button:hover {
   background-color: #003366; /* Slightly lighter blue on hover */
+}
+
+#map {
+  height: 400px;
+  width: 100%;
 }
 
 /* Footer */
