@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapview</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mapview.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css"
+    />
+  </head>
+  <body class="bg-gray-200 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header id="navbar">
+      <div class="container">
+        <!-- Logo Placeholder -->
+        <div class="logo">
+          <div class="logo-placeholder">LOGO</div>
+          <span class="brand-name">Your Brand</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+          <a href="#listings">Listings</a>
+          <a href="#insider-club">Insider Club</a>
+          <a href="#services">Services</a>
+          <a href="#about-us">About Us</a>
+          <a href="#tools">Tools</a>
+        </nav>
+
+        <!-- Currency and Language Switch -->
+        <div class="currency-language">
+          <a href="#">EN</a>
+          <a href="#">USD</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="bg-gray-100 py-12">
+      <section>
+        <!-- Search bar -->
+        <div id="search-bar" class="">
+          <input type="text" placeholder="Enter Keyword" />
+          <select>
+            <option>Location</option>
+          </select>
+          <select>
+            <option>Type</option>
+          </select>
+          <select>
+            <option>Price</option>
+          </select>
+          <button>Search</button>
+        </div>
+
+        <!-- Map -->
+        <div class="map-container">
+          <!-- Map div -->
+          <div id="map"></div>
+
+          <!-- Navigation bar overlay -->
+          <nav class="map-nav">
+            Navigation
+            <ul>
+              <li>
+                <a href="#link1">
+                  <div class="object-container">
+                    <!-- Object cards -->
+                    <div class="card-content">
+                      <div class="card">
+                        <h1 class="card-title">Card A</h1>
+                        <p class="card-text">This is card number one.</p>
+                      </div>
+                      <div class="card-description">
+                        <p>
+                          This is some additional text displayed to the right of
+                          the card.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#link2">
+                  <div class="object-container">
+                    <!-- Object cards -->
+                    <div class="card-content">
+                      <div class="card">
+                        <h1 class="card-title">Card B</h1>
+                        <p class="card-text">This is card number two.</p>
+                      </div>
+                      <div class="card-description">
+                        <p>
+                          This is some additional text displayed to the right of
+                          the card.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+    <script src="../js/mapview.js"></script>
+  </body>
+</html>
