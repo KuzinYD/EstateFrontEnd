@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }),
     ],
     view: new ol.View({
-      center: ol.proj.fromLonLat([-0.09, 51.505]),
-      zoom: 13,
+      center: ol.proj.fromLonLat([98.2938, 8.0016]),
+      zoom: 15,
     }),
   });
 });
