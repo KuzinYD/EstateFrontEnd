@@ -232,13 +232,18 @@ main {
 
 /* Navbar Styles */
 #navbar {
-  position: fixed; /* Keep navbar fixed at the top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent; /* Start as transparent */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
   z-index: 1000;
+}
+
+#navbar.scrolled {
+  background-color: #1a202c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Container */
@@ -273,7 +278,7 @@ main {
 
 /* Navigation Links */
 .nav-links {
-  display: none;
+  display: flex;
   gap: 24px;
   font-weight: 600;
 }
@@ -288,11 +293,55 @@ main {
   color: #718096;
 }
 
-/* Medium and Larger Screens */
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
+/* Listings Wrapper */
+.listings-wrapper {
+  position: relative; /* Key for hovered links positioning */
+}
+
+/* Hovered Links */
+
+#listings-link:hover {
+  text-decoration: underline;
+}
+
+/* Hovered Links Container */
+.nav-links-hovered {
+  display: none; /* Hidden by default */
+  gap: 16px;
+  font-weight: 600;
+  background-color: #1a202c;
+  padding: 16px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  text-align: center;
+  border-radius: 4px; /* Rounded corners for the whole container if needed */
+}
+
+/* Individual Link Containers */
+.link-container {
+  background-color: #2d3748; /* Background for each container */
+  border: 1px solid #4a5568; /* Border for the container */
+  border-radius: 8px; /* Rounded corners */
+  padding: 8px 16px; /* Padding inside each container */
+  margin: 4px 0; /* Space between containers */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link-container a {
+  color: white; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Ensure link fits inside the container */
+}
+
+.link-container:hover {
+  background-color: #4a5568; /* Change background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.link-container a:hover {
+  color: #a0aec0; /* Lighter color on hover */
 }
 
 /* Currency and Language Switch */
@@ -310,12 +359,6 @@ main {
 
 .currency-language a:hover {
   color: #718096;
-}
-
-/* Scrolled Navbar Styles */
-#navbar.scrolled {
-  background-color: #1a202c; /* Dark background on scroll */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
 /* Hero Section Styling */
