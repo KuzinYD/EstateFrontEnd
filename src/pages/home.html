@@ -13,23 +13,52 @@
   </head>
   <body class="bg-gray-200 min-h-screen flex flex-col">
     <!-- Header -->
-    <header id="navbar">
-      <div class="container">
-        <!-- Logo Placeholder -->
+    <header>
+      <div class="navbar">
         <div class="logo">
           <div class="logo-placeholder">LOGO</div>
           <span class="brand-name">Your Brand</span>
         </div>
-
-        <!-- Navigation Links -->
-        <nav class="nav-links">
-          <a href="#listings">Listings</a>
-          <a href="#insider-club">Insider Club</a>
-          <a href="#services">Services</a>
-          <a href="#about-us">About Us</a>
-          <a href="#tools">Tools</a>
-        </nav>
-
+        <div class="subnav">
+          <button class="subnavbtn">
+            Listings <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="subnav-content">
+            <a href="#company">Primary</a>
+            <a href="#team">Resale</a>
+            <a href="#careers">Land</a>
+          </div>
+        </div>
+        <div class="subnav">
+          <button class="subnavbtn">
+            Insider Club <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="subnav-content">
+            <a href="#bring">About insider club</a>
+            <a href="#deliver">Insights</a>
+            <a href="#package">Package</a>
+            <a href="#express">Express</a>
+          </div>
+        </div>
+        <div class="subnav">
+          <button class="subnavbtn">
+            Services <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="subnav-content">
+            <a href="#link1">For developers</a>
+            <a href="#link2">For investors</a>
+          </div>
+        </div>
+        <div class="subnav">
+          <button class="subnavbtn">
+            Tools <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="subnav-content">
+            <a href="#bring">Master dashboard</a>
+            <a href="#deliver">Luna AI</a>
+            <a href="#package">Marketing</a>
+          </div>
+        </div>
         <!-- Currency and Language Switch -->
         <div class="currency-language">
           <a href="#">EN</a>
@@ -39,7 +68,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="bg-gray-100 py-12">
+    <main class="bg-gray-100">
       <section>
         <div id="hero">
           <h1 class="hero-heading">

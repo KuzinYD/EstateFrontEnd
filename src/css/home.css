@@ -5,41 +5,96 @@
   box-sizing: border-box;
 }
 
-/* Body */
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
 /* Navbar Styles */
-#navbar {
-  position: fixed; /* Keep navbar fixed at the top */
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: transparent; /* Start as transparent */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
-  z-index: 1000;
+.navbar {
+  display: flex;
+  justify-content: center; /* Centers navbar items horizontally */
+  align-items: center; /* Centers items vertically */
+  background-color: #333;
+  height: 60px; /* Ensures consistent height */
 }
 
-/* Container */
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
+/* Navbar Links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* Submenu Wrapper */
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+/* Submenu Button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effects */
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+  background-color: black;
+}
+
+/* Submenu Dropdown Content */
+.subnav-content {
+  display: none; /* Hidden by default */
+
+  position: absolute;
+  left: 0;
+  background-color: black; /* Dropdown background matches navbar */
+  width: 100%; /* Full width */
+  z-index: 1;
+  padding: 10px 0; /* Adds spacing inside the dropdown */
+  justify-content: center; /* Centers navbar items horizontally */
+  align-items: center; /* Centers items vertically */
+}
+
+/* Submenu Links */
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effect on Submenu Links */
+.subnav-content a:hover {
+  background-color: #eee; /* Lighter background */
+  color: black; /* Dark text on hover */
+}
+
+/* Show Submenu on Hover */
+.subnav:hover .subnav-content {
+  display: block; /* Display dropdown on hover */
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  justify-content: center; /* Centers navbar items horizontally */
+  align-items: center; /* Centers items vertically */
 }
 
 /* Logo Section */
+
 .logo {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-right: 14rem;
 }
 
 .logo-placeholder {
@@ -53,51 +108,12 @@ body {
   color: white;
 }
 
-/* Navigation Links */
-.nav-links {
-  display: none;
-  gap: 24px;
-  font-weight: 600;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #718096;
-}
-
-/* Medium and Larger Screens */
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
-}
-
-/* Currency and Language Switch */
+/* Currency Language */
 .currency-language {
   display: flex;
   align-items: center;
-  gap: 16px;
-}
-
-.currency-language a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.currency-language a:hover {
-  color: #718096;
-}
-
-/* Scrolled Navbar Styles */
-#navbar.scrolled {
-  background-color: #1a202c; /* Dark background on scroll */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+  gap: 8px;
+  margin-left: 14rem;
 }
 
 /* Search Bar Container */
