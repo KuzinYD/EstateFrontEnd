@@ -1,0 +1,319 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Card Styles */
+.card {
+  padding: 1rem;
+  border: 1px solid #4b525e;
+  border-radius: 0.5rem;
+  background-color: #d3daeb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center; /* Centers navbar items horizontally */
+  align-items: center; /* Centers items vertically */
+  background-color: #333;
+  height: 60px; /* Ensures consistent height */
+}
+
+/* Navbar Links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* Submenu Wrapper */
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+/* Submenu Button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effects */
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+  background-color: black;
+}
+
+/* Submenu Dropdown Content */
+.subnav-content {
+  display: none; /* Hidden by default */
+
+  position: absolute;
+  left: 0;
+  background-color: black; /* Dropdown background matches navbar */
+  width: 100%; /* Full width */
+  z-index: 1;
+  padding: 10px 0; /* Adds spacing inside the dropdown */
+  justify-content: center; /* Centers navbar items horizontally */
+  align-items: center; /* Centers items vertically */
+}
+
+/* Submenu Links */
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effect on Submenu Links */
+.subnav-content a:hover {
+  background-color: #eee; /* Lighter background */
+  color: black; /* Dark text on hover */
+}
+
+/* Show Submenu on Hover */
+.subnav:hover .subnav-content {
+  display: block; /* Display dropdown on hover */
+  display: flex;
+  justify-content: center; /* Centers navbar items horizontally */
+  align-items: center; /* Centers items vertically */
+}
+
+/* Logo Section */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 14rem;
+}
+
+.logo-placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Currency Language */
+.currency-language {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 14rem;
+}
+
+/* Body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Search Bar Container */
+#search-bar {
+  background-color: white; /* bg-white */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  border-radius: 8px; /* rounded-md */
+  padding: 16px; /* p-4 */
+  display: flex; /* Align items horizontally */
+  gap: 8px; /* Add spacing between elements */
+  align-items: center; /* Center items vertically */
+}
+
+/* Input Field */
+#search-bar input {
+  padding: 8px; /* p-2 */
+  border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+  border-radius: 4px; /* rounded */
+  flex: 1; /* Allow the input to grow */
+  font-size: 16px; /* Adjust font size for better readability */
+}
+
+/* Dropdown Selects */
+#search-bar select {
+  padding: 8px; /* p-2 */
+  border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+  border-radius: 4px; /* rounded */
+  background-color: white; /* Ensure consistent background */
+  font-size: 16px; /* Adjust font size */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Search Button */
+#search-bar button {
+  background-color: #2563eb; /* Tailwind's bg-blue-600 */
+  color: white; /* Text color */
+  padding: 8px 16px; /* px-4 py-2 */
+  border-radius: 4px; /* rounded */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Adjust font size */
+}
+
+/* Search Button Hover Effect */
+#search-bar button:hover {
+  background-color: #1d4ed8; /* Slightly darker blue */
+}
+
+/* Layout for the contact info sections (Social media and Phone number) */
+
+.info-section ul {
+  background-color: #d66f2f;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.info-section.phone-number {
+  background-color: #997d6b;
+  border-radius: 5px;
+}
+
+.grid-container-email {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  justify-content: center;
+}
+
+.card-email {
+  padding: 2rem;
+  border: 1px solid rgb(75, 82, 94);
+  border-radius: 10px;
+  background-color: #d3daeb;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.card-text {
+  margin-top: 1rem;
+  color: #6b7280;
+  text-align: left;
+}
+
+#action-button {
+  background-color: #001f3f; /* Dark blue background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for a button-like shape */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Adjust text size */
+  margin-top: 1rem;
+}
+
+#action-button:hover {
+  background-color: #0056b3;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* Footer */
+/* Footer Section */
+.footer {
+  background-color: #1a202c; /* bg-gray-900 */
+  color: white; /* text-white */
+  padding: 24px 0; /* py-6 */
+  width: 100%; /* Full width */
+}
+
+.footer-container {
+  max-width: 1280px; /* Tailwind's mx-auto */
+  margin: 0 auto;
+  padding: 0 24px; /* px-6 */
+  text-align: center;
+}
+
+/* Footer Navigation */
+.footer-nav {
+  margin-bottom: 32px; /* mb-8 */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px; /* space-x-8 */
+  font-weight: 600; /* font-semibold */
+  text-transform: uppercase; /* uppercase */
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: white; /* text-white */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #718096; /* Tailwind's text-gray-400 */
+}
+
+/* Social Links and Contact */
+.footer-social-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* space-x-6 */
+  margin-bottom: 32px; /* mb-8 */
+}
+
+.social-links {
+  display: flex;
+  gap: 12px; /* space-x-3 */
+}
+
+.social-links a {
+  color: white; /* text-white */
+  font-size: 20px; /* Adjust icon size */
+  transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+  color: #d1d5db; /* Light gray hover effect */
+}
+
+.contact {
+  font-size: 16px; /* Adjust text size */
+  font-weight: bold; /* Bold "Call Us:" */
+  color: white; /* Text color */
+}
+
+/* Footer Bottom Text */
+.footer-bottom {
+  font-size: 14px; /* text-sm */
+  color: #718096; /* Tailwind's text-gray-400 */
+  margin-top: 16px;
+}
