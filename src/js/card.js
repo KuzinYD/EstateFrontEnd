@@ -16,3 +16,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }),
   });
 });
+
+//See more button
+document.querySelectorAll(".see-more").forEach((button) => {
+  button.addEventListener("click", function () {
+    const parent = button.closest(".object-description");
+    const secondDesc = parent.querySelector(".second-desc");
+
+    if (secondDesc) {
+      const isExpanded = secondDesc.classList.toggle("expanded");
+      // Toggle button text
+      button.textContent = isExpanded ? "See Less" : "See More";
+    }
+  });
+});
