@@ -377,7 +377,7 @@ main {
 .object-description .first-desc,
 .object-description .second-desc {
   font-size: 1rem;
-  color: #666;
+  color: #600;
   margin-bottom: 1rem;
   text-align: justify;
   max-width: 75ch; /* Approx. width for 8 words per line */
@@ -467,13 +467,284 @@ main {
   border-radius: 0.5rem;
 }
 
-/* Map */
+.floor-plans .main-view {
+  position: relative; /* Keep its own relative context */
+  background-image: url("https://images.unsplash.com/photo-1622015663381-d2e05ae91b72?q=80&w=2923&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20rem; /* Padding on all sides */
+  border-radius: 0.5rem;
+  background-color: #d3daeb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 18rem; /* Adjust height if needed */
+  width: 100%; /* Ensure it spans the container width */
+  flex-shrink: 0; /* Prevent shrinking */
+}
 
+.floor-photo {
+  position: relative; /* Keep its own relative context */
+  background-image: url("https://images.unsplash.com/photo-1721244653652-268631ec049a?q=80&w=2862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20rem; /* Padding on all sides */
+  border-radius: 0.5rem;
+  background-color: #d3daeb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 18rem; /* Adjust height if needed */
+  width: 100%; /* Ensure it spans the container width */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: #ffffff;
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Layout for the button content */
+.collapsible h1 {
+  display: flex; /* Arrange content horizontally */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Place items at the edges */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.collapsible h1 .left-items {
+  display: flex; /* Arrange left items horizontally */
+  align-items: center; /* Align vertically */
+  gap: 10px; /* Add spacing between left items */
+}
+
+.collapsible h1 .open-menu {
+  margin-left: auto; /* Push to the far right */
+  text-align: right; /* Align text inside open-menu */
+}
+
+.floor-name,
+.floor-beds,
+.floor-baths,
+.floor-meter {
+  text-align: center; /* Center align text */
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 10px; /* Adjust padding for better spacing */
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  width: 100%; /* Match parent width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+/* Wrapper for left items with border-radius */
+.left-wrapper {
+  background-color: #ffffff; /* Light background for visibility */
+  border-radius: 0.5rem; /* Rounded borders */
+  padding: 10px; /* Padding inside the wrapper */
+  display: flex; /* Flex container for alignment */
+  align-items: center; /* Align items vertically */
+  margin-right: 10px; /* Spacing to separate from .open-menu */
+}
+
+.left-items {
+  display: flex; /* Arrange left items horizontally */
+  align-items: center; /* Align vertically */
+  gap: 10px; /* Add spacing between items */
+}
+
+/* Styling for the nearby-wrapper */
+.nearby-wrapper {
+  margin: 20px 0; /* Add margin for spacing */
+  padding: 10px; /* Add padding for internal spacing */
+  background-color: #f5f5f5; /* Light background for distinction */
+  border-radius: 10px; /* Rounded corners for a polished look */
+  border: 1px solid #ddd; /* Optional border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Wrapper for left items with border-radius */
+.right-wrapper {
+  background-color: #ffffff; /* Light background for visibility */
+  border-radius: 0.5rem; /* Rounded borders */
+  padding: 10px; /* Padding inside the wrapper */
+  display: flex; /* Flex container for alignment */
+  align-items: center; /* Align items vertically */
+  margin-right: 10px; /* Spacing to separate from .open-menu */
+}
+
+.right-items {
+  display: flex; /* Arrange left items horizontally */
+  align-items: center; /* Align vertically */
+  gap: 10px; /* Add spacing between items */
+}
+
+.cafe-list {
+  display: flex;
+  flex-direction: column; /* Stack cafes vertically */
+  gap: 10px; /* Add spacing between each cafe */
+}
+
+/* Individual cafe item */
+.first-cafe {
+  display: flex; /* Flex container for left and right alignment */
+  justify-content: space-between; /* Ensure stars are on the far right */
+  align-items: center; /* Align content vertically */
+  padding: 10px; /* Add padding for spacing */
+  background-color: #ffffff; /* White background for each cafe item */
+  border: 1px solid #ddd; /* Border around each item */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Left wrapper styling */
+.first-cafe .left-wrapper {
+  flex: 1; /* Take up available space */
+}
+
+/* Right wrapper styling (for stars) */
+.first-cafe .right-wrapper {
+  display: flex;
+  align-items: center; /* Center align the stars vertically */
+  gap: 5px; /* Add spacing between stars */
+}
+
+/* Example star style (you can replace this with icons or images) */
+.right-wrapper .star {
+  font-size: 18px; /* Adjust star size */
+  color: gold; /* Gold color for stars */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .collapsible h1 {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  .floor-name,
+  .floor-beds,
+  .floor-baths,
+  .floor-meter {
+    flex: none; /* Disable equal spacing */
+    text-align: left; /* Align to the left */
+    margin-bottom: 5px; /* Add spacing between items */
+  }
+}
+
+#map-to-us {
+  height: 400px;
+  width: 100%; /* Make the map fill the width of its container */
+}
+
+.cafe-list {
+  border-radius: 0.5rem;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Map */
 #map {
   height: 400px;
   width: 100%; /* Make the map fill the width of its container */
 }
 
+/* Photo Carousel */
+.objects-carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-item {
+  flex: 1;
+  height: 10rem;
+  border-radius: 0.3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; /* Enable absolute positioning for child elements */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Individual Backgrounds for Carousel Items */
+.first-obj {
+  background-image: url("../assets/obj1.svg");
+}
+.second-obj {
+  background-image: url("../assets/obj2.svg");
+}
+.third-obj {
+  background-image: url("../assets/obj3.svg");
+}
+
+.fourth-obj {
+  background-image: url("../assets/obj4.svg");
+  position: relative; /* Enable positioning for .photo-number */
+}
+
+.obj-tag {
+  position: absolute;
+  top: 0.5rem;
+  right: 9rem;
+  padding: 0.2rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Styling for obj-name and obj-price */
+.obj-name {
+  position: absolute;
+  top: 5rem;
+
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  color: white;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.obj-price {
+  position: absolute;
+  top: 5rem;
+  left: 7rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  color: white;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.carousel-description {
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 8.5rem;
+  font-size: 1rem;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text color for contrast */
+}
 /* Footer */
 /* Footer */
 .footer {
