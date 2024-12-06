@@ -596,8 +596,6 @@ header {
   background-color: white;
   background-size: cover;
   background-position: center;
-  border-radius: 0.5rem;
-
   gap: 2rem;
   max-width: 1200px;
 }
