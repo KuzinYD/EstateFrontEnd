@@ -69,3 +69,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+//Show more button
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("show-more-button");
+  const hiddenContent = document.querySelector(".hidden-content");
+
+  // Initially hide the content
+  hiddenContent.style.display = "none";
+
+  button.addEventListener("click", function () {
+    if (hiddenContent.style.display === "none") {
+      hiddenContent.style.display = "inline";
+      button.textContent = "Show Less";
+    } else {
+      hiddenContent.style.display = "none";
+      button.textContent = "Show More";
+    }
+  });
+});
