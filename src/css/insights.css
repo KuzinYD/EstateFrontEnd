@@ -1,0 +1,621 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center; /* Centers navbar items horizontally */
+  align-items: center; /* Centers items vertically */
+  background-color: #333;
+  height: 60px; /* Ensures consistent height */
+}
+
+/* Navbar Links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* Submenu Wrapper */
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+/* Submenu Button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effects */
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+  background-color: black;
+}
+
+/* Submenu Dropdown Content */
+.subnav-content {
+  display: none; /* Hidden by default */
+
+  position: absolute;
+  left: 0;
+  background-color: black; /* Dropdown background matches navbar */
+  width: 100%; /* Full width */
+  z-index: 1;
+  padding: 10px 0; /* Adds spacing inside the dropdown */
+  justify-content: center; /* Centers navbar items horizontally */
+  align-items: center; /* Centers items vertically */
+}
+
+/* Submenu Links */
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effect on Submenu Links */
+.subnav-content a:hover {
+  background-color: #eee; /* Lighter background */
+  color: black; /* Dark text on hover */
+}
+
+/* Show Submenu on Hover */
+.subnav:hover .subnav-content {
+  display: block; /* Display dropdown on hover */
+  display: flex;
+  justify-content: center; /* Centers navbar items horizontally */
+  align-items: center; /* Centers items vertically */
+}
+
+/* Logo Section */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 14rem;
+}
+
+.logo-placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Currency Language */
+.currency-language {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 14rem;
+}
+
+.about-section {
+  z-index: 0;
+  position: relative;
+  color: #ffffff;
+  padding: 6rem;
+  text-align: center;
+  background: linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
+    url("../assets/insights/bg.svg") center/cover;
+}
+
+.about-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.about-header {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.about-header h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.about-title {
+  font-size: 3rem;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  text-align: left;
+  gap: 2rem;
+  color: #0f1f3d;
+  font-weight: bold;
+
+  padding: 2rem;
+}
+
+.about-content {
+  position: absolute;
+  left: 6rem;
+  top: calc(6rem + 4.5rem);
+}
+
+.content-wrapper {
+  position: relative;
+  padding-left: 1.5rem;
+  max-width: 50%;
+}
+
+.content-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #f4f4f4; /* You can change this color to match your design */
+}
+
+.hero-tags {
+  margin-top: 9rem;
+  margin-left: -40rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-tag {
+  color: #f4f4f4;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  background-color: rgba(244, 244, 244, 0.1); /* F4F4F4 with 10% fill */
+  border-radius: 100px;
+  padding: 5px 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    max-width: 90%;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.search-header {
+  position: relative;
+  margin-top: -40px; /* Adjust this value to control how much it overlaps */
+  z-index: 1; /* Ensures the search container appears above the hero section */
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding-right: 90px; /* Make space for the buttons */
+}
+
+.circle-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter-btn {
+  right: 45px; /* Adjust as needed */
+}
+
+.search-btn {
+  right: 5px; /* Adjust as needed */
+}
+
+.circle-button:hover {
+  background-color: #f5f5f5;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.topics-grid {
+  gap: 18rem;
+  max-width: 1200px;
+  color: black;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+.topic-card {
+  z-index: 0;
+  position: relative;
+  color: #ffffff;
+  /* Padding: top right bottom left */
+  /* 1rem on top, 1rem on right, 6rem on bottom, 1rem on left */
+  padding: 1rem 1rem 2rem 1rem;
+  text-align: center;
+  background: url(../assets/insights/card3.svg),
+    linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)), center/cover;
+  border-radius: 1.5rem;
+  display: flex; /* Add this */
+  flex-direction: column; /* Add this */
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.topic-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 6rem;
+}
+
+.topic-title span {
+  font-size: 0.8rem;
+  color: #ffffff;
+  margin: auto;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-header .topic-tag {
+  border-radius: 1.5rem;
+  background-color: #7da2bd;
+  color: #f4f4f4;
+  padding: 0.5rem 1rem;
+}
+
+#see-more {
+  background-color: #ffffff;
+  color: #0f1f3d;
+  border-radius: 1.5rem;
+  width: 100%;
+  margin: 0.5em;
+  padding: 1rem;
+  border: 1px solid #0f1f3d;
+}
+
+.subscribe-section {
+  gap: 18rem;
+  max-width: 1200px;
+  color: black;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 2rem;
+}
+.subscribe-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0f1f3d;
+  margin: auto;
+}
+
+.subscribe-input-container {
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.email-container {
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+}
+
+.email-container input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  border: none; /* Remove default border */
+  outline: none; /* Remove focus outline */
+}
+
+.topics-container {
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+}
+
+.topics-container select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  border: none; /* Remove default border */
+  outline: none; /* Remove focus outline */
+}
+
+.subscribe-button-container {
+  background-color: #0f1f3d;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+}
+
+.contact-us-header-container {
+  display: flex;
+  flex-direction: row;
+  gap: 18rem;
+  max-width: 1200px;
+  color: white;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+.contact-us-header-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0f1f3d;
+  margin: auto;
+}
+
+.contact-us-header-container .leader-contact-list {
+  margin-left: auto;
+}
+
+.leader-contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-us-header-container .leader-contact-list .contact-link {
+  color: #0f1f3d;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  background-color: white;
+  border-radius: 100px;
+  padding: auto;
+}
+
+.leader-contact-list .contact-link:hover {
+  opacity: 0.8;
+}
+
+.contact-us-button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  max-width: 1200px;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: auto;
+}
+.contact-us-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 1200px;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: auto;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-row input {
+  flex: 1;
+}
+
+.contact-us-form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#name,
+#email,
+#message {
+  border-radius: 20px;
+  color: rgb(1, 1, 1);
+}
+
+#message {
+  min-height: 6rem;
+  max-height: 12rem;
+  width: 1200px; /* Set default width */
+  max-width: 100%; /* Prevent overflow on smaller screens */
+  line-height: 1.5;
+  box-sizing: border-box;
+  resize: vertical;
+  overflow-y: auto;
+  padding: 0.5rem;
+  caret-color: auto;
+}
+#message::placeholder {
+  font-size: 16px;
+  position: absolute;
+
+  caret-color: transparent;
+}
+
+/* Style for when maxlength is reached */
+#message:invalid {
+  border-color: #ff4444;
+}
+
+#send-message-button {
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+#send-message-button:hover {
+  background-color: #003366; /* Slightly lighter shade for hover */
+}
+
+/* Footer */
+
+.footer {
+  background-color: #1a202c; /* bg-gray-900 */
+  color: white; /* text-white */
+  padding: 24px 0; /* py-6 */
+  width: 100%; /* Full width */
+}
+
+.footer-container {
+  max-width: 1280px; /* Tailwind's mx-auto */
+  margin: 0 auto;
+  padding: 0 24px; /* px-6 */
+  text-align: center;
+}
+
+/* Footer Navigation */
+.footer-nav {
+  margin-bottom: 32px; /* mb-8 */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px; /* space-x-8 */
+  font-weight: 600; /* font-semibold */
+  text-transform: uppercase; /* uppercase */
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: white; /* text-white */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #718096; /* Tailwind's text-gray-400 */
+}
+
+/* Social Links and Contact */
+.footer-social-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* space-x-6 */
+  margin-bottom: 32px; /* mb-8 */
+}
+
+.social-links {
+  display: flex;
+  gap: 12px; /* space-x-3 */
+}
+
+.social-links a {
+  color: white; /* text-white */
+  font-size: 20px; /* Adjust icon size */
+  transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+  color: #d1d5db; /* Light gray hover effect */
+}
+
+.contact {
+  font-size: 16px; /* Adjust text size */
+  font-weight: bold; /* Bold "Call Us:" */
+  color: white; /* Text color */
+}
+
+/* Footer Bottom Text */
+.footer-bottom {
+  font-size: 14px; /* text-sm */
+  color: #718096; /* Tailwind's text-gray-400 */
+  margin-top: 16px;
+}
