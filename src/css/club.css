@@ -513,11 +513,6 @@ body {
   max-width: 800px;
 }
 
-#map {
-  height: 400px;
-  width: 100%;
-}
-
 .insights {
   margin: auto;
   background: linear-gradient(to right, #1a2b4c, #283c4c);
@@ -580,6 +575,65 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.faq-container {
+  margin: auto;
+  max-width: 1200px;
+  height: auto;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #0f1f3d;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between image and text */
+}
+
+.criteria-icon {
+  flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: auto; /* Changed from 5px to auto to push to far right */
+}
+
+.active:after {
+  content: "\2212";
+  float: right; /* Added to ensure consistent positioning */
+  margin-left: auto; /* Added to match accordion:after */
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 /* Footer */
