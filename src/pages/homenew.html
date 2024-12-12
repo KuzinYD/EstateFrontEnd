@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Home New</title>
     <link rel="stylesheet" href="../../dist/style.css" />
     <link rel="stylesheet" href="../css/home.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body class="bg-gray-200 min-h-screen flex flex-col">
     <!-- Header -->
-    <header>
+    <header class="absolute w-full z-10">
       <div class="navbar">
         <div class="logo">
           <div class="logo-placeholder">
@@ -76,31 +80,310 @@
 
     <!-- Main Content -->
     <main class="bg-gray-100">
-      <section>
-        <div id="hero">
-          <h1 class="hero-heading">
-            Clarity for Investors.<br />Visibility for Developers.
-          </h1>
-          <div class="hero-buttons">
-            <button class="btn-primary">Watch Video</button>
-            <button class="btn-secondary">Contact Us</button>
+      <!-- Hero Section -->
+      <section class="hero-section relative">
+        <div class="relative z-1">
+          <div class="hero-header">
+            <h2>Clarity for Investors.<br />Visibility for Developers.</h2>
+          </div>
+          <div class="hero-tags">
+            <a class="hero-tag rounded-background">
+              <i class="fa fa-play mr-2"></i>Watch a video
+            </a>
+            <a class="hero-tag"> Contact us </a>
           </div>
         </div>
+      </section>
 
-        <div id="search-bar">
-          <input type="text" placeholder="Enter Keyword" />
-          <select>
-            <option>Location</option>
-          </select>
-          <select>
-            <option>Type</option>
-          </select>
-          <select>
-            <option>Price</option>
-          </select>
-          <button>Search</button>
+      <!-- Search Section -->
+      <section class="search-section">
+        <div class="search-header">
+          <div class="search-container">
+            <div class="search-input-wrapper">
+              <input type="text" placeholder="SEARCH" class="search-input" />
+              <button class="circle-button filter-btn">
+                <i class="fas fa-filter"></i>
+              </button>
+              <button class="circle-button search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
         </div>
+      </section>
 
+      <!--The problem we solve-->
+      <section class="problem-we-solve-section">
+        <div class="problem-we-solve-container">
+          <h1 class="problem-we-solve-title uppercase">The Problem We Solve</h1>
+          <div class="problem-we-solve-content">
+            <p>
+              We transform off-plan real estate sales by showcasing projects
+              based on their true merit and potential, not just an agent’s
+              reputation or glossy brochures.  We provide comprehensive,
+              data-driven insights that empower investors to make decisions
+              based on a project’s actual value, fostering a more transparent
+              and efficient marketplace where quantified and holistically proven
+              quality speaks louder than sales pitches.
+            </p>
+          </div>
+          <div class="how-we-serve-container">
+            <h1 class="how-we-serve-title uppercase">How we serve</h1>
+            <button class="investors-btn uppercase">Investors</button>
+            <button class="developers-btn uppercase">Developers</button>
+          </div>
+        </div>
+      </section>
+      <!--Primary Resale Land section-->
+      <section class="primary-resale-land-section">
+        <!-- Add the sub-grid here -->
+        <div class="sub-grid-container">
+          <div class="grid grid-cols-3 grid-rows-1 gap-4">
+            <div
+              class="bg-cover bg-center h-48 flex items-center justify-center rounded-2xl"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/primary.svg');
+              "
+            >
+              <div class="p-4">
+                <h3 class="text-white text-xl font-bold uppercase">Primary</h3>
+              </div>
+            </div>
+            <div
+              class="bg-cover bg-center h-48 flex items-center justify-center rounded-2xl"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/resale.svg');
+              "
+            >
+              <div class="p-4">
+                <h3 class="text-white text-xl font-bold uppercase">Resale</h3>
+              </div>
+            </div>
+            <div
+              class="bg-cover bg-center h-48 flex items-center justify-center rounded-2xl"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/land.svg');
+              "
+            >
+              <div class="p-4">
+                <h3 class="text-white text-xl font-bold uppercase">Land</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Media Us-->
+      <section class="media-us-section">
+        <div class="media-us-container">
+          <h1 class="media-us-title uppercase">Media about us</h1>
+        </div>
+        <div class="logos-slide">
+          <img src="../assets/home/reuters.svg" />
+          <img src="../assets/home/bloomberg.svg" />
+          <img src="../assets/home/nyt.svg" />
+          <img src="../assets/home/markets.svg" />
+          <img src="../assets/home/reuters.svg" />
+          <img src="../assets/home/reuters.svg" />
+        </div>
+      </section>
+
+      <!--IE Verified-->
+      <section class="ie-verified-section">
+        <div class="ie-verified-container">
+          <img src="../assets/home/ieverified.svg" />
+          <h1 class="ie-verified-title uppercase">IE Verified</h1>
+        </div>
+        <div class="ie-verified-grid mt-8">
+          <div class="grid grid-cols-2 grid-rows-1 gap-4">
+            <div class="for-investors-container">
+              <h1 class="for-investors-title uppercase">For investors</h1>
+              <p class="for-investors-description">
+                “Data & Quality Mark You Can Trust.”<br />
+                We do the research. You get the facts, clarity & best terms.
+              </p>
+            </div>
+            <div class="for-developers-container">
+              <h1 class="for-developers-title uppercase">For developers</h1>
+              <p class="for-developers-description">
+                “Data & Quality Mark You Can Trust.”<br />
+                We do the research. You get the facts, clarity & best terms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Verified Projects-->
+      <section class="verified-projects-section">
+        <div class="verified-projects-container">
+          <div class="grid grid-cols-3 grid-rows-1 gap-4">
+            <div
+              class="bg-cover bg-center h-48 flex flex-col justify-between rounded-2xl p-4 relative"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/primary.svg');
+              "
+            >
+              <!-- Top Row -->
+              <div class="flex justify-between">
+                <!-- Top Left Tags -->
+                <div class="flex gap-2">
+                  <div class="bg-blue-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">SMTH</span>
+                  </div>
+                  <div class="bg-green-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">VILLA</span>
+                  </div>
+                </div>
+                <!-- Top Right Buttons -->
+                <div class="flex gap-2">
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Bottom Row -->
+              <div class="flex justify-between items-end">
+                <!-- Bottom Left -->
+                <div class="flex items-center gap-2">
+                  <img
+                    src="../assets/home/ieverified.svg"
+                    alt="Verified"
+                    class="w-4 h-4"
+                  />
+                  <span class="text-white font-bold uppercase"
+                    >Object Name</span
+                  >
+                </div>
+                <!-- Bottom Right -->
+                <div class="text-white font-bold">$500,000</div>
+              </div>
+            </div>
+
+            <div
+              class="bg-cover bg-center h-48 flex flex-col justify-between rounded-2xl p-4 relative"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/primary.svg');
+              "
+            >
+              <!-- Top Row -->
+              <div class="flex justify-between">
+                <!-- Top Left Tags -->
+                <div class="flex gap-2">
+                  <div class="bg-blue-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">SMTH</span>
+                  </div>
+                  <div class="bg-green-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">VILLA</span>
+                  </div>
+                </div>
+                <!-- Top Right Buttons -->
+                <div class="flex gap-2">
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Bottom Row -->
+              <div class="flex justify-between items-end">
+                <!-- Bottom Left -->
+                <div class="flex items-center gap-2">
+                  <img
+                    src="../assets/home/ieverified.svg"
+                    alt="Verified"
+                    class="w-4 h-4"
+                  />
+                  <span class="text-white font-bold uppercase"
+                    >Object Name</span
+                  >
+                </div>
+                <!-- Bottom Right -->
+                <div class="text-white font-bold">$500,000</div>
+              </div>
+            </div>
+
+            <div
+              class="bg-cover bg-center h-48 flex flex-col justify-between rounded-2xl p-4 relative"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/primary.svg');
+              "
+            >
+              <!-- Top Row -->
+              <div class="flex justify-between">
+                <!-- Top Left Tags -->
+                <div class="flex gap-2">
+                  <div class="bg-blue-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">SMTH</span>
+                  </div>
+                  <div class="bg-green-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">VILLA</span>
+                  </div>
+                </div>
+                <!-- Top Right Buttons -->
+                <div class="flex gap-2">
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Bottom Row -->
+              <div class="flex justify-between items-end">
+                <!-- Bottom Left -->
+                <div class="flex items-center gap-2">
+                  <img
+                    src="../assets/home/ieverified.svg"
+                    alt="Verified"
+                    class="w-4 h-4"
+                  />
+                  <span class="text-white font-bold uppercase"
+                    >Object Name</span
+                  >
+                </div>
+                <!-- Bottom Right -->
+                <div class="text-white font-bold">$500,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="to-be-deleted-section">
         <div class="grid-container">
           <div class="card">
             <h1 class="text-2xl font-bold text-left">The Problem We Solve</h1>

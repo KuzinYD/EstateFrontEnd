@@ -198,7 +198,6 @@ body {
 .hero-tags {
   margin-top: 9rem;
   margin-left: -40rem;
-
   display: flex;
   justify-content: center;
   gap: 20px;
