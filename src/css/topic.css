@@ -137,6 +137,11 @@ body {
   background: linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
     url("../assets/common/bg.svg") center/cover;
 }
+.topic-tag-name {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 
 .about-section > * {
   position: relative;
@@ -156,6 +161,11 @@ body {
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: normal;
+}
+.about-header span {
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 1rem;
 }
 
 .about-title {
@@ -287,69 +297,55 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.topics-grid {
-  gap: 18rem;
+.topic-title-section {
   max-width: 1200px;
   color: black;
   border-radius: 0.5rem;
   margin: auto;
   padding: 2rem;
 }
-
-.topic-card {
-  z-index: 0;
-  position: relative;
-  color: #ffffff;
-  /* Padding: top right bottom left */
-  /* 1rem on top, 1rem on right, 6rem on bottom, 1rem on left */
-  padding: 1rem 1rem 2rem 1rem;
-  text-align: center;
-  background: url(../assets/insights/card3.svg),
-    linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)), center/cover;
-  border-radius: 1.5rem;
-  display: flex; /* Add this */
-  flex-direction: column; /* Add this */
-}
-
-.card-header {
+.topic-title-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
-.topic-title {
-  font-size: 1rem;
+.topic-title-container h1 {
+  font-size: 3rem;
   font-weight: bold;
-  color: #ffffff;
-  margin-top: 6rem;
+  color: #0f1f3d;
 }
-
-.topic-title span {
-  font-size: 0.8rem;
-  color: #ffffff;
-  margin: auto;
-}
-
-.card-header {
+.left-topic-title-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-.card-header .topic-tag {
-  border-radius: 1.5rem;
-  background-color: #7da2bd;
-  color: #f4f4f4;
-  padding: 0.5rem 1rem;
+  gap: 1rem;
+  align-items: center;
+  color: #0f1f3d;
 }
 
-#see-more {
-  background-color: #ffffff;
+.topic-content .first-paragraph {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
   color: #0f1f3d;
-  border-radius: 1.5rem;
-  width: 100%;
-  margin: 0.5em;
-  padding: 1rem;
-  border: 1px solid #0f1f3d;
+}
+.topic-content .second-paragraph {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  position: relative; /* Add this */
+  padding-left: 1rem; /* Add this to create space for the line */
+  color: #0f1f3d;
+}
+
+.second-paragraph::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #0f1f3d;
 }
 
 .subscribe-section {
@@ -413,6 +409,111 @@ body {
   align-items: center;
   padding: 0.5rem;
   border-radius: 1.5rem;
+}
+
+.also-like {
+  max-width: 1200px;
+  color: black;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+.topic-card {
+  z-index: 0;
+  position: relative;
+  color: #ffffff;
+  /* Padding: top right bottom left */
+  /* 1rem on top, 1rem on right, 6rem on bottom, 1rem on left */
+  padding: 1rem 1rem 2rem 1rem;
+  text-align: center;
+  background: url(../assets/insights/card3.svg),
+    linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)), center/cover;
+  border-radius: 1.5rem;
+  display: flex; /* Add this */
+  flex-direction: column; /* Add this */
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.topic-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 6rem;
+}
+
+.topic-title span {
+  font-size: 0.8rem;
+  color: #ffffff;
+  margin: auto;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-header .topic-tag {
+  border-radius: 1.5rem;
+  background-color: #7da2bd;
+  color: #f4f4f4;
+  padding: 0.5rem 1rem;
+}
+
+.topics-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.topics-slider {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+  /* Prevent wrapping */
+  flex-wrap: nowrap;
+  /* Allow horizontal scrolling */
+  overflow-x: auto;
+  /* Hide scrollbar but keep functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.topics-slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.topic-card {
+  min-width: 280px; /* Or your preferred card width */
+  flex: 0 0 auto;
+}
+
+#previous-button {
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 1rem;
+  width: 100%;
+}
+#next-button {
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 1rem;
+  width: 100%;
 }
 
 .contact-us-header-container {
