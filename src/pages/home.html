@@ -10,10 +10,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body class="bg-gray-200 min-h-screen flex flex-col">
     <!-- Header -->
-    <header>
+    <header class="absolute w-full z-10">
       <div class="navbar">
         <div class="logo">
           <div class="logo-placeholder">
@@ -76,312 +80,658 @@
 
     <!-- Main Content -->
     <main class="bg-gray-100">
-      <section>
-        <div id="hero">
-          <h1 class="hero-heading">
-            Clarity for Investors.<br />Visibility for Developers.
-          </h1>
-          <div class="hero-buttons">
-            <button class="btn-primary">Watch Video</button>
-            <button class="btn-secondary">Contact Us</button>
+      <!-- Hero Section -->
+      <section class="hero-section relative">
+        <div class="relative z-1">
+          <div class="hero-header">
+            <h2>Clarity for Investors.<br />Visibility for Developers.</h2>
+          </div>
+          <div class="hero-tags">
+            <a class="hero-tag rounded-background">
+              <i class="fa fa-play mr-2"></i>Watch a video
+            </a>
+            <a class="hero-tag"> Contact us </a>
           </div>
         </div>
+      </section>
 
-        <div id="search-bar">
-          <input type="text" placeholder="Enter Keyword" />
-          <select>
-            <option>Location</option>
-          </select>
-          <select>
-            <option>Type</option>
-          </select>
-          <select>
-            <option>Price</option>
-          </select>
-          <button>Search</button>
+      <!-- Search Section -->
+      <section class="search-section">
+        <div class="search-header">
+          <div class="search-container">
+            <div class="search-input-wrapper">
+              <input type="text" placeholder="SEARCH" class="search-input" />
+              <button class="circle-button filter-btn">
+                <i class="fas fa-filter"></i>
+              </button>
+              <button class="circle-button search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="grid-container">
-          <div class="card">
-            <h1 class="text-2xl font-bold text-left">The Problem We Solve</h1>
-            <p class="mt-4 text-left text-gray-600">
+      <!--The problem we solve-->
+      <section class="problem-we-solve-section">
+        <div class="problem-we-solve-container">
+          <h1 class="problem-we-solve-title uppercase">The Problem We Solve</h1>
+          <div class="problem-we-solve-content">
+            <p>
               We transform off-plan real estate sales by showcasing projects
               based on their true merit and potential, not just an agent’s
-              reputation or glossy brochures. We provide comprehensive,
+              reputation or glossy brochures.  We provide comprehensive,
               data-driven insights that empower investors to make decisions
               based on a project’s actual value, fostering a more transparent
               and efficient marketplace where quantified and holistically proven
               quality speaks louder than sales pitches.
             </p>
-            <span>How we serve</span>
-            <button class="bg-gray-500 px-6 py-2 rounded text-black mr-2">
-              Investors
-            </button>
-            <button class="bg-gray-200 px-6 py-2 rounded text-black">
-              Developers
-            </button>
+          </div>
+          <div class="how-we-serve-container">
+            <h1 class="how-we-serve-title uppercase">How we serve</h1>
+            <button class="investors-btn uppercase">Investors</button>
+            <button class="developers-btn uppercase">Developers</button>
           </div>
         </div>
+      </section>
 
-        <div class="grid-container">
-          <div class="card">
-            <h2>Primary</h2>
-          </div>
-          <div class="card">
-            <h2>Resale</h2>
-          </div>
-          <div class="card">
-            <h2>Land</h2>
-          </div>
-        </div>
-
-        <div class="logos">
-          <h2>Media about us</h2>
-          <div class="logos-slide">
-            <img src="../assets/image.svg" />
-            <img src="../assets/image.svg" />
-            <img src="../assets/image.svg" />
-            <img src="../assets/image.svg" />
-            <img src="../assets/image.svg" />
-            <img src="../assets/image.svg" />
-            <img src="../assets/image.svg" />
-            <img src="../assets/image.svg" />
-            <img src="../assets/image.svg" />
-          </div>
-        </div>
-
-        <div class="ie-verified">
-          <h2>Ie Verified</h2>
-          <div class="grid-container">
-            <div class="card">
-              <h2>For investors</h2>
-              <p>
-                “Data & Quality Mark You Can Trust.”We do the research. You get
-                the facts, clarity & best terms.
-              </p>
+      <!--Primary Resale Land section-->
+      <section class="primary-resale-land-section">
+        <!-- Add the sub-grid here -->
+        <div class="sub-grid-container">
+          <div class="grid grid-cols-3 grid-rows-1 gap-4">
+            <div
+              class="bg-cover bg-center h-48 flex items-center justify-center rounded-2xl"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/primary.svg');
+              "
+            >
+              <div class="p-4">
+                <h3 class="text-white text-xl font-bold uppercase">Primary</h3>
+              </div>
             </div>
-
-            <div class="card">
-              <h2>For developers</h2>
-              <p>
-                “Visibility & Quality Mark That Matters.” We connect you with
-                your buyers.
-              </p>
+            <div
+              class="bg-cover bg-center h-48 flex items-center justify-center rounded-2xl"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/resale.svg');
+              "
+            >
+              <div class="p-4">
+                <h3 class="text-white text-xl font-bold uppercase">Resale</h3>
+              </div>
             </div>
-          </div>
-          <div class="grid-container">
-            <div class="card">
-              <h2>Primary</h2>
-            </div>
-            <div class="card">
-              <h2>Primary</h2>
-            </div>
-            <div class="card">
-              <h2>Primary</h2>
+            <div
+              class="bg-cover bg-center h-48 flex items-center justify-center rounded-2xl"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/land.svg');
+              "
+            >
+              <div class="p-4">
+                <h3 class="text-white text-xl font-bold uppercase">Land</h3>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="no-strings">
-          <h2>Value, no strings attached</h2>
-          <p>
-            We believe in proving our worth upfront. That’s why some of our most
-            valuable insights and some services are free. Get the clarity you
-            need without commitment, and see why smart investors and developers
-            trust us from the start.
-          </p>
-          <p>
-            We don’t just provide unique, exclusive, and curated listings—we
-            create opportunities. For investors, it’s about clarity and
-            confidence. For developers, it’s about visibility and trust.
-            Together, we’re shaping the future of real estate with seamless,
-            reliable solutions that go beyond the market standard.
-          </p>
-          <div class="collapse-info">
-            <button type="button" class="collapsible">
-              Off-Plan Property Sales for Buyers and Investors
-            </button>
-            <div class="content">
-              <p>
-                We connect buyers and investors to real opportunities through
-                carefully selected off-plan projects that offer genuine value
-                and clear potential.
+      <!--Media Us-->
+      <section class="media-us-section">
+        <div class="media-us-container">
+          <h1 class="media-us-title uppercase">Media about us</h1>
+        </div>
+        <div class="logos-slide">
+          <img src="../assets/home/reuters.svg" />
+          <img src="../assets/home/bloomberg.svg" />
+          <img src="../assets/home/nyt.svg" />
+          <img src="../assets/home/markets.svg" />
+          <img src="../assets/home/reuters.svg" />
+          <img src="../assets/home/reuters.svg" />
+        </div>
+      </section>
+
+      <!--IE Verified-->
+      <section class="ie-verified-section">
+        <div class="ie-verified-container">
+          <img src="../assets/home/ieverified.svg" />
+          <h1 class="ie-verified-title uppercase">IE Verified</h1>
+        </div>
+        <div class="ie-verified-grid mt-8">
+          <div class="grid grid-cols-2 grid-rows-1 gap-4">
+            <div class="for-investors-container">
+              <h1 class="for-investors-title uppercase">For investors</h1>
+              <p class="for-investors-description">
+                “Data & Quality Mark You Can Trust.”<br />
+                We do the research. You get the facts, clarity & best terms.
               </p>
             </div>
-
-            <button type="button" class="collapsible">
-              Off-Plan Project Listing Platform
-            </button>
-            <div class="content">
-              <p>
-                We connect buyers and investors to real opportunities through
-                carefully selected off-plan projects that offer genuine value
-                and clear potential.
-              </p>
-            </div>
-
-            <button type="button" class="collapsible">
-              Personalized Investment Insights
-            </button>
-            <div class="content">
-              <p>
-                We connect buyers and investors to real opportunities through
-                carefully selected off-plan projects that offer genuine value
-                and clear potential.
-              </p>
-            </div>
-
-            <button type="button" class="collapsible">
-              Exclusive Pre-Sale Access
-            </button>
-            <div class="content">
-              <p>
-                We connect buyers and investors to real opportunities through
-                carefully selected off-plan projects that offer genuine value
-                and clear potential.
-              </p>
-            </div>
-
-            <button type="button" class="collapsible">
-              Insider Club for Investors
-            </button>
-            <div class="content">
-              <p>
-                We connect buyers and investors to real opportunities through
-                carefully selected off-plan projects that offer genuine value
-                and clear potential.
+            <div class="for-developers-container">
+              <h1 class="for-developers-title uppercase">For developers</h1>
+              <p class="for-developers-description">
+                “Data & Quality Mark You Can Trust.”<br />
+                We do the research. You get the facts, clarity & best terms.
               </p>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="our-clients">
-          <h2>Our clients</h2>
-          <button id="add-review">Add your review</button>
-        </div>
-        <div class="client-cards">
-          <div class="grid-container">
-            <div class="card">
-              <h2>Primary</h2>
+      <!--Verified Projects-->
+      <section class="verified-projects-section">
+        <div class="verified-projects-container">
+          <div class="grid grid-cols-3 grid-rows-1 gap-4">
+            <div
+              class="bg-cover bg-center h-48 flex flex-col justify-between rounded-2xl p-4 relative"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/primary.svg');
+              "
+            >
+              <!-- Top Row -->
+              <div class="flex justify-between">
+                <!-- Top Left Tags -->
+                <div class="flex gap-2">
+                  <div class="bg-blue-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">SMTH</span>
+                  </div>
+                  <div class="bg-green-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">VILLA</span>
+                  </div>
+                </div>
+                <!-- Top Right Buttons -->
+                <div class="flex gap-2">
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Bottom Row -->
+              <div class="flex justify-between items-end">
+                <!-- Bottom Left -->
+                <div class="flex items-center gap-2">
+                  <img
+                    src="../assets/home/ieverified.svg"
+                    alt="Verified"
+                    class="w-4 h-4"
+                  />
+                  <span class="text-white font-bold uppercase"
+                    >Object Name</span
+                  >
+                </div>
+                <!-- Bottom Right -->
+                <div class="text-white font-bold">$500,000</div>
+              </div>
             </div>
-            <div class="card">
-              <h2>Primary</h2>
+
+            <div
+              class="bg-cover bg-center h-48 flex flex-col justify-between rounded-2xl p-4 relative"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/primary.svg');
+              "
+            >
+              <!-- Top Row -->
+              <div class="flex justify-between">
+                <!-- Top Left Tags -->
+                <div class="flex gap-2">
+                  <div class="bg-blue-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">SMTH</span>
+                  </div>
+                  <div class="bg-green-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">VILLA</span>
+                  </div>
+                </div>
+                <!-- Top Right Buttons -->
+                <div class="flex gap-2">
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Bottom Row -->
+              <div class="flex justify-between items-end">
+                <!-- Bottom Left -->
+                <div class="flex items-center gap-2">
+                  <img
+                    src="../assets/home/ieverified.svg"
+                    alt="Verified"
+                    class="w-4 h-4"
+                  />
+                  <span class="text-white font-bold uppercase"
+                    >Object Name</span
+                  >
+                </div>
+                <!-- Bottom Right -->
+                <div class="text-white font-bold">$500,000</div>
+              </div>
             </div>
-            <div class="card">
-              <h2>Primary</h2>
+
+            <div
+              class="bg-cover bg-center h-48 flex flex-col justify-between rounded-2xl p-4 relative"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('../assets/common/primary.svg');
+              "
+            >
+              <!-- Top Row -->
+              <div class="flex justify-between">
+                <!-- Top Left Tags -->
+                <div class="flex gap-2">
+                  <div class="bg-blue-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">SMTH</span>
+                  </div>
+                  <div class="bg-green-200 bg-opacity-50 px-2 py-1 rounded-lg">
+                    <span class="text-white text-xs uppercase">VILLA</span>
+                  </div>
+                </div>
+                <!-- Top Right Buttons -->
+                <div class="flex gap-2">
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <button class="text-white hover:text-gray-200">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Bottom Row -->
+              <div class="flex justify-between items-end">
+                <!-- Bottom Left -->
+                <div class="flex items-center gap-2">
+                  <img
+                    src="../assets/home/ieverified.svg"
+                    alt="Verified"
+                    class="w-4 h-4"
+                  />
+                  <span class="text-white font-bold uppercase"
+                    >Object Name</span
+                  >
+                </div>
+                <!-- Bottom Right -->
+                <div class="text-white font-bold">$500,000</div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="discuss-project">
-          <h2>Let's discuss your project</h2>
-          <button id="contact-button">Contact us</button>
-        </div>
-        <div class="grid-container">
-          <div class="card">
-            <h2>
-              We will run your project through our assessment tools so that
-              opportunities and risks are captured and quantified.
-            </h2>
+      <!--Value no strings attached section-->
+      <section class="value-section">
+        <h1 class="value-title uppercase">Value no strings attached</h1>
+        <p class="value-description-1">
+          We believe in proving our worth upfront. That’s why some of our most
+          valuable insights and some services are free. Get the clarity you need
+          without commitment, and see why smart investors and developers trust
+          us from the start.
+        </p>
+        <p class="value-description-2">
+          We don’t just provide unique, exclusive, and curated listings—we
+          create opportunities. For investors, it’s about clarity and
+          confidence. For developers, it’s about visibility and trust. Together,
+          we’re shaping the future of real estate with seamless, reliable
+          solutions that go beyond the market standard.
+        </p>
+      </section>
+
+      <!--What we offer-->
+      <section class="we-offer-section">
+        <div class="faq-container">
+          <button class="accordion">
+            <img
+              width="25"
+              height="25"
+              src="../assets/club/criteria1.svg"
+              alt="Criteria icon"
+              class="criteria-icon"
+            />
+            Off-Plan Property Sales for Buyers and Investors
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+
+          <button class="accordion">
+            <img
+              width="25"
+              height="25"
+              src="../assets/club/criteria2.svg"
+              alt="Criteria icon"
+              class="criteria-icon"
+            />
+            Personalized Investment Insights
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+
+          <button class="accordion">
+            <img
+              width="25"
+              height="25"
+              src="../assets/club/criteria3.svg"
+              alt="Criteria icon"
+              class="criteria-icon"
+            />
+            Exclusive Pre-Sale Access
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+
+          <button class="accordion">
+            <img
+              width="25"
+              height="25"
+              src="../assets/club/criteria4.svg"
+              alt="Criteria icon"
+              class="criteria-icon"
+            />
+            Insider Club for Investors
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+
+          <button class="accordion">
+            <img
+              width="25"
+              height="25"
+              src="../assets/club/criteria5.svg"
+              alt="Criteria icon"
+              class="criteria-icon"
+            />
+            Helping Developers Sell Faster
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+
+          <button class="accordion">
+            <img
+              width="25"
+              height="25"
+              src="../assets/club/criteria6.svg"
+              alt="Criteria icon"
+              class="criteria-icon"
+            />
+            Off-Plan Project Listing Platform
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
           </div>
         </div>
+      </section>
 
-        <div class="faq">
-          <h2>Faq</h2>
-          <div class="collapse-info">
-            <button type="button" class="collapsible">Question 1</button>
-            <div class="content">
-              <p>
-                We connect buyers and investors to real opportunities through
-                carefully selected off-plan projects that offer genuine value
-                and clear potential.
-              </p>
-            </div>
-          </div>
-
-          <div class="collapse-info">
-            <button type="button" class="collapsible">Question 2</button>
-            <div class="content">
-              <p>
-                We connect buyers and investors to real opportunities through
-                carefully selected off-plan projects that offer genuine value
-                and clear potential.
-              </p>
-            </div>
-          </div>
-
-          <div class="collapse-info">
-            <button type="button" class="collapsible">Question 3</button>
-            <div class="content">
-              <p>
-                We connect buyers and investors to real opportunities through
-                carefully selected off-plan projects that offer genuine value
-                and clear potential.
-              </p>
-            </div>
-          </div>
-
-          <div class="collapse-info">
-            <button type="button" class="collapsible">Question 4</button>
-            <div class="content">
-              <p>
-                We connect buyers and investors to real opportunities through
-                carefully selected off-plan projects that offer genuine value
-                and clear potential.
-              </p>
-            </div>
-          </div>
+      <!--Our clients-->
+      <section class="our-clients-section">
+        <div class="our-clients-header-container">
+          <h1 class="our-clients-header uppercase">Our clients</h1>
+          <button class="our-clients-header-btn uppercase">
+            add your review
+          </button>
         </div>
+        <div class="our-clients-grid">
+          <div class="grid grid-cols-3 grid-rows-1 gap-4">
+            <div class="rounded-2xl">
+              <!-- Background with overlay -->
+              <div
+                class="bg-cover"
+                style="
+                  background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.5),
+                      rgba(0, 0, 0, 0.5)
+                    ),
+                    url('https://images.unsplash.com/photo-1629079448105-35ab3e5152d4?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                "
+              ></div>
 
-        <div class="contact-us">
-          <h2>Contact Us</h2>
-          <form class="email-form">
-            <div class="grid-container">
-              <div class="card">
-                <label for="fname">Name</label>
-                <input
-                  type="text"
-                  id="fname"
-                  name="firstname"
-                  placeholder="Name"
-                  required
+              <!-- Content container -->
+              <div class="relative">
+                <!-- Client image -->
+                <img
+                  src="../assets/home/client1.svg"
+                  alt="Client"
+                  class="client-image"
                 />
+
+                <div class="text-center">
+                  <h1 class="name-placeholder">Name Surname</h1>
+                  <p class="client-description-placeholder">
+                    Are you ready to be part of something extraordinary? Welcome
+                    to the Insider's Club
+                  </p>
+                </div>
               </div>
-              <div class="card">
-                <label for="femail">Email</label>
-                <input
-                  type="email"
-                  id="femail"
-                  name="email"
-                  placeholder="Email"
-                  required
+            </div>
+
+            <div class="rounded-2xl">
+              <!-- Background with overlay -->
+              <div
+                class="bg-cover"
+                style="
+                  background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.5),
+                      rgba(0, 0, 0, 0.5)
+                    ),
+                    url('https://images.unsplash.com/photo-1649083047668-e57d682e5749?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                "
+              ></div>
+
+              <!-- Content container -->
+              <div class="relative">
+                <!-- Client image -->
+                <img
+                  src="../assets/home/client2.svg"
+                  alt="Client"
+                  class="client-image"
                 />
+
+                <div class="text-center">
+                  <h1 class="name-placeholder">Name Surname</h1>
+                  <p class="client-description-placeholder">
+                    Are you ready to be part of something extraordinary? Welcome
+                    to the Insider's Club
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="grid-container">
-              <div class="card">
-                <label for="fmessage">Message</label>
-                <textarea
-                  id="fmessage"
-                  name="message"
-                  placeholder="Message"
-                  rows="4"
-                  required
-                ></textarea>
+
+            <div class="rounded-2xl">
+              <!-- Background with overlay -->
+              <div
+                class="bg-cover"
+                style="
+                  background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.5),
+                      rgba(0, 0, 0, 0.5)
+                    ),
+                    url('https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                "
+              ></div>
+
+              <!-- Content container -->
+              <div class="relative">
+                <!-- Client image -->
+                <img
+                  src="../assets/home/client3.svg"
+                  alt="Client"
+                  class="client-image"
+                />
+
+                <div class="text-center">
+                  <h1 class="name-placeholder">Name Surname</h1>
+                  <p class="client-description-placeholder">
+                    Are you ready to be part of something extraordinary? Welcome
+                    to the Insider's Club
+                  </p>
+                </div>
               </div>
             </div>
-            <button type="submit">Send</button>
+          </div>
+        </div>
+      </section>
+
+      <!--Let's discuss-->
+      <section class="lets-discuss-section">
+        <div class="lets-discuss-container">
+          <h1 class="lets-discuss-title uppercase">
+            Let's discuss your project
+          </h1>
+          <button class="lets-discuss-btn uppercase">Contact us</button>
+        </div>
+        <div class="lets-discuss-content">
+          <p>
+            We will run your project through our assessment tools so that
+            opportunities and risks are captured and quantified.
+          </p>
+        </div>
+      </section>
+
+      <!--FAQ-->
+      <section class="faq-bottom-section">
+        <div class="faq-bottom-container">
+          <h1 class="faq-bottom-title uppercase">Faq</h1>
+          <button class="faq-bottom-btn uppercase">Ask us something</button>
+        </div>
+
+        <div class="faq-container">
+          <button class="accordion uppercase">question 1</button>
+          <div class="panel">
+            <p>
+              We connect buyers and investors to real opportunities through
+              carefully selected off-plan projects that offer genuine value and
+              clear potential.
+            </p>
+          </div>
+
+          <button class="accordion uppercase">question 2</button>
+          <div class="panel">
+            <p>
+              We connect buyers and investors to real opportunities through
+              carefully selected off-plan projects that offer genuine value and
+              clear potential.
+            </p>
+          </div>
+
+          <button class="accordion uppercase">question 3</button>
+          <div class="panel">
+            <p>
+              We connect buyers and investors to real opportunities through
+              carefully selected off-plan projects that offer genuine value and
+              clear potential.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--Contact us section-->
+      <section class="contact-us-section">
+        <div class="contact-us-header-container">
+          <h1>Contact Us</h1>
+          <div class="contact-right-content">
+            <div class="social-links-container">
+              <button>
+                <img src="../assets/common/facebook.svg" alt="Facebook" />
+              </button>
+              <button>
+                <img src="../assets/common/vk.svg" alt="Vk" />
+              </button>
+              <button>
+                <img src="../assets/common/emailicon.svg" alt="Email" />
+              </button>
+              <button>
+                <img src="../assets/common/x.svg" alt="Twitter" />
+              </button>
+            </div>
+            <div class="phone-container">
+              <img src="../assets/common/phoneicon.svg" alt="Phone" />+7 (972)
+              928-30-12
+            </div>
+          </div>
+        </div>
+        <div class="contact-us-form-container">
+          <form>
+            <div class="input-row">
+              <input type="text" id="name" placeholder="Name" />
+              <input type="email" id="email" placeholder="Email" />
+            </div>
+            <textarea
+              id="message"
+              maxlength="250"
+              placeholder="Message"
+            ></textarea>
           </form>
         </div>
-
-        <div class="map">
-          <div id="map"></div>
+        <div class="contact-us-button-container">
+          <button id="send-message-button">Send Message</button>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
+      <div class="map">
+        <div id="map"></div>
+      </div>
       <div class="footer-container">
         <!-- Footer Navigation -->
         <nav class="footer-nav">
@@ -419,5 +769,8 @@
 
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
     <script src="../js/home.js"></script>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
   </body>
 </html>
