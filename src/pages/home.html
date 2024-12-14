@@ -211,9 +211,51 @@
               </li>
 
               <div class="search-divider"></div>
-              <button class="search-section-btn">
+              <button
+                class="search-section-btn"
+                onclick="toggleAdvancedSearch()"
+              >
                 <span class="text-gray-500 uppercase">+</span>
               </button>
+              <!-- Advanced Search Popup -->
+              <div
+                id="advancedSearchPopup"
+                class="advanced-search-popup hidden"
+              >
+                <div class="popup-content">
+                  <div class="popup-header">
+                    <h3>Advanced Search</h3>
+                    <button onclick="toggleAdvancedSearch()" class="close-btn">
+                      &times;
+                    </button>
+                  </div>
+                  <div class="popup-body">
+                    <div class="filter-group">
+                      <label>Property Features</label>
+                      <div class="checkbox-group">
+                        <label><input type="checkbox" /> Swimming Pool</label>
+                        <label><input type="checkbox" /> Garden</label>
+                        <label><input type="checkbox" /> Sea View</label>
+                        <label><input type="checkbox" /> Mountain View</label>
+                      </div>
+                    </div>
+                    <div class="filter-group">
+                      <label>Property Status</label>
+                      <div class="checkbox-group">
+                        <label><input type="checkbox" /> Ready to Move</label>
+                        <label
+                          ><input type="checkbox" /> Under Construction</label
+                        >
+                        <label><input type="checkbox" /> Off-Plan</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup-footer">
+                    <button class="apply-btn">Apply Filters</button>
+                    <button class="reset-btn">Reset</button>
+                  </div>
+                </div>
+              </div>
 
               <button class="circle-button search-btn">
                 <i class="fas fa-search"></i>

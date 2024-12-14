@@ -174,3 +174,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial update
   updateProgress();
 });
+
+//Advanced Filter pop up
+function toggleAdvancedSearch() {
+  const popup = document.getElementById("advancedSearchPopup");
+  popup.classList.toggle("hidden");
+}
