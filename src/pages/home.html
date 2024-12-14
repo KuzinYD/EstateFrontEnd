@@ -100,10 +100,121 @@
         <div class="search-header">
           <div class="search-container">
             <div class="search-input-wrapper">
-              <input type="text" placeholder="SEARCH" class="search-input" />
-              <button class="circle-button filter-btn">
-                <i class="fas fa-filter"></i>
+              <li class="nav-link types">
+                <a class="text-gray-500 uppercase">Keywords </a>
+                <ul class="drop-down">
+                  <li>Keyword 1</li>
+                  <li>Keyword 2</li>
+                  <li>Keyword 3</li>
+                </ul>
+              </li>
+
+              <div class="search-divider"></div>
+              <li class="nav-link types">
+                <a class="text-gray-500 uppercase">Type </a>
+                <ul class="drop-down">
+                  <li>Primary</li>
+                  <li>Resale</li>
+                  <li>Land</li>
+                </ul>
+              </li>
+
+              <div class="search-divider"></div>
+              <li class="nav-link types">
+                <a class="text-gray-500 uppercase">Location </a>
+                <ul class="drop-down">
+                  <li>Bang Tao</li>
+                  <li>Bang Tao</li>
+                  <li>Bang Tao</li>
+                </ul>
+              </li>
+
+              <div class="search-divider"></div>
+              <li class="nav-link types">
+                <a class="text-gray-500 uppercase"
+                  >🛏️
+
+                  <span class="bed-counter-number" id="bedCounterSearchBar"
+                    >1</span
+                  >
+                </a>
+                <ul class="drop-down">
+                  <li>
+                    <div class="bed-counter-container">
+                      <button class="bed-decrease" onclick="decreaseBeds()">
+                        -
+                      </button>
+                      <span class="bed-counter-number" id="bedCounterDropDown"
+                        >From 1</span
+                      >
+                      <button class="bed-increase" onclick="increaseBeds()">
+                        +
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <div class="search-divider"></div>
+              <li class="nav-link types price">
+                <div class="price-container">
+                  <div class="price-inputs">
+                    <div class="field">
+                      <input
+                        type="number"
+                        class="input-min"
+                        value="0"
+                        placeholder="Min"
+                      />
+                    </div>
+                    <div class="separator">-</div>
+                    <div class="field">
+                      <input
+                        type="number"
+                        class="input-max"
+                        value="10000000"
+                        placeholder="Max"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="drop-down">
+                  <li>
+                    <div class="price-range-container">
+                      <div class="slider-container">
+                        <div class="price-slider">
+                          <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                          <input
+                            type="range"
+                            class="range-min"
+                            min="0"
+                            max="10000000"
+                            value="0"
+                            step="1000"
+                          />
+                          <input
+                            type="range"
+                            class="range-max"
+                            min="0"
+                            max="10000000"
+                            value="10000000"
+                            step="1000"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <div class="search-divider"></div>
+              <button class="search-section-btn">
+                <span class="text-gray-500 uppercase">+</span>
               </button>
+
               <button class="circle-button search-btn">
                 <i class="fas fa-search"></i>
               </button>

@@ -84,3 +84,93 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Bed Counter Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  let bedCount = 1;
+
+  function updateBedCounter() {
+    document.getElementById(
+      "bedCounterDropDown"
+    ).textContent = `From ${bedCount}`;
+    document.getElementById("bedCounterSearchBar").textContent = `${bedCount}`;
+  }
+
+  // Increase Beds
+  window.increaseBeds = function () {
+    bedCount++;
+    updateBedCounter();
+  };
+
+  // Decrease Beds
+  window.decreaseBeds = function () {
+    if (bedCount > 1) {
+      bedCount--;
+      updateBedCounter();
+    }
+  };
+});
+
+//Price range slider
+document.addEventListener("DOMContentLoaded", function () {
+  // Range inputs in the dropdown
+  const rangeMin = document.querySelector(".range-input .range-min");
+  const rangeMax = document.querySelector(".range-input .range-max");
+
+  // Number inputs in the price container
+  const inputMin = document.querySelector(".price-inputs .input-min");
+  const inputMax = document.querySelector(".price-inputs .input-max");
+
+  const progress = document.querySelector(".progress");
+
+  // Check if all required elements exist
+  if (!rangeMin || !rangeMax || !inputMin || !inputMax || !progress) {
+    console.warn("Some price range elements are missing from the DOM");
+    return;
+  }
+
+  function updateProgress() {
+    const minVal = parseInt(rangeMin.value);
+    const maxVal = parseInt(rangeMax.value);
+
+    // Update input values
+    inputMin.value = minVal;
+    inputMax.value = maxVal;
+
+    // Prevent crossing
+    if (minVal > maxVal) {
+      [rangeMin.value, rangeMax.value] = [maxVal, minVal];
+      return;
+    }
+
+    // Calculate progress position and width
+    const percent = (minVal / rangeMin.max) * 100;
+    const percent2 = 100 - (maxVal / rangeMax.max) * 100;
+    progress.style.left = `${percent}%`;
+    progress.style.width = `${100 - percent - percent2}%`;
+  }
+
+  // Update when range inputs change
+  rangeMin.addEventListener("input", updateProgress);
+  rangeMax.addEventListener("input", updateProgress);
+
+  // Update when number inputs change
+  inputMin.addEventListener("input", () => {
+    let val = parseInt(inputMin.value) || 0;
+    if (val < 0) val = 0;
+    if (val > parseInt(rangeMax.value)) val = parseInt(rangeMax.value);
+    rangeMin.value = val;
+    updateProgress();
+  });
+
+  inputMax.addEventListener("input", () => {
+    let val = parseInt(inputMax.value) || 10000000;
+    if (val > 10000000) val = 10000000;
+    if (val < parseInt(rangeMin.value)) val = parseInt(rangeMin.value);
+    rangeMax.value = val;
+    updateProgress();
+  });
+
+  // Initial update
+  updateProgress();
+});
