@@ -223,30 +223,146 @@
                 class="advanced-search-popup hidden"
               >
                 <div class="popup-content">
-                  <div class="popup-header">
-                    <h3>Advanced Search</h3>
+                  <div class="popup-header uppercase">
+                    <h3>Filters</h3>
+
                     <button onclick="toggleAdvancedSearch()" class="close-btn">
                       &times;
                     </button>
                   </div>
                   <div class="popup-body">
-                    <div class="filter-group">
-                      <label>Property Features</label>
-                      <div class="checkbox-group">
-                        <label><input type="checkbox" /> Swimming Pool</label>
-                        <label><input type="checkbox" /> Garden</label>
-                        <label><input type="checkbox" /> Sea View</label>
-                        <label><input type="checkbox" /> Mountain View</label>
-                      </div>
+                    <!--Type filter group-->
+                    <div class="popup-filters-container">
+                      <div class="popup-filter-type uppercase">tags |</div>
+                      <button class="chosen-option-btn uppercase">
+                        X Chosen Option
+                      </button>
                     </div>
                     <div class="filter-group">
-                      <label>Property Status</label>
                       <div class="checkbox-group">
-                        <label><input type="checkbox" /> Ready to Move</label>
-                        <label
-                          ><input type="checkbox" /> Under Construction</label
-                        >
-                        <label><input type="checkbox" /> Off-Plan</label>
+                        <div class="filter-selection-container">
+                          <div
+                            class="filter-name uppercase"
+                            style="background-color: #0f1f3d"
+                          >
+                            primary
+                          </div>
+                          <div
+                            class="filter-name uppercase"
+                            style="background-color: #69a8a4"
+                          >
+                            resale
+                          </div>
+                          <div
+                            class="filter-name uppercase"
+                            style="background-color: #5a6bc9"
+                          >
+                            land
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Keywords and Price range-->
+                    <div class="left-right-container">
+                      <div class="left-container">
+                        <div class="popup-filters-container">
+                          <div class="popup-filter-type uppercase">
+                            Keywords
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right-container">
+                        <div class="popup-filters-container">
+                          <div class="popup-filter-type uppercase">
+                            Price range
+                          </div>
+                        </div>
+                        <div class="from-to-price-container">
+                          <div class="from-price-container">
+                            <input
+                              type="number"
+                              class="from-price-input"
+                              placeholder="From"
+                            />
+                            <span class="thin-underline"> </span>
+                          </div>
+                          <div class="to-price-container">
+                            <input
+                              type="number"
+                              class="to-price-input"
+                              placeholder="To"
+                            />
+                            <span class="thin-underline"> </span>
+                          </div>
+                        </div>
+                        <div class="price-slider-container">
+                          <div class="price-slider">
+                            <div class="progress-popup"></div>
+                          </div>
+                          <div class="range-input-popup">
+                            <input
+                              type="range"
+                              class="range-min-popup"
+                              min="0"
+                              max="10000000"
+                              value="0"
+                              step="1000"
+                            />
+                            <input
+                              type="range"
+                              class="range-max-popup"
+                              min="0"
+                              max="10000000"
+                              value="10000000"
+                              step="1000"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Tags filter group-->
+                    <div class="popup-filters-container">
+                      <div class="popup-filter-type uppercase">tags |</div>
+                      <button class="chosen-option-btn uppercase">
+                        X Chosen Option
+                      </button>
+                    </div>
+                    <div class="filter-group">
+                      <div class="checkbox-group">
+                        <div class="filter-selection-container">
+                          <div
+                            class="filter-name uppercase"
+                            style="background-color: #0f1f3d"
+                          >
+                            Research
+                          </div>
+                          <div
+                            class="filter-name uppercase"
+                            style="background-color: #69a8a4"
+                          >
+                            Luxury
+                          </div>
+                          <div
+                            class="filter-name uppercase"
+                            style="background-color: #5a6bc9"
+                          >
+                            Summer
+                          </div>
+                          <div
+                            class="filter-name uppercase"
+                            style="background-color: #5a6bc9"
+                          >
+                            Condo
+                          </div>
+                          <div
+                            class="filter-name uppercase"
+                            style="background-color: #5a6bc9"
+                          >
+                            Smth
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

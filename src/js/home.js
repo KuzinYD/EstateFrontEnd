@@ -113,17 +113,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Price range slider
 document.addEventListener("DOMContentLoaded", function () {
-  // Range inputs in the dropdown
-  const rangeMin = document.querySelector(".range-input .range-min");
-  const rangeMax = document.querySelector(".range-input .range-max");
+  // Original price range slider
+  setupPriceRange(
+    ".range-input .range-min",
+    ".range-input .range-max",
+    ".price-inputs .input-min",
+    ".price-inputs .input-max",
+    ".progress"
+  );
 
-  // Number inputs in the price container
-  const inputMin = document.querySelector(".price-inputs .input-min");
-  const inputMax = document.querySelector(".price-inputs .input-max");
+  // Popup price range slider
+  setupPriceRange(
+    ".range-input-popup .range-min-popup",
+    ".range-input-popup .range-max-popup",
+    ".from-price-input",
+    ".to-price-input",
+    ".progress-popup"
+  );
+});
 
-  const progress = document.querySelector(".progress");
+function setupPriceRange(
+  rangeMinSelector,
+  rangeMaxSelector,
+  inputMinSelector,
+  inputMaxSelector,
+  progressSelector
+) {
+  const rangeMin = document.querySelector(rangeMinSelector);
+  const rangeMax = document.querySelector(rangeMaxSelector);
+  const inputMin = document.querySelector(inputMinSelector);
+  const inputMax = document.querySelector(inputMaxSelector);
+  const progress = document.querySelector(progressSelector);
 
-  // Check if all required elements exist
   if (!rangeMin || !rangeMax || !inputMin || !inputMax || !progress) {
     console.warn("Some price range elements are missing from the DOM");
     return;
@@ -136,6 +157,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update input values
     inputMin.value = minVal;
     inputMax.value = maxVal;
+
+    // Add slider-active class when slider is being used
+    inputMin.classList.add("slider-active");
+    inputMax.classList.add("slider-active");
 
     // Prevent crossing
     if (minVal > maxVal) {
@@ -150,9 +175,25 @@ document.addEventListener("DOMContentLoaded", function () {
     progress.style.width = `${100 - percent - percent2}%`;
   }
 
+  // Remove slider-active class when user stops using the slider
+  function handleSliderEnd() {
+    if (inputMin.value === "") {
+      inputMin.classList.remove("slider-active");
+    }
+    if (inputMax.value === "") {
+      inputMax.classList.remove("slider-active");
+    }
+  }
+
   // Update when range inputs change
   rangeMin.addEventListener("input", updateProgress);
   rangeMax.addEventListener("input", updateProgress);
+
+  // Add mouseup and touchend events to detect when user stops using the slider
+  rangeMin.addEventListener("mouseup", handleSliderEnd);
+  rangeMax.addEventListener("mouseup", handleSliderEnd);
+  rangeMin.addEventListener("touchend", handleSliderEnd);
+  rangeMax.addEventListener("touchend", handleSliderEnd);
 
   // Update when number inputs change
   inputMin.addEventListener("input", () => {
@@ -173,7 +214,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initial update
   updateProgress();
-});
+  handleSliderEnd(); // Initialize placeholder visibility
+}
 
 //Advanced Filter pop up
 function toggleAdvancedSearch() {

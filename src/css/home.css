@@ -436,8 +436,9 @@
   padding: 2rem;
   border-radius: 8px;
   width: 90%;
-  max-width: 600px;
-  max-height: 80vh;
+  height: 90%;
+  max-width: 70rem;
+  max-height: 70rem;
   overflow-y: auto;
 }
 
@@ -446,6 +447,24 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.popup-filters-container {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+.popup-filter-type {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.chosen-option-btn {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: 900;
 }
 
 .close-btn {
@@ -457,6 +476,76 @@
 
 .filter-group {
   margin-bottom: 1.5rem;
+}
+
+.filter-selection-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.filter-selection-container .filter-name {
+  background-color: #0f1f3d;
+  font-size: 1rem;
+  font-weight: 900;
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.thin-underline {
+  border-bottom: 1px solid #999;
+  width: 100%;
+  display: block;
+}
+
+.left-right-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.right-container {
+  width: 50%;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.from-to-price-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  color: #0f1f3d;
+  margin-bottom: 1rem;
+}
+
+.from-price-input::placeholder,
+.to-price-input::placeholder {
+  color: #0f1f3d;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 1; /* Ensure placeholders are visible */
+}
+
+/* Add a class that will be applied when the slider is being used */
+.from-price-input.slider-active::placeholder,
+.to-price-input.slider-active::placeholder {
+  opacity: 0;
+}
+
+//Price slider in pop up
+.price-slider-container {
+  width: 100%; /* Make it take full width */
+  margin-top: 1rem; /* Add spacing from elements above */
+  display: block; /* Ensure it's a block element */
+  clear: both; /* Clear any floating elements */
+}
+
+.left-container {
+  width: 50%;
+  margin: 1rem 0 1rem 0;
 }
 
 .checkbox-group {
