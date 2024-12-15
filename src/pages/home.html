@@ -271,6 +271,28 @@
                             Keywords
                           </div>
                         </div>
+                        <div class="keywords-input-container">
+                          <input
+                            type="text"
+                            class="keywords-input uppercase"
+                            style="width: 70%"
+                            placeholder="for example: beautiful view villa"
+                          />
+                          <button
+                            class="keyword-luna-ai-btn uppercase"
+                            style="
+                              width: 70%;
+                              color: white;
+                              font-weight: 900;
+                              font-size: 1rem;
+                              background-color: #662884;
+                              border-radius: 10px;
+                              margin: 1rem auto;
+                            "
+                          >
+                            analyze wih ai
+                          </button>
+                        </div>
                       </div>
                       <div class="right-container">
                         <div class="popup-filters-container">
@@ -322,6 +344,144 @@
                       </div>
                     </div>
 
+                    <!--Location -->
+                    <div class="popup-filters-container">
+                      <div class="popup-filter-type uppercase">location |</div>
+                      <button class="chosen-option-btn uppercase">
+                        X Chosen Option
+                      </button>
+                    </div>
+                    <div id="map-filter"></div>
+
+                    <!--Facilities filter group-->
+                    <div class="popup-filters-container">
+                      <div class="popup-filter-type uppercase">
+                        facilities |
+                      </div>
+                      <button class="chosen-option-btn uppercase">
+                        X Chosen Option
+                      </button>
+                    </div>
+                    <div class="left-right-container">
+                      <div class="left-container">
+                        <div class="popup-filters-container">
+                          <div
+                            class="popup-filter-type uppercase"
+                            style="color: #c6c6c6"
+                          >
+                            Bathrooms
+                          </div>
+                        </div>
+                        <div class="bathrooms-slider-container">
+                          <div class="bathroom-emoji">🛁</div>
+                          <div class="bathroom-slider">
+                            <div
+                              class="bathroom-progress"
+                              style="background-color: #0f1f3d; margin: 0.5rem"
+                            ></div>
+                            <div
+                              class="range-values"
+                              style="
+                                display: flex;
+                                justify-content: space-between;
+                                margin: 0 2rem;
+                              "
+                            >
+                              <span>0</span>
+                              <span id="bathroom-value">0</span>
+                            </div>
+                            <input
+                              type="range"
+                              class="bathroom-range"
+                              min="0"
+                              max="7"
+                              value="0"
+                              step="1"
+                              oninput="document.getElementById('bathroom-value').textContent = this.value"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right-container">
+                        <div class="popup-filters-container">
+                          <div
+                            class="popup-filter-type uppercase"
+                            style="color: #c6c6c6"
+                          >
+                            Bedrooms
+                          </div>
+                        </div>
+                        <div class="bedroom-slider-container">
+                          <div class="bedroom-emoji">🛏️</div>
+                          <div class="bedroom-slider">
+                            <div
+                              class="bedroom-progress"
+                              style="background-color: #0f1f3d; margin: 0.5rem"
+                            ></div>
+                            <div
+                              class="range-values"
+                              style="
+                                display: flex;
+                                justify-content: space-between;
+                                margin: 0 2rem;
+                              "
+                            >
+                              <span>0</span>
+                              <span id="bedroom-value">0</span>
+                            </div>
+                            <input
+                              type="range"
+                              class="bedroom-range"
+                              min="0"
+                              max="7"
+                              value="0"
+                              step="1"
+                              oninput="document.getElementById('bedroom-value').textContent = this.value"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="other-facilities-container">
+                      <div class="grid grid-cols-4 grid-rows-1 gap-2">
+                        <div class="other-facility-item">
+                          <div class="other-facility-emoji">🏋️‍♂️</div>
+                          <div class="other-facility-name">
+                            <span class="other-facility-name-text uppercase">
+                              Gym
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="other-facility-item">
+                          <div class="other-facility-emoji">🏊</div>
+                          <div class="other-facility-name">
+                            <span class="other-facility-name-text uppercase">
+                              pool
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="other-facility-item">
+                          <div class="other-facility-emoji">🏖</div>
+                          <div class="other-facility-name">
+                            <span class="other-facility-name-text uppercase">
+                              Beach
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="other-facility-item">
+                          <div class="other-facility-emoji">👨‍🍳</div>
+                          <div class="other-facility-name">
+                            <span class="other-facility-name-text uppercase">
+                              Chef
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <!--Tags filter group-->
                     <div class="popup-filters-container">
                       <div class="popup-filter-type uppercase">tags |</div>
@@ -366,9 +526,12 @@
                       </div>
                     </div>
                   </div>
+
+                  <!--Popup footer group-->
                   <div class="popup-footer">
-                    <button class="apply-btn">Apply Filters</button>
-                    <button class="reset-btn">Reset</button>
+                    <button class="apply-btn uppercase">
+                      show 124 results
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1038,6 +1201,7 @@
 
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
     <script src="../js/home.js"></script>
+
     <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Go to top">
       <i class="fas fa-arrow-up"></i>
     </button>

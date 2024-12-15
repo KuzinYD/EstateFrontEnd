@@ -555,9 +555,76 @@
   margin-top: 0.5rem;
 }
 
+.bathrooms-slider-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: left;
+  background-color: #dcdde0;
+  color: #0f1f3d;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.bathroom-emoji {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 1rem;
+}
+
+.range-values {
+  color: #666;
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+.bedroom-slider-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: left;
+  background-color: #dcdde0;
+  color: #0f1f3d;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.bedroom-emoji {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 1rem;
+}
+
+.other-facilities-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: left;
+
+  color: #0f1f3d;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.other-facility-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #0f1f3d;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+.other-facility-emoji {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.other-facility-name .other-facility-name-text {
+  font-size: 1rem;
+  font-weight: 900;
+}
 .popup-footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -570,7 +637,7 @@
 }
 
 .apply-btn {
-  background-color: #4caf50;
+  background-color: #0f1f3d;
   color: white;
   border: none;
 }
@@ -953,6 +1020,15 @@
   background-color: #0f1f3d;
   padding: 5px 20px;
 }
+
+#map-filter {
+  height: 300px; /* Appropriate height for a filter popup */
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 8px; /* Optional: for rounded corners */
+  overflow: hidden; /* Ensures content stays within border radius */
+}
+
 #map {
   height: 400px;
   width: 100%;

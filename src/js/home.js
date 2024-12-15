@@ -14,20 +14,39 @@ for (let i = 0; i < coll.length; i++) {
 
 // OpenMap
 document.addEventListener("DOMContentLoaded", function () {
-  const map = new ol.Map({
-    target: "map",
-    layers: [
-      new ol.layer.Tile({
-        source: new ol.source.XYZ({
-          url: "https://{1-4}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-          attributions: "© OpenStreetMap contributors & CARTO",
+  // Map configurations
+  const mapsConfig = [
+    {
+      target: "map",
+      center: [98.2938, 8.0016],
+      zoom: 10,
+      markers: [], // No markers for this map
+    },
+    {
+      target: "map-filter",
+      center: [98.2938, 8.0016],
+      zoom: 10,
+      markers: [], // No markers for this map
+    },
+  ];
+
+  // Initialize each map
+  mapsConfig.forEach((config) => {
+    const map = new ol.Map({
+      target: config.target,
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.XYZ({
+            url: "https://{1-4}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+            attributions: "© OpenStreetMap contributors & CARTO",
+          }),
         }),
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat(config.center),
+        zoom: config.zoom,
       }),
-    ],
-    view: new ol.View({
-      center: ol.proj.fromLonLat([98.2938, 8.0016]),
-      zoom: 15,
-    }),
+    });
   });
 });
 
