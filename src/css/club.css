@@ -714,3 +714,28 @@ body {
   color: #718096; /* Tailwind's text-gray-400 */
   margin-top: 16px;
 }
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex; /* Changed from 'none' to 'flex' */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Increased z-index to ensure it's above other elements */
+  transition: background-color 0.3s;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.scroll-to-top-btn.visible {
+  display: flex;
+}
