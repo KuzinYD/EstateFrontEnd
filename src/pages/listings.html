@@ -10,14 +10,25 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body class="bg-gray-200 min-h-screen flex flex-col">
     <!-- Header -->
-    <header>
+    <header class="absolute w-full z-10">
       <div class="navbar">
         <div class="logo">
-          <div class="logo-placeholder">LOGO</div>
-          <span class="brand-name">Your Brand</span>
+          <div class="logo-placeholder">
+            <img
+              src="../assets/common/logo-white.svg"
+              alt="logo"
+              width="30"
+              height="30"
+            />
+          </div>
+          <span class="brand-name">Ignatev Estate</span>
         </div>
         <div class="subnav">
           <button class="subnavbtn">
@@ -69,7 +80,8 @@
 
     <main class="bg-gray-100">
       <section>
-        <div id="hero">
+        <!-- Hero Section -->
+        <div class="hero-section relative">
           <h1 class="hero-heading">new listing</h1>
           <p>
             Buying a property with the intent to sell it later—whether in the
@@ -87,92 +99,183 @@
           </div>
         </div>
 
-        <div id="search-bar">
-          <input type="text" placeholder="Enter Keyword" />
-          <select>
-            <option>Location</option>
-          </select>
-          <select>
-            <option>Type</option>
-          </select>
-          <select>
-            <option>Price</option>
-          </select>
-          <button>Search</button>
-        </div>
-
-        <div class="list-objects">
-          <!-- Controls -->
-          <div class="controls">
-            <h1>For sale | off plan</h1>
-
-            <div class="control-buttons">
-              <!-- Sort Icon -->
-              <button id="sortButton" class="icon-button" title="Sort">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="icon"
-                >
-                  <!-- Up arrow -->
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 4l-5 5h10l-5-5z"
-                  />
-                  <!-- Down arrow -->
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 20l5-5H7l5 5z"
-                  />
-                </svg>
-              </button>
-
-              <!-- Toggle View Icon -->
-              <button id="toggleView" class="icon-button" title="Toggle View">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="icon"
-                >
-                  <!-- Top-left square -->
-                  <rect x="3" y="3" width="7" height="7" rx="1.5" />
-                  <!-- Top-right square -->
-                  <rect x="14" y="3" width="7" height="7" rx="1.5" />
-                  <!-- Bottom-left square -->
-                  <rect x="3" y="14" width="7" height="7" rx="1.5" />
-                  <!-- Bottom-right square -->
-                  <rect x="14" y="14" width="7" height="7" rx="1.5" />
-                </svg>
-              </button>
+        <!-- Search Section -->
+        <section class="search-section">
+          <div class="search-header">
+            <div class="search-container">
+              <div class="search-input-wrapper">
+                <input type="text" placeholder="SEARCH" class="search-input" />
+                <button class="circle-button filter-btn">
+                  <i class="fas fa-filter"></i>
+                </button>
+                <button class="circle-button search-btn">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
             </div>
           </div>
+        </section>
 
-          <!-- Object Container -->
-          <div class="object-container">
-            <!-- Object cards -->
-            <div class="card">
-              <h1 class="card-title">Card C</h1>
-              <p class="card-text">This is card number three.</p>
+        <!--For Sale Off plan section-->
+        <section class="topics-grid">
+          <div class="grid grid-cols-3 grid-rows-3 gap-4 flex-wrap">
+            <div
+              class="topic-card"
+              style="
+                background: url(../assets/insights/card1.svg),
+                  linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
+                  center/cover;
+              "
+            >
+              <div class="card-header">
+                <div class="topic-tag">Research</div>
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+              </div>
+
+              <h1 class="topic-title">
+                How low can the bitcoin price go? <span>~7min</span>
+              </h1>
             </div>
-            <div class="card">
-              <h1 class="card-title">Card A</h1>
-              <p class="card-text">This is card number one.</p>
+
+            <div
+              class="topic-card"
+              style="
+                background: url(../assets/insights/card2.svg),
+                  linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
+                  center/cover;
+              "
+            >
+              <div class="card-header">
+                <div class="topic-tag">Research</div>
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+              </div>
+
+              <h1 class="topic-title">
+                How low can the bitcoin price go? <span>~7min</span>
+              </h1>
             </div>
-            <div class="card">
-              <h1 class="card-title">Card B</h1>
-              <p class="card-text">This is card number two.</p>
+
+            <div
+              class="topic-card"
+              style="
+                background: url(../assets/insights/card3.svg),
+                  linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
+                  center/cover;
+              "
+            >
+              <div class="card-header">
+                <div class="topic-tag">Research</div>
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+              </div>
+
+              <h1 class="topic-title">
+                How low can the bitcoin price go? <span>~7min</span>
+              </h1>
+            </div>
+
+            <div
+              class="topic-card"
+              style="
+                background: url(../assets/insights/card2.svg),
+                  linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
+                  center/cover;
+              "
+            >
+              <div class="card-header">
+                <div class="topic-tag">Research</div>
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+              </div>
+
+              <h1 class="topic-title">
+                How low can the bitcoin price go? <span>~7min</span>
+              </h1>
+            </div>
+
+            <div
+              class="topic-card"
+              style="
+                background: url(../assets/insights/card1.svg),
+                  linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
+                  center/cover;
+              "
+            >
+              <div class="card-header">
+                <div class="topic-tag">Research</div>
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+              </div>
+
+              <h1 class="topic-title">
+                How low can the bitcoin price go? <span>~7min</span>
+              </h1>
+            </div>
+
+            <div
+              class="topic-card"
+              style="
+                background: url(../assets/insights/card3.svg),
+                  linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
+                  center/cover;
+              "
+            >
+              <div class="card-header">
+                <div class="topic-tag">Research</div>
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+              </div>
+
+              <h1 class="topic-title">
+                How low can the bitcoin price go? <span>~7min</span>
+              </h1>
+            </div>
+
+            <div
+              class="topic-card"
+              style="
+                background: url(../assets/insights/card2.svg),
+                  linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
+                  center/cover;
+              "
+            >
+              <div class="card-header">
+                <div class="topic-tag">Research</div>
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+              </div>
+
+              <h1 class="topic-title">
+                How low can the bitcoin price go? <span>~7min</span>
+              </h1>
+            </div>
+
+            <div class="topic-card">
+              <div class="card-header">
+                <div class="topic-tag">Research</div>
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+              </div>
+
+              <h1 class="topic-title">
+                How low can the bitcoin price go? <span>~7min</span>
+              </h1>
+            </div>
+
+            <div
+              class="topic-card"
+              style="
+                background: url(../assets/insights/card3.svg),
+                  linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
+                  center/cover;
+              "
+            >
+              <div class="card-header">
+                <div class="topic-tag">Research</div>
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+              </div>
+
+              <h1 class="topic-title">
+                How low can the bitcoin price go? <span>~7min</span>
+              </h1>
             </div>
           </div>
-          <button id="action-button">See more</button>
-        </div>
+          <button id="see-more">See more</button>
+        </section>
 
         <div class="grid-container-news">
           <div class="grid-item">
