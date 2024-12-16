@@ -413,60 +413,71 @@ body {
   padding: 0.5rem;
   border-radius: 1.5rem;
 }
+.contact-us-section {
+  margin: 2rem auto;
+  max-width: 1200px;
+  height: auto;
+}
 
 .contact-us-header-container {
   display: flex;
-  flex-direction: row;
-  gap: 18rem;
-  max-width: 1200px;
+  justify-content: space-between; /* This will push items to opposite ends */
+  align-items: flex-start; /* Align items to the top */
+  width: 100%; /* Ensure container takes full width */
+  margin: auto;
   color: white;
   border-radius: 0.5rem;
-  margin: auto;
-  padding: 2rem;
 }
 
-.contact-us-header-container h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #0f1f3d;
-  margin: auto;
-}
-
-.contact-us-header-container .leader-contact-list {
-  margin-left: auto;
-}
-
-.leader-contact-list {
+.contact-right-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 1rem;
 }
 
-.contact-us-header-container .leader-contact-list .contact-link {
-  color: #0f1f3d;
-  text-decoration: none;
+.social-links-container {
   display: flex;
-  align-items: center;
-  transition: opacity 0.3s ease;
-  background-color: white;
-  border-radius: 100px;
-  padding: auto;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0.1rem;
+  height: 40px;
+  margin: 1rem auto;
 }
 
-.leader-contact-list .contact-link:hover {
+.social-links-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.social-links-container button img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-links-container button:hover {
   opacity: 0.8;
 }
-
-.contact-us-button-container {
+.phone-container {
   display: flex;
-  flex-direction: row;
   gap: 1rem;
-  max-width: 1200px;
-  color: white;
-  border-radius: 0.5rem;
-  padding: 2rem;
-  margin: auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0.1rem;
+  height: 40px;
+  margin: 1rem auto;
+  color: black;
+  justify-content: center;
+  align-items: center;
 }
+.contact-us-header-container h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0f1f3d;
+}
+
 .contact-us-form-container {
   display: flex;
   flex-direction: column;
