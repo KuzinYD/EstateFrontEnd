@@ -32,3 +32,41 @@ document.addEventListener("DOMContentLoaded", function () {
     slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
   });
 });
+
+// Scroll to top functionality
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show button when user scrolls down 100px from the top
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    scrollToTopBtn.classList.add("visible");
+  } else {
+    scrollToTopBtn.classList.remove("visible");
+  }
+};
+
+// Scroll to top when button is clicked
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
+    ) {
+      scrollToTopBtn.classList.add("visible");
+    } else {
+      scrollToTopBtn.classList.remove("visible");
+    }
+  };
+
+  scrollToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
