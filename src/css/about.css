@@ -25,25 +25,8 @@ header {
   align-items: center; /* Centers items vertically */
   background-color: #333;
   height: 60px; /* Ensures consistent height */
-}
-
-/* Logo Section */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-right: 14rem;
-}
-
-.logo-placeholder {
-  color: white;
-  font-size: 16px;
-}
-
-.brand-name {
-  font-size: 18px;
-  font-weight: 700;
-  color: white;
+  background: transparent; /* Make navbar background transparent */
+  transition: background 0.3s ease; /* Optional: for smooth background change on scroll */
 }
 
 /* Navbar Links */
@@ -86,6 +69,7 @@ header {
 /* Submenu Dropdown Content */
 .subnav-content {
   display: none; /* Hidden by default */
+
   position: absolute;
   left: 0;
   background-color: black; /* Dropdown background matches navbar */
@@ -117,6 +101,26 @@ header {
   display: flex;
   justify-content: center; /* Centers navbar items horizontally */
   align-items: center; /* Centers items vertically */
+}
+
+/* Logo Section */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 14rem;
+}
+
+.logo-placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
 }
 
 /* Currency Language */
