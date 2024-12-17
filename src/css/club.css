@@ -19,6 +19,8 @@ body {
   align-items: center; /* Centers items vertically */
   background-color: #333;
   height: 60px; /* Ensures consistent height */
+  background: transparent; /* Make navbar background transparent */
+  transition: background 0.3s ease; /* Optional: for smooth background change on scroll */
 }
 
 /* Navbar Links */
