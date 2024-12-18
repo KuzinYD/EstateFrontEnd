@@ -795,20 +795,36 @@ header {
   padding: 0.5rem;
 }
 
+.heading-underline {
+  height: 1px;
+  background-color: #e5e7eb; /* Light gray color, you can adjust */
+  margin: 1rem 0; /* Adds some spacing above and below the line */
+  width: 100%;
+}
+
 /* Styling for h2 elements */
 .object-description h2 {
   font-size: 1.25rem;
-  color: #555;
+  color: #0f1f3d;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   text-align: left;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.object-description h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: ##0f1f3d;
 }
 
 /* Styling for description elements with 8 words per line */
 .object-description .first-desc,
 .object-description .second-desc {
   font-size: 1rem;
-  color: #600;
+  color: #0f1f3d;
   margin-bottom: 1rem;
   text-align: justify;
   max-width: 100ch; /* Approx. width for 8 words per line */
@@ -834,8 +850,10 @@ header {
 .object-description .see-more {
   display: inline-block;
   font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
   color: white;
-  background-color: #007bff;
+  background-color: #0f1f3d;
   border: none;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
