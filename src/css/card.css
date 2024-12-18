@@ -751,8 +751,17 @@ header {
   border-radius: 0.5rem;
   text-align: center;
 }
-/* General container styling */
-/* General container styling */
+
+/* Object description section */
+.object-description-section {
+  margin: 2rem auto;
+  max-width: 1200px;
+  color: black;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
 .object-description {
   background-color: white;
   border-radius: 0.5rem;
@@ -835,6 +844,16 @@ header {
 
 .object-description .see-more:hover {
   background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Features Section */
+.features-section {
+  margin: 2rem auto;
+  max-width: 1200px;
+  color: black;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 2rem 2rem 2rem 2rem;
 }
 
 /* Contact Us Section */
