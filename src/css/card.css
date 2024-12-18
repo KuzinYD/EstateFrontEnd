@@ -908,6 +908,7 @@ header {
   border-radius: 0.5rem;
   margin: auto;
   padding: 2rem 2rem 2rem 2rem;
+  background-color: transparent;
 }
 
 .floor-plans .main-view {
@@ -938,13 +939,13 @@ header {
 
 .floor-photo {
   position: relative; /* Keep its own relative context */
-  background-image: url("https://images.unsplash.com/photo-1721244653652-268631ec049a?q=80&w=2862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../assets/card/floor-plan.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 20rem; /* Padding on all sides */
   border-radius: 0.5rem;
-  background-color: #d3daeb;
+  background-color: transparent;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 18rem; /* Adjust height if needed */
   width: 100%; /* Ensure it spans the container width */
