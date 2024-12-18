@@ -144,7 +144,7 @@ header {
 
 /* Search Bar Container */
 .search-section {
-  margin: 3rem auto;
+  margin: 8rem auto;
 }
 
 .search-container {
@@ -987,6 +987,7 @@ header {
   margin: auto;
   color: white;
   border-radius: 0.5rem;
+  text-transform: uppercase;
 }
 
 .contact-right-content {
@@ -1303,6 +1304,31 @@ header {
   flex-shrink: 0; /* Prevent shrinking */
 }
 
+.similar-listings-section h1 {
+  font-size: 3rem;
+  color: #0f1f3d;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-left: 8rem;
+}
+
+#action-button {
+  background-color: #0f1f3d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-right: 3rem;
+  width: 20%;
+  text-transform: uppercase;
+}
+
 /* Map */
 #map {
   height: 400px;
@@ -1320,16 +1346,32 @@ header {
 
 .carousel-item {
   flex: 1;
-  height: 10rem;
+  height: 15rem;
+  min-width: 300px;
   border-radius: 0.3rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative; /* Enable absolute positioning for child elements */
-  overflow: hidden; /* Prevent content overflow */
+  position: relative;
+  overflow: hidden;
+  margin: 0 10px;
+  display: flex; /* Added to help with description positioning */
+  flex-direction: column; /* Stack children vertically */
 }
 
 /* Individual Backgrounds for Carousel Items */
+/* Base styles for all carousel objects */
+.first-obj,
+.second-obj,
+.third-obj,
+.fourth-obj {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Individual background images */
 .first-obj {
   background-image: url("../assets/obj1.svg");
 }
@@ -1339,10 +1381,26 @@ header {
 .third-obj {
   background-image: url("../assets/obj3.svg");
 }
-
 .fourth-obj {
   background-image: url("../assets/obj4.svg");
-  position: relative; /* Enable positioning for .photo-number */
+}
+
+/* Common styles for obj-name and obj-price */
+.first-obj .obj-name,
+.first-obj .obj-price,
+.second-obj .obj-name,
+.second-obj .obj-price,
+.third-obj .obj-name,
+.third-obj .obj-price,
+.fourth-obj .obj-name,
+.fourth-obj .obj-price {
+  position: absolute;
+  top: 9rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
 }
 
 .obj-tag {
@@ -1379,15 +1437,20 @@ header {
   border-radius: 0.5rem;
   text-align: center;
 }
+
 .carousel-description {
+  position: absolute; /* Changed from relative to absolute */
+  bottom: 0; /* Position at bottom of carousel-item */
+  left: 0;
+  right: 0;
   gap: 2rem;
   display: flex;
   justify-content: center;
-  position: relative;
-  top: 8.5rem;
   font-size: 1rem;
-  background-color: #ffffff; /* White background */
-  color: #000000; /* Black text color for contrast */
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.5rem; /* Added padding for better spacing */
+  width: 100%; /* Ensure full width */
 }
 
 /* Footer */
