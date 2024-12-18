@@ -901,7 +901,8 @@
         </div>
       </section>
 
-      <section>
+      <!--Similar listings section-->
+      <section class="similar-listings-section">
         <div class="similar-wrapper">
           <div class="flex justify-between items-center mb-2">
             <h1>Similar listings</h1>
@@ -966,75 +967,48 @@
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="contact-us">
-          <div class="contact-us-header flex items-center justify-between">
-            <!-- Contact Us Title -->
-            <h2 class="">Contact Us</h2>
-
-            <!-- Social media and phone info section -->
-            <section class="w-auto">
-              <div class="flex">
-                <!-- Social Media Links -->
-                <div class="info-section flex">
-                  <ul class="flex">
-                    <li>
-                      <a href="#" target="_blank">Facebook</a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">Twitter</a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">Instagram</a>
-                    </li>
-                  </ul>
-                </div>
-
-                <!-- Phone Number Section -->
-                <div class="info-section phone-number">
-                  <p>+1 (555) 123-4567</p>
-                </div>
-              </div>
-            </section>
+      <!--Contact us section-->
+      <section class="contact-us-section">
+        <div class="contact-us-header-container">
+          <h1>Contact Us</h1>
+          <div class="contact-right-content">
+            <div class="social-links-container">
+              <button>
+                <img src="../assets/common/facebook.svg" alt="Facebook" />
+              </button>
+              <button>
+                <img src="../assets/common/vk.svg" alt="Vk" />
+              </button>
+              <button>
+                <img src="../assets/common/emailicon.svg" alt="Email" />
+              </button>
+              <button>
+                <img src="../assets/common/x.svg" alt="Twitter" />
+              </button>
+            </div>
+            <div class="phone-container">
+              <img src="../assets/common/phoneicon.svg" alt="Phone" />+7 (972)
+              928-30-12
+            </div>
           </div>
-
-          <form class="email-form">
-            <div class="grid-container-email">
-              <div class="card-email">
-                <label for="fname">Name</label>
-                <input
-                  type="text"
-                  id="fname"
-                  name="firstname"
-                  placeholder="Name"
-                  required
-                />
-              </div>
-              <div class="card-email">
-                <label for="femail">Email</label>
-                <input
-                  type="email"
-                  id="femail"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
-              </div>
+        </div>
+        <div class="contact-us-form-container">
+          <form>
+            <div class="input-row">
+              <input type="text" id="name" placeholder="Name" />
+              <input type="email" id="email" placeholder="Email" />
             </div>
-            <div class="grid-container-email">
-              <div class="card-email">
-                <label for="fmessage">Message</label>
-                <textarea
-                  id="fmessage"
-                  name="message"
-                  placeholder="Message"
-                  rows="4"
-                  required
-                ></textarea>
-              </div>
-            </div>
-            <button id="action-button" type="submit">Send</button>
+            <textarea
+              id="message"
+              maxlength="250"
+              placeholder="Message"
+            ></textarea>
           </form>
+        </div>
+        <div class="contact-us-button-container">
+          <button id="send-message-button">Send Message</button>
         </div>
       </section>
     </main>
@@ -1060,16 +1034,24 @@
 
         <!-- Social Links and Contact -->
         <div class="footer-social-contact">
-          <!-- Social Media Links -->
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f">Fb</i></a>
-            <a href="#"><i class="fab fa-twitter">X</i></a>
-            <a href="#"><i class="fab fa-instagram">Inst</i></a>
-            <a href="#"><i class="fab fa-linkedin-in">Linkdin</i></a>
+          <div class="social-links-container">
+            <button>
+              <img src="../assets/common/white-social1.svg" alt="Facebook" />
+            </button>
+            <button>
+              <img src="../assets/common/white-social2.svg" alt="Vk" />
+            </button>
+            <button>
+              <img src="../assets/common/white-social3.svg" alt="Email" />
+            </button>
+            <button>
+              <img src="../assets/common/white-social4.svg" alt="Twitter" />
+            </button>
           </div>
-
-          <!-- Contact -->
-          <div class="contact"><span>Call Us:</span> +1 1 1 1 1</div>
+          <div class="phone-container">
+            <img src="../assets/common/white-phone.svg" alt="Phone" />+7 (972)
+            928-30-12
+          </div>
         </div>
 
         <!-- Footer Bottom Text -->
