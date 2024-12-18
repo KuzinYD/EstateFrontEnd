@@ -1205,6 +1205,16 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
+.nearby-wrapper h1 {
+  font-size: 1.2rem;
+  color: #0f1f3d;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
 /* Wrapper for left items with border-radius */
 .right-wrapper {
   background-color: #ffffff; /* Light background for visibility */
@@ -1242,6 +1252,12 @@ header {
 /* Left wrapper styling */
 .first-cafe .left-wrapper {
   flex: 1; /* Take up available space */
+}
+
+.first-cafe .left-wrapper h1 {
+  color: #0f1f3d;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /* Right wrapper styling (for stars) */
