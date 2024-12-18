@@ -870,9 +870,11 @@ header {
 
 /* Features Section */
 .features-section {
-  margin: 2rem auto;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 1rem;
   max-width: 1200px;
-  color: black;
+  color: #0f1f3d;
   border-radius: 0.5rem;
   margin: auto;
   padding: 2rem 2rem 2rem 2rem;
