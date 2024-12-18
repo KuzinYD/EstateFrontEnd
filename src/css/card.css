@@ -910,6 +910,47 @@ header {
   padding: 2rem 2rem 2rem 2rem;
 }
 
+.floor-plans .main-view {
+  position: relative; /* Keep its own relative context */
+  background-image: url("../assets/card/floor-plan-bg.svg");
+  filter: brightness(0.6);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20rem; /* Padding on all sides */
+  border-radius: 0.5rem;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 18rem; /* Adjust height if needed */
+  width: 100%; /* Ensure it spans the container width */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.floor-plans h1 {
+  font-size: 1.2rem;
+  color: #0f1f3d;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.floor-photo {
+  position: relative; /* Keep its own relative context */
+  background-image: url("https://images.unsplash.com/photo-1721244653652-268631ec049a?q=80&w=2862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20rem; /* Padding on all sides */
+  border-radius: 0.5rem;
+  background-color: #d3daeb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 18rem; /* Adjust height if needed */
+  width: 100%; /* Ensure it spans the container width */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
 /* Map to us Section */
 .map-to-us-section {
   margin: 2rem auto;
@@ -1081,36 +1122,6 @@ header {
 .content-developer p {
   font-size: 1.2rem;
   color: #0f1f3d;
-}
-
-.floor-plans .main-view {
-  position: relative; /* Keep its own relative context */
-  background-image: url("https://images.unsplash.com/photo-1622015663381-d2e05ae91b72?q=80&w=2923&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 20rem; /* Padding on all sides */
-  border-radius: 0.5rem;
-  background-color: #d3daeb;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 18rem; /* Adjust height if needed */
-  width: 100%; /* Ensure it spans the container width */
-  flex-shrink: 0; /* Prevent shrinking */
-}
-
-.floor-photo {
-  position: relative; /* Keep its own relative context */
-  background-image: url("https://images.unsplash.com/photo-1721244653652-268631ec049a?q=80&w=2862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 20rem; /* Padding on all sides */
-  border-radius: 0.5rem;
-  background-color: #d3daeb;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 18rem; /* Adjust height if needed */
-  width: 100%; /* Ensure it spans the container width */
-  flex-shrink: 0; /* Prevent shrinking */
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
