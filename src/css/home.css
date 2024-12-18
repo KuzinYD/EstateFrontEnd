@@ -1173,24 +1173,23 @@
 }
 
 /* Footer */
-/* Footer Section */
 .footer {
-  background-color: #1a202c; /* bg-gray-900 */
+  background-color: transparent;
   color: white; /* text-white */
-  padding: 24px 0; /* py-6 */
+  border-radius: 0.5rem;
   width: 100%; /* Full width */
 }
 
 .footer-container {
-  max-width: 1280px; /* Tailwind's mx-auto */
-  margin: 0 auto;
-  padding: 0 24px; /* px-6 */
+  background-color: #1a202c; /* bg-gray-900 */
+  width: 100%;
+
   text-align: center;
+  padding: 3rem 0rem 0rem 0rem;
 }
 
-/* Footer Navigation */
 .footer-nav {
-  margin-bottom: 32px; /* mb-8 */
+  margin-bottom: 2rem;
 }
 
 .footer-links {
@@ -1205,6 +1204,7 @@
 }
 
 .footer-links a {
+  margin-top: 4rem;
   color: white; /* text-white */
   text-decoration: none; /* Remove underline */
   transition: color 0.3s;
@@ -1214,13 +1214,27 @@
   color: #718096; /* Tailwind's text-gray-400 */
 }
 
-/* Social Links and Contact */
 .footer-social-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px; /* space-x-6 */
-  margin-bottom: 32px; /* mb-8 */
+  gap: 2rem; /* Add specific gap between elements */
+  max-width: 35rem; /* Limit the maximum width */
+  margin: 0 auto; /* Center the container */
+}
+
+.footer-social-contact .social-links-container {
+  background-color: transparent;
+}
+
+.footer-social-contact .phone-container {
+  color: white;
+  background-color: transparent;
+}
+
+.footer-social-contact .social-links-container button img {
+  width: 24px;
+  height: 24px;
 }
 
 .social-links {
