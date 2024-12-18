@@ -886,6 +886,26 @@ header {
   padding: 2rem 2rem 2rem 2rem;
 }
 
+/* Map to us Section */
+.map-to-us-section {
+  margin: 2rem auto;
+  max-width: 1200px;
+  color: black;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+/* Nearby Objects Section */
+.nearby-objects-section {
+  margin: 2rem auto;
+  max-width: 1200px;
+  color: black;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
 /* Contact Us Section */
 .contact-us {
   margin-top: 2rem;
