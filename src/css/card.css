@@ -1074,6 +1074,15 @@ header {
   border-radius: 0.5rem;
 }
 
+.content-developer {
+  padding: 1rem;
+}
+
+.content-developer p {
+  font-size: 1.2rem;
+  color: #0f1f3d;
+}
+
 .floor-plans .main-view {
   position: relative; /* Keep its own relative context */
   background-image: url("https://images.unsplash.com/photo-1622015663381-d2e05ae91b72?q=80&w=2923&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
