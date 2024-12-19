@@ -26,6 +26,7 @@ header {
   height: 60px; /* Ensures consistent height */
   background-color: transparent;
   transition: background 0.3s ease; /* Optional: for smooth background change on scroll */
+  margin-top: 2rem;
 }
 
 /* Navbar Links */
@@ -135,16 +136,38 @@ header {
 }
 
 /* Currency Language */
-.currency-language {
+.currency-language-login {
   display: flex;
+  padding: 2rem 0rem 2rem 1rem;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   margin-left: 14rem;
+}
+.language-btn {
+  border-radius: 20px;
+  background-color: #c6c6c6;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #0f1f3d;
+}
+
+.login-btn img {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+.currency-btn {
+  border-radius: 20px;
+  background-color: #c6c6c6;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #0f1f3d;
 }
 
 /* Search Bar Container */
 .search-section {
-  margin: 8rem auto;
+  margin: 6rem auto;
 }
 
 .search-container {
@@ -607,7 +630,6 @@ header {
 
 /* Main Card */
 .main-card {
-  margin: 2rem auto;
   max-width: 1200px;
   height: 25rem; /* Height in rem units */
   color: black;
@@ -635,7 +657,6 @@ header {
 }
 
 .off-plan-container {
-  margin: 2rem auto;
   max-width: 1200px;
   color: black;
   border-radius: 0.5rem;
@@ -714,7 +735,7 @@ header {
 
 .carousel-item {
   flex: 1;
-  height: 8rem;
+  height: 4rem;
   border-radius: 0.3rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -737,7 +758,6 @@ header {
 
 .fourth-photo {
   background-image: url("../assets/card/card4.svg");
-  position: relative; /* Enable positioning for .photo-number */
 }
 
 .photo-number {
@@ -1347,7 +1367,7 @@ header {
 .carousel-item {
   flex: 1;
   height: 15rem;
-  min-width: 300px;
+
   border-radius: 0.3rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1395,7 +1415,7 @@ header {
 .fourth-obj .obj-name,
 .fourth-obj .obj-price {
   position: absolute;
-  top: 9rem;
+  top: 9rem; /* Position relative to the top of .first-obj */
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 1rem;
