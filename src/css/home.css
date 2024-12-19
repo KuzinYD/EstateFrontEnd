@@ -13,17 +13,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+
   height: 60px;
-  background: transparent;
+  background-color: transparent;
   transition: background 0.3s ease;
+  margin-top: 3rem;
 }
 
 /* Navbar Links */
 .navbar a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: #0f1f3d;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -38,7 +39,9 @@
 
 /* Submenu Button */
 .subnav .subnavbtn {
+  text-transform: uppercase;
   font-size: 16px;
+  font-weight: 900;
   border: none;
   outline: none;
   color: white;
@@ -53,7 +56,11 @@
 /* Hover Effects */
 .navbar a:hover,
 .subnav:hover .subnavbtn {
-  background-color: black;
+  background-color: transparent;
+}
+
+.subnavbtn:hover {
+  text-decoration: underline;
 }
 
 /* Submenu Dropdown Content */
@@ -62,23 +69,26 @@
 
   position: absolute;
   left: 0;
-  background-color: black;
+  background-color: transparent;
   width: 100%;
   z-index: 1;
   padding: 10px 0;
-
   justify-content: center;
-
   align-items: center;
 }
 
 /* Submenu Links */
 .subnav-content a {
+  background-color: #494e6a;
+  text-transform: uppercase;
   float: left;
-  color: white;
+  color: #f4f4f4;
   text-decoration: none;
   padding: 14px 20px;
   transition: background-color 0.3s;
+  border-radius: 10rem;
+  margin: 0 1rem;
+  font-weight: 900;
 }
 
 /* Hover Effect on Submenu Links */
@@ -91,6 +101,7 @@
 .subnav:hover .subnav-content {
   display: block;
   display: flex;
+
   justify-content: center;
   align-items: center;
 }
@@ -105,7 +116,7 @@
 }
 
 .logo-placeholder {
-  color: white;
+  color: #0f1f3d;
   font-size: 16px;
 }
 
@@ -116,18 +127,41 @@
 }
 
 /* Currency Language */
-.currency-language {
+.currency-language-login {
   display: flex;
+  padding: 2rem 0rem 2rem 1rem;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   margin-left: 14rem;
+}
+.language-btn {
+  border-radius: 20px;
+  background-color: #c6c6c6;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #0f1f3d;
+}
+
+.login-btn img {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+.currency-btn {
+  border-radius: 20px;
+  background-color: #c6c6c6;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #0f1f3d;
 }
 
 .hero-section {
   z-index: 0;
   position: relative;
   color: #ffffff;
-  padding: 8rem;
+  height: 70vh; /* Added this line */
+  padding: 6rem; /* Reduced padding to work better with height */
   text-align: center;
   background: linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
     url("../assets/home/bg-main.svg") center/cover;
@@ -140,17 +174,20 @@
 
 .hero-header {
   text-align: left;
+  margin-top: 5rem;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  padding-left: 10rem;
 }
 
 .hero-header h2 {
   text-align: left;
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  font-weight: normal;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .content-wrapper {
@@ -172,8 +209,9 @@
 .hero-tags {
   display: flex;
   justify-content: left;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
+  padding-left: 10rem;
 }
 
 .hero-tag {
