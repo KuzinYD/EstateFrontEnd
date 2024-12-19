@@ -8,24 +8,24 @@
 /* Body */
 body {
   display: flex;
-  flex-direction: column; /* Ensure the header and main content stack vertically */
-  min-height: 100vh; /* Ensure the body covers the full viewport height */
-  margin: 0; /* Remove default body margins */
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 /* Header */
 header {
-  flex-shrink: 0; /* Prevent the header from shrinking */
+  flex-shrink: 0;
 }
 /* Navbar Styles */
 .navbar {
   display: flex;
-  justify-content: center; /* Centers navbar items horizontally */
-  align-items: center; /* Centers items vertically */
+  justify-content: center;
+  align-items: center;
   background-color: #333;
-  height: 60px; /* Ensures consistent height */
+  height: 60px;
   background-color: transparent;
-  transition: background 0.3s ease; /* Optional: for smooth background change on scroll */
+  transition: background 0.3s ease;
   margin-top: 2rem;
 }
 
@@ -73,16 +73,16 @@ header {
 
 /* Submenu Dropdown Content */
 .subnav-content {
-  display: none; /* Hidden by default */
+  display: none;
 
   position: absolute;
   left: 0;
-  background-color: transparent; /* Dropdown background matches navbar */
-  width: 100%; /* Full width */
+  background-color: transparent;
+  width: 100%;
   z-index: 1;
-  padding: 10px 0; /* Adds spacing inside the dropdown */
-  justify-content: center; /* Centers navbar items horizontally */
-  align-items: center; /* Centers items vertically */
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Submenu Links */
@@ -101,17 +101,17 @@ header {
 
 /* Hover Effect on Submenu Links */
 .subnav-content a:hover {
-  background-color: #eee; /* Lighter background */
-  color: black; /* Dark text on hover */
+  background-color: #eee;
+  color: black;
 }
 
 /* Show Submenu on Hover */
 .subnav:hover .subnav-content {
-  display: block; /* Display dropdown on hover */
+  display: block;
   display: flex;
 
-  justify-content: center; /* Centers navbar items horizontally */
-  align-items: center; /* Centers items vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 /* Logo Section */
@@ -170,10 +170,7 @@ header {
   position: absolute;
   left: 50%;
   top: 10rem;
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Center both horizontally and vertically */
+  transform: translate(-50%, -50%);
   width: 100%;
   z-index: 10;
   margin: 6rem auto;
@@ -192,7 +189,7 @@ header {
 .search-header {
   position: relative;
 
-  z-index: 1; /* Ensures the search container appears above the hero section */
+  z-index: 1;
 }
 
 .search-input-wrapper {
@@ -234,7 +231,7 @@ header {
 }
 
 .search-btn {
-  right: 5px; /* Adjust as needed */
+  right: 5px;
 }
 
 .circle-button:hover {
@@ -263,7 +260,7 @@ header {
 }
 
 .keywords-dropdown div {
-  height: 45px; /* Height of each dropdown item */
+  height: 45px;
   padding: 10px;
   transition: background-color 0.2s ease;
   border-radius: 8px;
@@ -360,22 +357,22 @@ header {
 
 .price-container {
   display: flex;
-  flex-direction: row; /* Ensures horizontal layout */
+  flex-direction: row;
   align-items: center;
   gap: 10px;
 }
 
 .price-inputs {
   display: flex;
-  flex-direction: row; /* Ensures horizontal layout */
+  flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 5px; /* Adds space between elements */
+  gap: 5px;
 }
 
 .price-inputs .field {
   display: flex;
-  gap: 1px; /* Adds space between label and input within each field */
+  gap: 1px;
 }
 
 .price-inputs input {
@@ -396,7 +393,7 @@ header {
 
 .price-inputs .separator {
   color: #666;
-  margin: 0 5px; /* Adds space around the separator */
+  margin: 0 5px;
 }
 
 .advanced-search-popup {
@@ -511,7 +508,7 @@ header {
   color: #0f1f3d;
   font-weight: 900;
   text-transform: uppercase;
-  opacity: 1; /* Ensure placeholders are visible */
+  opacity: 1;
 }
 
 /* Add a class that will be applied when the slider is being used */
@@ -522,10 +519,10 @@ header {
 
 //Price slider in pop up
 .price-slider-container {
-  width: 100%; /* Make it take full width */
-  margin-top: 1rem; /* Add spacing from elements above */
-  display: block; /* Ensure it's a block element */
-  clear: both; /* Clear any floating elements */
+  width: 100%;
+  margin-top: 1rem;
+  display: block;
+  clear: both;
 }
 
 .left-container {
@@ -640,7 +637,7 @@ header {
 /* Main Card */
 .main-card {
   max-width: 1200px;
-  height: 25rem; /* Height in rem units */
+  height: 25rem;
   color: black;
   border-radius: 0.5rem;
   margin: auto;
@@ -653,7 +650,7 @@ header {
   backdrop-filter: blur(5px);
 }
 .photo-main-object {
-  position: relative; /* Keep its own relative context */
+  position: relative;
   margin: 2rem auto;
   max-width: 1200px;
   color: black;
@@ -685,7 +682,7 @@ header {
 
 .object-tags div {
   padding: 0.2rem 0.5rem;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 0.8rem;
   border-radius: 0.3rem;
@@ -750,7 +747,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative; /* Enable positioning for child elements */
+  position: relative;
 }
 
 /* Individual Backgrounds for Carousel Items */
@@ -775,7 +772,7 @@ header {
   top: 0.5rem;
   right: 0.5rem;
   padding: 0.2rem 0.5rem;
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 0.9rem;
   border-radius: 0.5rem;
@@ -827,8 +824,8 @@ header {
 
 .heading-underline {
   height: 1px;
-  background-color: #e5e7eb; /* Light gray color, you can adjust */
-  margin: 1rem 0; /* Adds some spacing above and below the line */
+  background-color: #e5e7eb;
+  margin: 1rem 0;
   width: 100%;
 }
 
@@ -857,13 +854,13 @@ header {
   color: #0f1f3d;
   margin-bottom: 1rem;
   text-align: justify;
-  max-width: 100ch; /* Approx. width for 8 words per line */
-  max-height: 4.5rem; /* Limit height to show 3 lines of text initially */
-  overflow: hidden; /* Hide overflowed text */
+  max-width: 100ch;
+  max-height: 4.5rem;
+  overflow: hidden;
   text-overflow: ellipsis;
   transition: max-height 0.3s ease;
-  line-height: 1.6; /* Adjust line spacing for readability */
-  word-wrap: break-word; /* Ensure long words wrap properly */
+  line-height: 1.6;
+  word-wrap: break-word;
 }
 
 .description-container {
@@ -872,7 +869,7 @@ header {
 
 /* Expanded state for descriptions */
 .object-description .expanded {
-  max-height: none; /* Allow full height when expanded */
+  max-height: none;
 }
 
 /* Styling for the "See More" button */
@@ -890,12 +887,12 @@ header {
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-align: center;
-  margin: 1rem auto; /* Add margin for spacing */
-  display: block; /* Make it a block element for centering */
+  margin: 1rem auto;
+  display: block;
 }
 
 .object-description .see-more:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
 }
 
 /* Features Section */
@@ -942,19 +939,19 @@ header {
 }
 
 .floor-plans .main-view {
-  position: relative; /* Keep its own relative context */
+  position: relative;
   background-image: url("../assets/card/floor-plan-bg.svg");
   filter: brightness(0.6);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20rem; /* Padding on all sides */
+  padding: 20rem;
   border-radius: 0.5rem;
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 18rem; /* Adjust height if needed */
-  width: 100%; /* Ensure it spans the container width */
-  flex-shrink: 0; /* Prevent shrinking */
+  height: 18rem;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .floor-plans h1 {
@@ -968,18 +965,18 @@ header {
 }
 
 .floor-photo {
-  position: relative; /* Keep its own relative context */
+  position: relative;
   background-image: url("../assets/card/floor-plan.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20rem; /* Padding on all sides */
+  padding: 20rem;
   border-radius: 0.5rem;
   background-color: transparent;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 18rem; /* Adjust height if needed */
-  width: 100%; /* Ensure it spans the container width */
-  flex-shrink: 0; /* Prevent shrinking */
+  height: 18rem;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 /* Map to us Section */
@@ -1011,9 +1008,9 @@ header {
 
 .contact-us-header-container {
   display: flex;
-  justify-content: space-between; /* This will push items to opposite ends */
-  align-items: flex-start; /* Align items to the top */
-  width: 100%; /* Ensure container takes full width */
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
   margin: auto;
   color: white;
   border-radius: 0.5rem;
@@ -1105,8 +1102,8 @@ header {
 #message {
   min-height: 6rem;
   max-height: 12rem;
-  width: 1200px; /* Set default width */
-  max-width: 100%; /* Prevent overflow on smaller screens */
+  width: 1200px;
+  max-width: 100%;
   line-height: 1.5;
   box-sizing: border-box;
   resize: vertical;
@@ -1139,7 +1136,7 @@ header {
 }
 
 #send-message-button:hover {
-  background-color: #003366; /* Slightly lighter shade for hover */
+  background-color: #003366;
 }
 
 .about-developer {
@@ -1176,64 +1173,64 @@ header {
 
 /* Layout for the button content */
 .collapsible h1 {
-  display: flex; /* Arrange content horizontally */
-  align-items: center; /* Align items vertically */
-  justify-content: space-between; /* Place items at the edges */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .collapsible h1 .left-items {
-  display: flex; /* Arrange left items horizontally */
-  align-items: center; /* Align vertically */
-  gap: 10px; /* Add spacing between left items */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .collapsible h1 .open-menu {
-  margin-left: auto; /* Push to the far right */
-  text-align: right; /* Align text inside open-menu */
+  margin-left: auto;
+  text-align: right;
 }
 
 .floor-name,
 .floor-beds,
 .floor-baths,
 .floor-meter {
-  text-align: center; /* Center align text */
+  text-align: center;
 }
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
-  padding: 10px; /* Adjust padding for better spacing */
+  padding: 10px;
   display: none;
   overflow: hidden;
   background-color: transparent;
-  width: 100%; /* Match parent width */
-  box-sizing: border-box; /* Include padding in width calculation */
+  width: 100%;
+  box-sizing: border-box;
 }
 /* Wrapper for left items with border-radius */
 .left-wrapper {
-  background-color: #ffffff; /* Light background for visibility */
-  border-radius: 0.5rem; /* Rounded borders */
-  padding: 10px; /* Padding inside the wrapper */
-  display: flex; /* Flex container for alignment */
-  align-items: center; /* Align items vertically */
-  margin-right: 10px; /* Spacing to separate from .open-menu */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .left-items {
-  display: flex; /* Arrange left items horizontally */
-  align-items: center; /* Align vertically */
-  gap: 10px; /* Add spacing between items */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Styling for the nearby-wrapper */
 .nearby-wrapper {
-  margin: 20px 0; /* Add margin for spacing */
-  padding: 10px; /* Add padding for internal spacing */
-  background-color: #ffffff; /* Light background for distinction */
-  border-radius: 10px; /* Rounded corners for a polished look */
-  border: 1px solid #ddd; /* Optional border */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nearby-objects-section h1 {
@@ -1248,36 +1245,36 @@ header {
 
 /* Wrapper for left items with border-radius */
 .right-wrapper {
-  background-color: #ffffff; /* Light background for visibility */
-  border-radius: 0.5rem; /* Rounded borders */
-  padding: 10px; /* Padding inside the wrapper */
-  display: flex; /* Flex container for alignment */
-  align-items: center; /* Align items vertically */
-  margin-right: 10px; /* Spacing to separate from .open-menu */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .right-items {
-  display: flex; /* Arrange left items horizontally */
-  align-items: center; /* Align vertically */
-  gap: 10px; /* Add spacing between items */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .cafe-list {
   display: flex;
-  flex-direction: column; /* Stack cafes vertically */
-  gap: 10px; /* Add spacing between each cafe */
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* Individual cafe item */
 .first-cafe {
-  display: flex; /* Flex container for left and right alignment */
-  justify-content: space-between; /* Ensure stars are on the far right */
-  align-items: center; /* Align content vertically */
-  padding: 10px; /* Add padding for spacing */
-  background-color: #ffffff; /* White background for each cafe item */
-  border: 1px solid #ddd; /* Border around each item */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Left wrapper styling */
@@ -1294,36 +1291,36 @@ header {
 /* Right wrapper styling (for stars) */
 .first-cafe .right-wrapper {
   display: flex;
-  align-items: center; /* Center align the stars vertically */
-  gap: 5px; /* Add spacing between stars */
+  align-items: center;
+  gap: 5px;
 }
 
 /* Example star style (you can replace this with icons or images) */
 .right-wrapper .star {
-  font-size: 18px; /* Adjust star size */
-  color: gold; /* Gold color for stars */
+  font-size: 18px;
+  color: gold;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .collapsible h1 {
-    flex-direction: column; /* Stack items vertically on small screens */
-    align-items: flex-start; /* Align to the left */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .floor-name,
   .floor-beds,
   .floor-baths,
   .floor-meter {
-    flex: none; /* Disable equal spacing */
-    text-align: left; /* Align to the left */
-    margin-bottom: 5px; /* Add spacing between items */
+    flex: none;
+    text-align: left;
+    margin-bottom: 5px;
   }
 }
 
 #map-to-us {
   height: 400px;
-  width: 100%; /* Make the map fill the width of its container */
+  width: 100%;
 }
 
 .cafe-list {
@@ -1331,7 +1328,7 @@ header {
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
 }
 
 .similar-listings-section h1 {
@@ -1362,7 +1359,7 @@ header {
 /* Map */
 #map {
   height: 400px;
-  width: 100%; /* Make the map fill the width of its container */
+  width: 100%;
 }
 
 /* Photo Carousel */
@@ -1385,11 +1382,10 @@ header {
   position: relative;
   overflow: hidden;
   margin: 0 10px;
-  display: flex; /* Added to help with description positioning */
-  flex-direction: column; /* Stack children vertically */
+  display: flex;
+  flex-direction: column;
 }
 
-/* Individual Backgrounds for Carousel Items */
 /* Base styles for all carousel objects */
 .first-obj,
 .second-obj,
@@ -1425,7 +1421,7 @@ header {
 .fourth-obj .obj-name,
 .fourth-obj .obj-price {
   position: absolute;
-  top: 9rem; /* Position relative to the top of .first-obj */
+  top: 9rem;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 1rem;
@@ -1438,7 +1434,7 @@ header {
   top: 0.5rem;
   right: 9rem;
   padding: 0.2rem 0.5rem;
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 0.9rem;
   border-radius: 0.5rem;
@@ -1450,7 +1446,7 @@ header {
   position: absolute;
   top: 5rem;
 
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 1rem;
   border-radius: 0.5rem;
@@ -1461,7 +1457,7 @@ header {
   position: absolute;
   top: 5rem;
   left: 7rem;
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 1rem;
   border-radius: 0.5rem;
@@ -1469,8 +1465,8 @@ header {
 }
 
 .carousel-description {
-  position: absolute; /* Changed from relative to absolute */
-  bottom: 0; /* Position at bottom of carousel-item */
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
   gap: 2rem;
@@ -1479,20 +1475,20 @@ header {
   font-size: 1rem;
   background-color: #ffffff;
   color: #000000;
-  padding: 0.5rem; /* Added padding for better spacing */
-  width: 100%; /* Ensure full width */
+  padding: 0.5rem;
+  width: 100%;
 }
 
 /* Footer */
 .footer {
   background-color: transparent;
-  color: white; /* text-white */
+  color: white;
   border-radius: 0.5rem;
-  width: 100%; /* Full width */
+  width: 100%;
 }
 
 .footer-container {
-  background-color: #1a202c; /* bg-gray-900 */
+  background-color: #1a202c;
   width: 100%;
   text-align: center;
   padding: 3rem 0rem 0rem 0rem;
@@ -1505,32 +1501,32 @@ header {
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 32px; /* space-x-8 */
-  font-weight: 600; /* font-semibold */
-  text-transform: uppercase; /* uppercase */
-  list-style: none; /* Remove bullet points */
+  gap: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .footer-links a {
   margin-top: 4rem;
-  color: white; /* text-white */
-  text-decoration: none; /* Remove underline */
+  color: white;
+  text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #718096; /* Tailwind's text-gray-400 */
+  color: #718096;
 }
 
 .footer-social-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Add specific gap between elements */
-  max-width: 35rem; /* Limit the maximum width */
-  margin: 0 auto; /* Center the container */
+  gap: 2rem;
+  max-width: 35rem;
+  margin: 0 auto;
 }
 
 .footer-social-contact .social-links-container {
@@ -1549,29 +1545,29 @@ header {
 
 .social-links {
   display: flex;
-  gap: 12px; /* space-x-3 */
+  gap: 12px;
 }
 
 .social-links a {
-  color: white; /* text-white */
-  font-size: 20px; /* Adjust icon size */
+  color: white;
+  font-size: 20px;
   transition: background-color 0.3s;
 }
 
 .social-links a:hover {
-  color: #d1d5db; /* Light gray hover effect */
+  color: #d1d5db;
 }
 
 .contact {
-  font-size: 16px; /* Adjust text size */
-  font-weight: bold; /* Bold "Call Us:" */
-  color: white; /* Text color */
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
 }
 
 /* Footer Bottom Text */
 .footer-bottom {
-  font-size: 14px; /* text-sm */
-  color: #718096; /* Tailwind's text-gray-400 */
+  font-size: 14px;
+  color: #718096;
   margin-top: 16px;
 }
 .scroll-to-top-btn {
@@ -1585,10 +1581,10 @@ header {
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  display: flex; /* Changed from 'none' to 'flex' */
+  display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Increased z-index to ensure it's above other elements */
+  z-index: 9999;
   transition: background-color 0.3s;
 }
 

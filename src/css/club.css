@@ -15,12 +15,12 @@ body {
 /* Navbar Styles */
 .navbar {
   display: flex;
-  justify-content: center; /* Centers navbar items horizontally */
-  align-items: center; /* Centers items vertically */
+  justify-content: center;
+  align-items: center;
   background-color: #333;
-  height: 60px; /* Ensures consistent height */
-  background: transparent; /* Make navbar background transparent */
-  transition: background 0.3s ease; /* Optional: for smooth background change on scroll */
+  height: 60px;
+  background: transparent;
+  transition: background 0.3s ease;
 }
 
 /* Navbar Links */
@@ -62,16 +62,16 @@ body {
 
 /* Submenu Dropdown Content */
 .subnav-content {
-  display: none; /* Hidden by default */
+  display: none;
 
   position: absolute;
   left: 0;
-  background-color: black; /* Dropdown background matches navbar */
-  width: 100%; /* Full width */
+  background-color: black;
+  width: 100%;
   z-index: 1;
-  padding: 10px 0; /* Adds spacing inside the dropdown */
-  justify-content: center; /* Centers navbar items horizontally */
-  align-items: center; /* Centers items vertically */
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Submenu Links */
@@ -85,16 +85,16 @@ body {
 
 /* Hover Effect on Submenu Links */
 .subnav-content a:hover {
-  background-color: #eee; /* Lighter background */
-  color: black; /* Dark text on hover */
+  background-color: #eee;
+  color: black;
 }
 
 /* Show Submenu on Hover */
 .subnav:hover .subnav-content {
-  display: block; /* Display dropdown on hover */
+  display: block;
   display: flex;
-  justify-content: center; /* Centers navbar items horizontally */
-  align-items: center; /* Centers items vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 /* Logo Section */
@@ -186,7 +186,7 @@ body {
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: #f4f4f4; /* You can change this color to match your design */
+  background-color: #f4f4f4;
 }
 
 .hero-tags {
@@ -205,7 +205,7 @@ body {
   display: flex;
   align-items: center;
   transition: opacity 0.3s ease;
-  background-color: rgba(244, 244, 244, 0.1); /* F4F4F4 with 10% fill */
+  background-color: rgba(244, 244, 244, 0.1);
   border-radius: 100px;
   padding: 5px 10px;
 }
@@ -234,8 +234,8 @@ body {
 
 .search-header {
   position: relative;
-  margin-top: -40px; /* Adjust this value to control how much it overlaps */
-  z-index: 1; /* Ensures the search container appears above the hero section */
+  margin-top: -40px;
+  z-index: 1;
 }
 
 .search-input-wrapper {
@@ -245,7 +245,7 @@ body {
 
 .search-input {
   width: 100%;
-  padding-right: 90px; /* Make space for the buttons */
+  padding-right: 90px;
 }
 
 .circle-button {
@@ -255,11 +255,11 @@ body {
 }
 
 .filter-btn {
-  right: 45px; /* Adjust as needed */
+  right: 45px;
 }
 
 .search-btn {
-  right: 5px; /* Adjust as needed */
+  right: 5px;
 }
 
 .circle-button:hover {
@@ -297,7 +297,7 @@ body {
   font-size: 3rem;
   font-weight: bold;
   color: #0f1f3d;
-  margin: 0; /* Remove all margins */
+  margin: 0;
   text-align: left;
 }
 
@@ -310,12 +310,12 @@ body {
   cursor: pointer;
   font-size: 16px;
   margin-top: 1rem;
-  margin-right: 0; /* Remove right margin */
+  margin-right: 0;
   width: 100%;
 }
 
 .general-header-container button:hover {
-  background-color: #003366; /* Slightly lighter shade for hover */
+  background-color: #003366;
 }
 
 .apply-to-join {
@@ -425,8 +425,8 @@ body {
 #message {
   min-height: 6rem;
   max-height: 12rem;
-  width: 1200px; /* Set default width */
-  max-width: 100%; /* Prevent overflow on smaller screens */
+  width: 1200px;
+  max-width: 100%;
   line-height: 1.5;
   box-sizing: border-box;
   resize: vertical;
@@ -459,7 +459,7 @@ body {
 }
 
 #send-message-button:hover {
-  background-color: #003366; /* Slightly lighter shade for hover */
+  background-color: #003366;
 }
 
 .for-whom {
@@ -483,9 +483,9 @@ body {
 .for-whom-photo {
   position: absolute;
   left: 0.2rem;
-  top: auto; /* Remove top positioning */
-  bottom: 0; /* Align to bottom of parent */
-  transform: none; /* Remove Y transform */
+  top: auto;
+  bottom: 0;
+  transform: none;
   width: 300px;
   height: 300px;
   background-size: cover;
@@ -616,11 +616,11 @@ body {
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 1rem; /* Space between image and text */
+  gap: 1rem;
 }
 
 .criteria-icon {
-  flex-shrink: 0; /* Prevents image from shrinking */
+  flex-shrink: 0;
 }
 
 .active,
@@ -633,13 +633,13 @@ body {
   color: #777;
   font-weight: bold;
   float: right;
-  margin-left: auto; /* Changed from 5px to auto to push to far right */
+  margin-left: auto;
 }
 
 .active:after {
   content: "\2212";
-  float: right; /* Added to ensure consistent positioning */
-  margin-left: auto; /* Added to match accordion:after */
+  float: right;
+  margin-left: auto;
 }
 
 .panel {
@@ -653,13 +653,13 @@ body {
 /* Footer */
 .footer {
   background-color: transparent;
-  color: white; /* text-white */
+  color: white;
   border-radius: 0.5rem;
-  width: 100%; /* Full width */
+  width: 100%;
 }
 
 .footer-container {
-  background-color: #1a202c; /* bg-gray-900 */
+  background-color: #1a202c;
   width: 100%;
 
   text-align: center;
@@ -673,32 +673,32 @@ body {
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 32px; /* space-x-8 */
-  font-weight: 600; /* font-semibold */
-  text-transform: uppercase; /* uppercase */
-  list-style: none; /* Remove bullet points */
+  gap: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .footer-links a {
   margin-top: 4rem;
-  color: white; /* text-white */
-  text-decoration: none; /* Remove underline */
+  color: white;
+  text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #718096; /* Tailwind's text-gray-400 */
+  color: #718096;
 }
 
 .footer-social-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Add specific gap between elements */
-  max-width: 35rem; /* Limit the maximum width */
-  margin: 0 auto; /* Center the container */
+  gap: 2rem;
+  max-width: 35rem;
+  margin: 0 auto;
 }
 
 .footer-social-contact .social-links-container {
@@ -717,29 +717,29 @@ body {
 
 .social-links {
   display: flex;
-  gap: 12px; /* space-x-3 */
+  gap: 12px;
 }
 
 .social-links a {
-  color: white; /* text-white */
-  font-size: 20px; /* Adjust icon size */
+  color: white;
+  font-size: 20px;
   transition: background-color 0.3s;
 }
 
 .social-links a:hover {
-  color: #d1d5db; /* Light gray hover effect */
+  color: #d1d5db;
 }
 
 .contact {
-  font-size: 16px; /* Adjust text size */
-  font-weight: bold; /* Bold "Call Us:" */
-  color: white; /* Text color */
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
 }
 
 /* Footer Bottom Text */
 .footer-bottom {
-  font-size: 14px; /* text-sm */
-  color: #718096; /* Tailwind's text-gray-400 */
+  font-size: 14px;
+  color: #718096;
   margin-top: 16px;
 }
 
@@ -754,10 +754,10 @@ body {
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  display: flex; /* Changed from 'none' to 'flex' */
+  display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Increased z-index to ensure it's above other elements */
+  z-index: 9999;
   transition: background-color 0.3s;
 }
 
