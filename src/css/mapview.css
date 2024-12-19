@@ -10,10 +10,11 @@
   display: flex;
   justify-content: center; /* Centers navbar items horizontally */
   align-items: center; /* Centers items vertically */
-  background-color: #333;
+
   height: 60px; /* Ensures consistent height */
   background-color: transparent;
   transition: background 0.3s ease; /* Optional: for smooth background change on scroll */
+  margin-top: 2rem;
 }
 
 /* Navbar Links */
@@ -123,11 +124,33 @@
 }
 
 /* Currency Language */
-.currency-language {
+.currency-language-login {
   display: flex;
+  padding: 2rem 0rem 2rem 1rem;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   margin-left: 14rem;
+}
+.language-btn {
+  border-radius: 20px;
+  background-color: #c6c6c6;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #0f1f3d;
+}
+
+.login-btn img {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+.currency-btn {
+  border-radius: 20px;
+  background-color: #c6c6c6;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #0f1f3d;
 }
 
 /* Map Styling */
@@ -135,7 +158,7 @@
   width: 100%;
   height: 100%;
   position: absolute; /* Position map inside the container */
-  top: 0;
+  top: 10;
   left: 0;
 }
 
@@ -149,7 +172,8 @@
 .map-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full height of the viewport */
+  height: calc(100vh - 1rem); /* Reduced height to create space at top */
+  margin-top: 25rem; /* Add space at the top */
 }
 
 /* Navigation Bar Styling */
@@ -497,48 +521,468 @@
 }
 
 /* Search Bar Container */
-#search-bar {
-  margin-top: 5rem;
-  background-color: white; /* bg-white */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
-  border-radius: 8px; /* rounded-md */
-  padding: 16px; /* p-4 */
-  display: flex; /* Align items horizontally */
-  gap: 8px; /* Add spacing between elements */
-  align-items: center; /* Center items vertically */
+.search-section {
+  position: absolute;
+  left: 50%;
+  top: 10rem;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center both horizontally and vertically */
+  width: 100%;
+  z-index: 10;
+  margin: 2rem auto;
 }
 
-/* Input Field */
-#search-bar input {
-  padding: 8px; /* p-2 */
-  border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
-  border-radius: 4px; /* rounded */
-  flex: 1; /* Allow the input to grow */
-  font-size: 16px; /* Adjust font size for better readability */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1250px;
 }
 
-/* Dropdown Selects */
-#search-bar select {
-  padding: 8px; /* p-2 */
-  border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
-  border-radius: 4px; /* rounded */
-  background-color: white; /* Ensure consistent background */
-  font-size: 16px; /* Adjust font size */
-  flex-shrink: 0; /* Prevent shrinking */
+.search-header {
+  position: relative;
+
+  z-index: 1; /* Ensures the search container appears above the hero section */
 }
 
-/* Search Button */
-#search-bar button {
-  background-color: #2563eb; /* Tailwind's bg-blue-600 */
-  color: white; /* Text color */
-  padding: 8px 16px; /* px-4 py-2 */
-  border-radius: 4px; /* rounded */
-  border: none; /* Remove default border */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 16px; /* Adjust font size */
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  overflow: visible;
 }
 
-/* Search Button Hover Effect */
-#search-bar button:hover {
-  background-color: #1d4ed8; /* Slightly darker blue */
+.search-section-btn {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-section-btn:hover {
+  background-color: #f3f4f6;
+  border-radius: 4px;
+}
+
+.search-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #e5e7eb;
+  margin: 0 4px;
+}
+
+.circle-button {
+  position: relative;
+}
+
+.search-btn {
+  right: 5px; /* Adjust as needed */
+}
+
+.circle-button:hover {
+  background-color: #f5f5f5;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/*Keywords dropdown*/
+.search-input-wrapper.expanded {
+  padding-bottom: var(--dropdown-height, 180px);
+  width: var(--dropdown-width, 100%);
+}
+
+.keywords-dropdown div {
+  height: 45px; /* Height of each dropdown item */
+  padding: 10px;
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+}
+
+.keywords-dropdown-container {
+  position: relative;
+}
+
+.keywords-dropdown {
+  position: absolute;
+  width: 100%;
+  background-color: inherit;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.keywords-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  background-color: #ffffff;
+}
+
+.keywords-dropdown div:hover {
+  transform: translateY(-1px);
+}
+
+/*Type dropdown*/
+
+.nav-link {
+  list-style: none;
+  height: 100%;
+  padding: 1rem 4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.drop-down li {
+  list-style: none;
+  height: 100%;
+  padding: 1rem 4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.drop-down {
+  position: absolute;
+  padding: 1rem auto;
+  margin: 1rem 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: white;
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  font-size: 20px;
+  display: none;
+}
+
+.nav-link:not(.price):hover {
+  background-color: #f4f4f4;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.types:hover .drop-down {
+  display: block;
+}
+
+.types {
+  font-size: 16px;
+  position: relative;
+  right: -5px;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out all;
+}
+
+.types:not(.price) .drop-down li:hover {
+  background: #0f1f3d;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.bed-counter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+//Price range slider
+
+.price-container {
+  display: flex;
+  flex-direction: row; /* Ensures horizontal layout */
+  align-items: center;
+  gap: 10px;
+}
+
+.price-inputs {
+  display: flex;
+  flex-direction: row; /* Ensures horizontal layout */
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5px; /* Adds space between elements */
+}
+
+.price-inputs .field {
+  display: flex;
+  gap: 1px; /* Adds space between label and input within each field */
+}
+
+.price-inputs input {
+  width: clamp(10px, 8vw, 80px);
+  padding: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.progress {
+  position: absolute;
+  height: 100%;
+  background: your-color;
+  border-radius: appropriate-value;
+  pointer-events: none;
+}
+
+.price-inputs .separator {
+  color: #666;
+  margin: 0 5px; /* Adds space around the separator */
+}
+
+.advanced-search-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.advanced-search-popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  height: 90vh;
+  max-width: 70rem;
+  max-height: 70rem;
+  overflow-y: auto;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.popup-filters-container {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+.popup-filter-type {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.chosen-option-btn {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-selection-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.filter-selection-container .filter-name {
+  background-color: #0f1f3d;
+  font-size: 1rem;
+  font-weight: 900;
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.thin-underline {
+  border-bottom: 1px solid #999;
+  width: 100%;
+  display: block;
+}
+
+.left-right-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.right-container {
+  width: 50%;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.from-to-price-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  color: #0f1f3d;
+  margin-bottom: 1rem;
+}
+
+.from-price-input::placeholder,
+.to-price-input::placeholder {
+  color: #0f1f3d;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 1; /* Ensure placeholders are visible */
+}
+
+/* Add a class that will be applied when the slider is being used */
+.from-price-input.slider-active::placeholder,
+.to-price-input.slider-active::placeholder {
+  opacity: 0;
+}
+
+//Price slider in pop up
+.price-slider-container {
+  width: 100%; /* Make it take full width */
+  margin-top: 1rem; /* Add spacing from elements above */
+  display: block; /* Ensure it's a block element */
+  clear: both; /* Clear any floating elements */
+}
+
+.left-container {
+  width: 50%;
+  margin: 1rem 0 1rem 0;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.bathrooms-slider-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: left;
+  background-color: #dcdde0;
+  color: #0f1f3d;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.bathroom-emoji {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 1rem;
+}
+
+.range-values {
+  color: #666;
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+.bedroom-slider-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: left;
+  background-color: #dcdde0;
+  color: #0f1f3d;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.bedroom-emoji {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 1rem;
+}
+
+.other-facilities-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: left;
+
+  color: #0f1f3d;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.other-facility-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #0f1f3d;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+.other-facility-emoji {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.other-facility-name .other-facility-name-text {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.popup-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.apply-btn,
+.reset-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.apply-btn {
+  background-color: #0f1f3d;
+  color: white;
+  border: none;
+}
+
+.reset-btn {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
 }
