@@ -251,7 +251,15 @@ header {
   text-align: left;
   gap: 2rem;
 }
-
+.about-us .desc-us-addr {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.about-us .desc-us-tax {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
 #map-to-us {
   height: auto;
   width: 50%;
