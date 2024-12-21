@@ -4,15 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const mapsConfig = [
     {
       target: "map",
-      center: [98.2938, 8.0016],
+      center: [99.533, 7.467],
       zoom: 10,
-      markers: [], // No markers for this map
+      markers: [{ coordinates: [99.533, 7.467], label: "Main Location" }],
     },
     {
       target: "map-filter",
       center: [98.2938, 8.0016],
       zoom: 10,
-      markers: [], // No markers for this map
+      markers: [{ coordinates: [98.2938, 8.0016], label: "Filter Location" }],
     },
   ];
 
@@ -33,6 +33,35 @@ document.addEventListener("DOMContentLoaded", function () {
         zoom: config.zoom,
       }),
     });
+
+    // Add markers if any are defined
+    if (config.markers.length > 0) {
+      config.markers.forEach((marker) => {
+        const markerFeature = new ol.Feature({
+          geometry: new ol.geom.Point(ol.proj.fromLonLat(marker.coordinates)),
+        });
+
+        const markerStyle = new ol.style.Style({
+          image: new ol.style.Icon({
+            anchor: [0.5, 1],
+            src: "../assets/home/locationicon.svg",
+            scale: 0.5,
+          }),
+        });
+
+        markerFeature.setStyle(markerStyle);
+
+        const vectorSource = new ol.source.Vector({
+          features: [markerFeature],
+        });
+
+        const markerLayer = new ol.layer.Vector({
+          source: vectorSource,
+        });
+
+        map.addLayer(markerLayer);
+      });
+    }
   });
 });
 
