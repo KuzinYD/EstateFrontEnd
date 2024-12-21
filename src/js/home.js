@@ -1,17 +1,3 @@
-// Collapsible element functionality
-var coll = document.getElementsByClassName("collapsible");
-for (let i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-
 // OpenMap
 document.addEventListener("DOMContentLoaded", function () {
   // Map configurations
@@ -49,22 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-//JS to expand what we offer faq
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
 
 // Scroll to top functionality
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
@@ -241,3 +211,28 @@ function toggleAdvancedSearch() {
   const popup = document.getElementById("advancedSearchPopup");
   popup.classList.toggle("hidden");
 }
+
+// Add this accordion functionality
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach((accordion) => {
+  accordion.addEventListener("click", function () {
+    // Close all other accordion items
+    accordions.forEach((item) => {
+      if (item !== this) {
+        item.classList.remove("active");
+        const panel = item.nextElementSibling;
+        panel.style.maxHeight = null;
+      }
+    });
+
+    // Toggle the clicked accordion
+    this.classList.toggle("active");
+    const panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+});

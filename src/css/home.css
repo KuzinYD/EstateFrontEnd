@@ -903,7 +903,7 @@
   height: auto;
 }
 .accordion {
-  background-color: #eee;
+  background-color: transparent;
   color: #0f1f3d;
   cursor: pointer;
   padding: 18px;
@@ -930,15 +930,20 @@
 
 .accordion:after {
   content: "\002B";
-  color: #777;
-  font-weight: bold;
+  color: #0f1f3d;
+  font-weight: 900;
+  font-size: 2rem;
   float: right;
   margin-left: auto;
 }
 
+.accordion.active:after {
+  content: "\2212"; /* Minus symbol */
+}
+
 .panel {
   padding: 0px 18px;
-  background-color: white;
+  background-color: transparent;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -1006,7 +1011,7 @@
 }
 
 .our-clients-header {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -1034,7 +1039,7 @@
 }
 
 .lets-discuss-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -1070,7 +1075,7 @@
 }
 
 .faq-bottom-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -1111,6 +1116,11 @@
   margin: auto;
   color: white;
   border-radius: 0.5rem;
+}
+.contact-us-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0f1f3d;
 }
 
 .contact-right-content {
@@ -1155,11 +1165,6 @@
   color: black;
   justify-content: center;
   align-items: center;
-}
-.contact-us-header-container h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #0f1f3d;
 }
 
 .contact-us-form-container {
