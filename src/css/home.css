@@ -689,7 +689,7 @@
   background-color: #f5f5f5;
   border: 1px solid #ddd;
 }
-
+//Problem we solve section
 .problem-we-solve-container {
   margin: 2rem auto;
   max-width: 1200px;
@@ -697,13 +697,12 @@
   border-radius: 0.5rem;
 }
 .problem-we-solve-section {
-  margin: 2rem auto;
   max-width: 1200px;
   color: black;
   border-radius: 0.5rem;
-  margin: auto;
+  margin: 4rem auto 4rem;
   padding: 2rem 10rem 2rem 2rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(../assets/home/problem-we-solve-bg.svg);
   background-size: cover;
   background-position: center;
@@ -713,14 +712,14 @@
 .problem-we-solve-title {
   margin: 2rem auto;
   text-align: left;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   color: white;
 }
 
 .problem-we-solve-content p {
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 200;
   color: white;
 }
@@ -745,10 +744,10 @@
 .investors-btn {
   text-align: left;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 900;
   color: white;
   margin-right: 2rem;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #294270;
   padding: 5px 20px;
 }
@@ -756,16 +755,16 @@
 .developers-btn {
   text-align: left;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 900;
   color: white;
   margin-right: 2rem;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #2e638b;
   padding: 5px 20px;
 }
 
 .primary-resale-land-section {
-  margin: 2rem auto;
+  margin: 2rem auto 4rem;
   max-width: 1200px;
   color: black;
   border-radius: 0.5rem;
@@ -774,8 +773,8 @@
 .media-us-section {
   max-width: 1200px;
   margin: 2rem auto;
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 900;
   color: #0f1f3d;
 }
 
@@ -786,11 +785,27 @@
   justify-content: center;
   white-space: nowrap;
   gap: 20px;
+  animation: ticker 60s linear infinite;
+}
+@keyframes ticker {
+  100% {
+    transform: translateX(100%);
+  }
+  0% {
+    transform: translateX(-100%);
+  }
+}
+
+.logos-slide .logo-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+
+  height: 5rem;
 }
 
 .logos-slide img {
-  height: 50px;
-  margin: 0 40px;
+  padding: 1rem;
+  height: 5rem;
 }
 
 .ie-verified-title {
@@ -1331,4 +1346,15 @@
 
 .scroll-to-top-btn.visible {
   display: flex;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-250px * 4)
+    ); /* Adjust based on logo container width */
+  }
 }
