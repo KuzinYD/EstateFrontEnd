@@ -13,11 +13,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
   height: 60px;
   background-color: transparent;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   margin-top: 3rem;
+}
+
+/* Add this new class */
+.navbar.scrolled {
+  background-color: #162142;
+  margin-top: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar Links */
@@ -77,9 +87,13 @@
   align-items: center;
 }
 
+.subnav-content.scrolled {
+  background-color: #162142;
+}
+
 /* Submenu Links */
 .subnav-content a {
-  background-color: #494e6a;
+  background-color: #162142;
   text-transform: uppercase;
   float: left;
   color: #f4f4f4;

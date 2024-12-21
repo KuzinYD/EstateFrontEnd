@@ -265,3 +265,29 @@ accordions.forEach((accordion) => {
     }
   });
 });
+
+// Function to handle navbar scroll effect
+function handleNavbarScroll() {
+  const navbar = document.querySelector(".navbar");
+  const subnavContents = document.querySelectorAll(".subnav-content");
+
+  // Add scrolled class when page is scrolled past threshold
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add("scrolled");
+      // Apply scrolled class to all subnav-content elements
+      subnavContents.forEach((content) => {
+        content.classList.add("scrolled");
+      });
+    } else {
+      navbar.classList.remove("scrolled");
+      // Remove scrolled class from all subnav-content elements
+      subnavContents.forEach((content) => {
+        content.classList.remove("scrolled");
+      });
+    }
+  });
+}
+
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", handleNavbarScroll);
