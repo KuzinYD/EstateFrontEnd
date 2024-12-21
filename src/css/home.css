@@ -809,14 +809,14 @@
 }
 
 .ie-verified-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
 .ie-verified-section {
   max-width: 1200px;
   margin: 2rem auto;
-  font-weight: bold;
+  font-weight: 900;
   color: #0f1f3d;
 }
 
@@ -825,6 +825,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: left;
+}
+.ie-verified-container img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
 }
 
 .for-investors-container {
@@ -836,12 +841,12 @@
 }
 
 .for-investors-title {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 900;
 }
 
 .for-investors-description {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -854,12 +859,12 @@
 }
 
 .for-developers-title {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 900;
 }
 
 .for-developers-description {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -877,7 +882,7 @@
   color: #0f1f3d;
 }
 .value-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 .value-description-1 {
