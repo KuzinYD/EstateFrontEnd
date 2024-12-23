@@ -668,7 +668,7 @@ header {
 .off-plan-container {
   position: relative;
   max-width: 1200px;
-  color: black;
+  color: #c6c6c6;
   border-radius: 0.5rem;
   margin: 20rem auto 0 auto;
   padding: 2rem 2rem 2rem 2rem;
@@ -688,6 +688,7 @@ header {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 0.8rem;
+  font-weight: 900;
   border-radius: 0.3rem;
 }
 
@@ -713,25 +714,26 @@ header {
 }
 
 /* Object Name - Bottom Left */
-.object-name {
+
+.object-details {
   position: absolute;
   bottom: 2rem;
-  left: 1rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Object Price - Bottom Right */
-.object-price {
-  position: absolute;
-  bottom: 2rem;
-  right: 1rem;
-  color: white;
+.object-details .object-name {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.object-details .object-price {
   font-size: 1rem;
-  font-weight: bold;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 /* Photo Carousel */
