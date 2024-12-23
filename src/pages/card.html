@@ -58,7 +58,7 @@
           <button class="subnavbtn">Tools</button>
           <div class="subnav-content">
             <a href="#bring">Master dashboard</a>
-            <a href="#deliver">Luna AI</a>
+            <a href="#deliver" class="hidden">Luna AI</a>
             <a href="#package">Marketing</a>
           </div>
         </div>
@@ -652,7 +652,7 @@
       </section>
 
       <!--Luna AI section-->
-      <section class="luna-ai-section">
+      <section class="luna-ai-section hidden">
         <div class="luna-ai flex flex-col items-center gap-4 p-4">
           <div class="progress-bar w-full">
             <div class="flex justify-between items-center mb-2">
@@ -1004,7 +1004,7 @@
       <!--Contact us section-->
       <section class="contact-us-section">
         <div class="contact-us-header-container">
-          <h1>Contact Us</h1>
+          <h1 class="contact-us-title uppercase">Contact Us</h1>
           <div class="contact-right-content">
             <div class="social-links-container">
               <button>
@@ -1040,7 +1040,7 @@
           </form>
         </div>
         <div class="contact-us-button-container">
-          <button id="send-message-button">Send Message</button>
+          <button id="send-message-button">Send</button>
         </div>
       </section>
     </main>
@@ -1088,7 +1088,11 @@
 
         <!-- Footer Bottom Text -->
         <div class="footer-bottom">
-          &copy; 2024 Your Company. All rights reserved.
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Ignatev Estate. All rights reserved.
         </div>
       </div>
     </footer>
@@ -1096,7 +1100,12 @@
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
     <script src="../js/card.js"></script>
     <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Go to top">
-      <i class="fas fa-arrow-up"></i>
+      <img
+        src="../assets/home/scroll.svg"
+        alt="Arrow up"
+        width="20"
+        height="20"
+      />
     </button>
   </body>
 </html>
