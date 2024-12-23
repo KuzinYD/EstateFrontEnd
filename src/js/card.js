@@ -287,3 +287,36 @@ function toggleAdvancedSearch() {
   const popup = document.getElementById("advancedSearchPopup");
   popup.classList.toggle("hidden");
 }
+
+// Function to handle navbar scroll effect
+function handleNavbarScroll() {
+  const navbar = document.querySelector(".navbar");
+  const subnavContents = document.querySelectorAll(".subnav-content");
+  const headerLogo = document.getElementById("headerLogo");
+  const originalLogo = "../assets/common/logo.svg";
+  const scrolledLogo = "../assets/common/logo-white.svg";
+
+  // Add scrolled class when page is scrolled past threshold
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add("scrolled");
+      // Apply scrolled class to all subnav-content elements
+      subnavContents.forEach((content) => {
+        content.classList.add("scrolled");
+      });
+      // Change logo to white version
+      headerLogo.src = scrolledLogo;
+    } else {
+      navbar.classList.remove("scrolled");
+      // Remove scrolled class from all subnav-content elements
+      subnavContents.forEach((content) => {
+        content.classList.remove("scrolled");
+      });
+      // Change logo back to original
+      headerLogo.src = originalLogo;
+    }
+  });
+}
+
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", handleNavbarScroll);

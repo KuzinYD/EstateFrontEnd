@@ -16,26 +16,32 @@ body {
   margin: 0;
 }
 
-/* Header */
-header {
-  flex-shrink: 0;
-}
 /* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
   height: 60px;
   background-color: transparent;
-  transition: background 0.3s ease;
-  margin-top: 2rem;
+  transition: all 0.3s ease;
+  margin-top: 3rem;
+}
+
+/* Add this new class */
+.navbar.scrolled {
+  background-color: #162142;
+  margin-top: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar Links */
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 12px;
   color: #0f1f3d;
   text-align: center;
   padding: 14px 16px;
@@ -53,9 +59,10 @@ header {
 .subnav .subnavbtn {
   text-transform: uppercase;
   font-size: 16px;
+  font-weight: 900;
   border: none;
   outline: none;
-  color: #0f1f3d;
+  color: white;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -67,7 +74,7 @@ header {
 /* Hover Effects */
 .navbar a:hover,
 .subnav:hover .subnavbtn {
-  background-color: transparent;
+  background-color: red;
 }
 
 .subnavbtn:hover {
@@ -88,9 +95,13 @@ header {
   align-items: center;
 }
 
+.subnav-content.scrolled {
+  background-color: #162142;
+}
+
 /* Submenu Links */
 .subnav-content a {
-  background-color: #2d3755;
+  background-color: #162142;
   text-transform: uppercase;
   float: left;
   color: #f4f4f4;
@@ -99,7 +110,7 @@ header {
   transition: background-color 0.3s;
   border-radius: 10rem;
   margin: 0 1rem;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 /* Hover Effect on Submenu Links */
@@ -135,7 +146,6 @@ header {
   font-size: 18px;
   font-weight: 700;
   color: white;
-  color: #0f1f3d;
 }
 
 /* Currency Language */
@@ -154,10 +164,12 @@ header {
   color: #0f1f3d;
 }
 
-.login-btn img {
-  width: 3rem;
-  height: 3rem;
-  margin-top: 1rem;
+.login-btn {
+  border-radius: 20px;
+  background-color: #c6c6c6;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0f1f3d;
 }
 
 .currency-btn {
