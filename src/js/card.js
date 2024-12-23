@@ -83,22 +83,33 @@ document.querySelectorAll(".see-more").forEach((button) => {
 var coll = document.getElementsByClassName("collapsible");
 
 for (let i = 0; i < coll.length; i++) {
+  // Initialize all items as collapsed
+  coll[i].classList.remove("active");
+  coll[i].nextElementSibling.style.display = "none";
+  coll[i].querySelector(".open-menu").textContent = "+";
+
   coll[i].addEventListener("click", function () {
+    // Close all other open items first
+    for (let j = 0; j < coll.length; j++) {
+      if (coll[j] !== this && coll[j].classList.contains("active")) {
+        coll[j].classList.remove("active");
+        coll[j].nextElementSibling.style.display = "none";
+        coll[j].querySelector(".open-menu").textContent = "+";
+      }
+    }
+
+    // Toggle the clicked item
     this.classList.toggle("active");
     var content = this.nextElementSibling;
 
-    // Toggle content visibility
     if (content.style.display === "block") {
       content.style.display = "none";
-      this.querySelector(".open-menu").textContent = "+"; // Change to "+"
+      this.querySelector(".open-menu").textContent = "+";
     } else {
       content.style.display = "block";
-      this.querySelector(".open-menu").textContent = "-"; // Change to "-"
+      this.querySelector(".open-menu").textContent = "-";
     }
   });
-
-  // Set default text to "+"
-  coll[i].querySelector(".open-menu").textContent = "+";
 }
 
 // Scroll to top functionality
