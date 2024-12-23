@@ -1030,12 +1030,14 @@ header {
   font-size: 2rem;
   font-weight: 900;
   color: #0f1f3d;
+  margin-left: 2.3rem;
 }
 
 .contact-right-content {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  margin-right: 2.3rem;
 }
 
 .social-links-container {
@@ -1414,8 +1416,7 @@ header {
 
 .carousel-item {
   flex: 1;
-  height: 15rem;
-
+  height: 20rem;
   border-radius: 1.5rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1436,6 +1437,8 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 /* Individual background images */
@@ -1461,13 +1464,19 @@ header {
 .third-obj .obj-price,
 .fourth-obj .obj-name,
 .fourth-obj .obj-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 9rem;
+  top: 14rem;
+
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border-radius: 0.5rem;
   text-align: center;
+
+  white-space: nowrap;
 }
 
 .obj-tag {
@@ -1486,7 +1495,6 @@ header {
 .obj-name {
   position: absolute;
   top: 5rem;
-
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 1rem;
@@ -1496,8 +1504,8 @@ header {
 
 .obj-price {
   position: absolute;
-  top: 5rem;
-  left: 7rem;
+  top: 10rem;
+  left: 14rem;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 1rem;
