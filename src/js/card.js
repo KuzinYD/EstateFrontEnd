@@ -288,55 +288,39 @@ function toggleAdvancedSearch() {
   popup.classList.toggle("hidden");
 }
 
-// Function to handle navbar scroll effect
+// Function to handle navbar scroll effects
 function handleNavbarScroll() {
   const navbar = document.querySelector(".navbar");
   const subnavContents = document.querySelectorAll(".subnav-content");
   const headerLogo = document.getElementById("headerLogo");
+  const brandName = document.querySelector(".brand-name");
+  const subnavButtons = document.querySelectorAll(".subnavbtn");
   const originalLogo = "../assets/common/logo.svg";
   const scrolledLogo = "../assets/common/logo-white.svg";
 
-  // Add scrolled class when page is scrolled past threshold
+  // Handle scroll events
   window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
+      // Add scrolled classes and change logo
       navbar.classList.add("scrolled");
-      // Apply scrolled class to all subnav-content elements
-      subnavContents.forEach((content) => {
-        content.classList.add("scrolled");
-      });
-      // Change logo to white version
+      subnavContents.forEach((content) => content.classList.add("scrolled"));
       headerLogo.src = scrolledLogo;
+
+      // Change text colors to white
+      brandName.style.color = "white";
+      subnavButtons.forEach((btn) => (btn.style.color = "white"));
     } else {
+      // Remove scrolled classes and restore logo
       navbar.classList.remove("scrolled");
-      // Remove scrolled class from all subnav-content elements
-      subnavContents.forEach((content) => {
-        content.classList.remove("scrolled");
-      });
-      // Change logo back to original
+      subnavContents.forEach((content) => content.classList.remove("scrolled"));
       headerLogo.src = originalLogo;
+
+      // Restore original text colors
+      brandName.style.color = "#0F1F3D";
+      subnavButtons.forEach((btn) => (btn.style.color = "#0F1F3D"));
     }
   });
 }
 
 // Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", handleNavbarScroll);
-
-// Add scroll event listener to change brand name and subnavbtn colors
-window.addEventListener('scroll', function() {
-    const brandName = document.querySelector('.brand-name');
-    const subnavButtons = document.querySelectorAll('.subnavbtn');
-    
-    if (window.scrollY > 0) {
-        brandName.style.color = 'white';
-        subnavButtons.forEach(btn => {
-            btn.style.color = 'white';
-        });
-    } else {
-        brandName.style.color = "#0F1F3D";
-        subnavButtons.forEach(btn => {
-            btn.style.color = "#0F1F3D";
-        });
-    }
-});
-
-
