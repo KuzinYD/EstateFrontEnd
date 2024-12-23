@@ -642,7 +642,7 @@ header {
   max-width: 1200px;
   height: 25rem;
   color: black;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
   margin: auto;
   padding: 2rem 2rem 2rem 2rem;
   background-size: cover;
@@ -706,7 +706,9 @@ header {
   border: none;
   border-radius: 0.3rem;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .online-tour button:hover {
@@ -723,6 +725,11 @@ header {
   flex-direction: column;
   gap: 0.5rem;
   color: white;
+}
+.object-name-and-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .object-details .object-name {
@@ -746,9 +753,8 @@ header {
 }
 
 .carousel-item {
-  flex: 1;
   height: 4rem;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -773,13 +779,15 @@ header {
 }
 
 .photo-number {
+  text-transform: uppercase;
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
   padding: 0.2rem 0.5rem;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 900;
   border-radius: 0.5rem;
   text-align: center;
 }
@@ -1380,7 +1388,7 @@ header {
   flex: 1;
   height: 15rem;
 
-  border-radius: 0.3rem;
+  border-radius: 1.5rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
