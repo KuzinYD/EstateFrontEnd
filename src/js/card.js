@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const markerStyle = new ol.style.Style({
           image: new ol.style.Icon({
             anchor: [0.5, 1],
-            src: "https://cdn-icons-png.flaticon.com/512/684/684908.png", // Default marker icon
-            scale: 0.1,
+            src: "../assets/home/locationicon.svg",
+            scale: 0.5,
           }),
         });
 
@@ -60,11 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         map.addLayer(markerLayer);
-
-        // Optional: Add click interaction or label handling
-        markerFeature.on("click", () => {
-          alert(marker.label); // Show marker label on click
-        });
       });
     }
   });
