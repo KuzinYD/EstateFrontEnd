@@ -1173,6 +1173,10 @@ header {
   border-radius: 0.5rem;
 }
 
+.floor-group {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+}
 .collapsible {
   background-color: transparent;
   color: #444;
@@ -1224,7 +1228,7 @@ header {
 /* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 10px;
-  display: none;
+
   overflow: hidden;
   background-color: transparent;
   width: 100%;
@@ -1232,7 +1236,6 @@ header {
 }
 /* Wrapper for left items with border-radius */
 .left-wrapper {
-  background-color: #ffffff;
   border-radius: 0.5rem;
   padding: 10px;
   display: flex;
@@ -1257,7 +1260,7 @@ header {
 }
 
 .nearby-objects-section h1 {
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #0f1f3d;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -1285,6 +1288,7 @@ header {
 .cafe-list {
   display: flex;
   flex-direction: column;
+  background-color: transparent;
   gap: 10px;
 }
 
@@ -1294,9 +1298,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: transparent;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -1348,8 +1352,6 @@ header {
 
 .cafe-list {
   border-radius: 0.5rem;
-
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   flex-shrink: 0;
 }
