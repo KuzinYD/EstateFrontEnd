@@ -320,3 +320,23 @@ function handleNavbarScroll() {
 
 // Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", handleNavbarScroll);
+
+// Add scroll event listener to change brand name and subnavbtn colors
+window.addEventListener('scroll', function() {
+    const brandName = document.querySelector('.brand-name');
+    const subnavButtons = document.querySelectorAll('.subnavbtn');
+    
+    if (window.scrollY > 0) {
+        brandName.style.color = 'white';
+        subnavButtons.forEach(btn => {
+            btn.style.color = 'white';
+        });
+    } else {
+        brandName.style.color = "#0F1F3D";
+        subnavButtons.forEach(btn => {
+            btn.style.color = "#0F1F3D";
+        });
+    }
+});
+
+
