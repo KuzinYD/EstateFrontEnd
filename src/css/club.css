@@ -28,6 +28,9 @@ body {
   background-color: transparent;
   transition: all 0.3s ease;
   margin-top: 3rem;
+  padding-left: 8rem;
+  padding-right: 10rem;
+  white-space: nowrap;
 }
 
 /* Add this new class */
@@ -142,8 +145,9 @@ body {
 }
 
 .brand-name {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
   color: white;
 }
 
@@ -153,7 +157,7 @@ body {
   padding: 2rem 0rem 2rem 1rem;
   align-items: center;
   gap: 4px;
-  margin-left: 14rem;
+  margin-left: 8rem;
 }
 .language-btn,
 .currency-btn,
@@ -187,7 +191,7 @@ body {
 }
 
 .about-section-inside-wrapper {
-  margin: 2rem auto;
+  margin: 2rem 2rem 2rem 19rem;
   max-width: 1200px;
   padding: 0 2rem;
   height: auto;
@@ -199,6 +203,14 @@ body {
 @media (max-width: 1200px) {
   .about-section-inside-wrapper {
     padding: 0 4rem;
+    margin: 2rem 2rem 2rem 5rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .about-section-inside-wrapper {
+    padding: 0 4rem;
+    margin: 2rem 2rem 2rem 3rem;
   }
 }
 
