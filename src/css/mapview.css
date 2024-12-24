@@ -134,26 +134,17 @@
   gap: 4px;
   margin-left: 14rem;
 }
-.language-btn {
+.language-btn,
+.currency-btn,
+.login-btn {
   border-radius: 20px;
   background-color: #c6c6c6;
-  font-size: 1rem;
   font-weight: 900;
-  color: #0f1f3d;
-}
-
-.login-btn img {
-  width: 3rem;
-  height: 3rem;
-  margin-top: 1rem;
-}
-
-.currency-btn {
-  border-radius: 20px;
-  background-color: #c6c6c6;
-  font-size: 1rem;
-  font-weight: 900;
-  color: #0f1f3d;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Map Styling */

@@ -156,28 +156,17 @@ body {
   gap: 4px;
   margin-left: 14rem;
 }
-.language-btn {
-  border-radius: 20px;
-  background-color: #c6c6c6;
-  font-size: 1rem;
-  font-weight: 900;
-  color: #0f1f3d;
-}
-
+.language-btn,
+.currency-btn,
 .login-btn {
   border-radius: 20px;
   background-color: #c6c6c6;
-  font-size: 2rem;
   font-weight: 900;
-  color: #0f1f3d;
-}
-
-.currency-btn {
-  border-radius: 20px;
-  background-color: #c6c6c6;
-  font-size: 1rem;
-  font-weight: 900;
-  color: #0f1f3d;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Search Bar Container */
