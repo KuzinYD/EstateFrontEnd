@@ -183,10 +183,13 @@ body {
   z-index: 0;
   position: relative;
   color: #ffffff;
-  padding: 6rem;
+  min-height: 66.67vh;
   text-align: center;
   background: linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
     url("../assets/club/background1.svg") center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-section > * {
@@ -343,29 +346,28 @@ body {
   color: white;
   border-radius: 0.5rem;
   margin: auto;
-  padding: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 10rem;
   justify-content: space-between;
 }
 
 .general-header-container h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
   color: #0f1f3d;
-  margin: 0;
+
   text-align: left;
 }
 
 .general-header-container button {
-  background-color: #001f3f;
+  font-size: 1rem;
+  font-weight: 900;
   color: white;
-  border: none;
   border-radius: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 1rem;
-  margin-right: 0;
-  width: 100%;
+  background-color: #0f1f3d;
+  padding: 5px 20px;
+  text-transform: uppercase;
 }
 
 .general-header-container button:hover {
@@ -379,7 +381,7 @@ body {
 }
 /* Contact Us Section */
 .contact-us-section {
-  margin: 2rem auto;
+  margin: 7rem auto;
   max-width: 1200px;
   height: auto;
 }
@@ -628,14 +630,15 @@ body {
   justify-content: space-between;
 }
 
-#expand-bttn {
-  background-color: #f4f4f4;
-  color: black;
+.expand-btn {
+  background-color: transparent;
+  color: white;
   border: none;
   border-radius: 20px;
   padding: 2px 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 2rem;
+  font-weight: 900;
   margin-top: 1rem;
   width: 5%;
 }
@@ -682,6 +685,7 @@ body {
   text-align: left;
   outline: none;
   font-size: 20px;
+  text-transform: uppercase;
   transition: 0.4s;
   font-weight: bold;
   display: flex;

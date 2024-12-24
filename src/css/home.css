@@ -927,6 +927,7 @@
   text-align: left;
   outline: none;
   font-size: 20px;
+  text-transform: uppercase;
   transition: 0.4s;
   font-weight: bold;
   display: flex;

@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //Js to expand insights
 document.addEventListener("DOMContentLoaded", function () {
   const expandButtons = document.querySelectorAll(".expand-btn");
+  let currentlyOpen = null;
 
   expandButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -27,11 +28,25 @@ document.addEventListener("DOMContentLoaded", function () {
       const container = button.closest(".insights-container");
       const description = container.querySelector(".insights-description");
 
-      // Toggle the hidden class
-      description.classList.toggle("hidden");
+      // If clicking the currently open section, just close it
+      if (currentlyOpen === description) {
+        description.classList.add("hidden");
+        button.textContent = "+";
+        currentlyOpen = null;
+        return;
+      }
 
-      // Change the button text based on state
-      button.textContent = description.classList.contains("hidden") ? "+" : "-";
+      // Close currently open section if exists
+      if (currentlyOpen) {
+        currentlyOpen.classList.add("hidden");
+        const openButton = currentlyOpen.closest(".insights-container").querySelector(".expand-btn");
+        openButton.textContent = "+";
+      }
+
+      // Open clicked section
+      description.classList.remove("hidden");
+      button.textContent = "-";
+      currentlyOpen = description;
     });
   });
 });
