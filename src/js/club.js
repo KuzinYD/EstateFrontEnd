@@ -37,20 +37,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //JS to entry criteria faq
-var acc = document.getElementsByClassName("accordion");
-var i;
+// Add this accordion functionality
+const accordions = document.querySelectorAll(".accordion");
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
+accordions.forEach((accordion) => {
+  accordion.addEventListener("click", function () {
+    // Close all other accordion items
+    accordions.forEach((item) => {
+      if (item !== this) {
+        item.classList.remove("active");
+        const panel = item.nextElementSibling;
+        panel.style.maxHeight = null;
+      }
+    });
+
+    // Toggle the clicked accordion
     this.classList.toggle("active");
-    var panel = this.nextElementSibling;
+    const panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
-}
+});
 
 // Scroll to top functionality
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
@@ -89,3 +99,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Function to handle navbar scroll effect
+function handleNavbarScroll() {
+  const navbar = document.querySelector(".navbar");
+  const subnavContents = document.querySelectorAll(".subnav-content");
+
+  // Add scrolled class when page is scrolled past threshold
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add("scrolled");
+      // Apply scrolled class to all subnav-content elements
+      subnavContents.forEach((content) => {
+        content.classList.add("scrolled");
+      });
+    } else {
+      navbar.classList.remove("scrolled");
+      // Remove scrolled class from all subnav-content elements
+      subnavContents.forEach((content) => {
+        content.classList.remove("scrolled");
+      });
+    }
+  });
+}
+
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", handleNavbarScroll);
