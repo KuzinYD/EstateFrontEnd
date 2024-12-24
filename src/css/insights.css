@@ -25,17 +25,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
   height: 60px;
-  background: transparent;
-  transition: background 0.3s ease;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  margin-top: 3rem;
+  padding-left: 8rem;
+  padding-right: 10rem;
+  white-space: nowrap;
+}
+
+/* Add this new class */
+.navbar.scrolled {
+  background-color: #162142;
+  margin-top: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar Links */
 .navbar a {
   float: left;
-  font-size: 16px;
-  color: white;
+  font-size: 12px;
+  color: #0f1f3d;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -50,7 +64,9 @@ body {
 
 /* Submenu Button */
 .subnav .subnavbtn {
+  text-transform: uppercase;
   font-size: 16px;
+  font-weight: 900;
   border: none;
   outline: none;
   color: white;
@@ -65,7 +81,11 @@ body {
 /* Hover Effects */
 .navbar a:hover,
 .subnav:hover .subnavbtn {
-  background-color: black;
+  background-color: red;
+}
+
+.subnavbtn:hover {
+  text-decoration: underline;
 }
 
 /* Submenu Dropdown Content */
@@ -74,7 +94,7 @@ body {
 
   position: absolute;
   left: 0;
-  background-color: black;
+  background-color: transparent;
   width: 100%;
   z-index: 1;
   padding: 10px 0;
@@ -82,13 +102,22 @@ body {
   align-items: center;
 }
 
+.subnav-content.scrolled {
+  background-color: #162142;
+}
+
 /* Submenu Links */
 .subnav-content a {
+  background-color: #162142;
+  text-transform: uppercase;
   float: left;
-  color: white;
+  color: #f4f4f4;
   text-decoration: none;
   padding: 14px 20px;
   transition: background-color 0.3s;
+  border-radius: 10rem;
+  margin: 0 1rem;
+  font-weight: 900;
 }
 
 /* Hover Effect on Submenu Links */
@@ -99,7 +128,9 @@ body {
 
 /* Show Submenu on Hover */
 .subnav:hover .subnav-content {
+  display: block;
   display: flex;
+
   justify-content: center;
   align-items: center;
 }
@@ -114,22 +145,78 @@ body {
 }
 
 .logo-placeholder {
-  color: white;
+  color: #0f1f3d;
   font-size: 16px;
 }
 
 .brand-name {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
   color: white;
 }
 
 /* Currency Language */
-.currency-language {
+.currency-language-login {
+  display: flex;
+  padding: 2rem 0rem 2rem 1rem;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8rem;
+}
+.language-btn,
+.currency-btn,
+.login-btn {
+  border-radius: 20px;
+  background-color: #c6c6c6;
+  font-weight: 900;
+  width: 60px;
+  height: 40px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-left: 14rem;
+  justify-content: center;
+}
+
+.about-section {
+  z-index: 0;
+  position: relative;
+  color: #ffffff;
+  min-height: 66.67vh;
+  text-align: center;
+  background: linear-gradient(rgba(26, 43, 76, 0.3), rgba(40, 50, 76, 0.3)),
+    url("../assets/club/background1.svg") center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.about-section-inside-wrapper {
+  margin: 2rem 2rem 2rem 6rem;
+  max-width: 1200px;
+  padding: 0 2rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add these media queries */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .about-section-inside-wrapper {
+    padding: 0 4rem;
+    margin: 2rem 2rem 2rem 17rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .about-section-inside-wrapper {
+    padding: 0 4rem;
+    margin: 2rem 2rem 2rem 4rem;
+  }
 }
 
 .about-section {
@@ -254,6 +341,7 @@ body {
 
 .search-input {
   width: 100%;
+  font-weight: 900;
   padding-right: 90px;
 }
 
@@ -265,14 +353,26 @@ body {
 
 .filter-btn {
   right: 45px;
+  margin-right: 1rem;
 }
 
 .search-btn {
   right: 5px;
+  margin-right: 1rem;
+  background-color: #0f1f3d;
+  border-radius: 50%;
+
+  height: 2rem;
+  width: 2rem;
+  color: white;
+  margin-bottom: 0.2rem;
 }
 
 .circle-button:hover {
-  background-color: #f5f5f5;
+  background-color: transparent;
+}
+.circle-button.search-btn:hover {
+  background-color: #5c6d8d;
 }
 
 .search-input {
@@ -288,6 +388,7 @@ body {
 .search-input:focus {
   outline: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f5f5f5;
 }
 
 .topics-grid {
@@ -555,7 +656,8 @@ body {
 
 /* Footer */
 .footer {
-  background-color: transparent;
+  padding: 2rem;
+  background-color: #f4f4f4;
   color: white;
   border-radius: 0.5rem;
   width: 100%;
@@ -564,7 +666,7 @@ body {
 .footer-container {
   background-color: #1a202c;
   width: 100%;
-
+  border-radius: 0.5rem;
   text-align: center;
   padding: 3rem 0rem 0rem 0rem;
 }
@@ -576,8 +678,8 @@ body {
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 32px;
-  font-weight: 600;
+  gap: 4rem;
+  font-weight: 900;
   text-transform: uppercase;
   list-style: none;
   padding: 0;
@@ -599,23 +701,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   max-width: 35rem;
   margin: 0 auto;
 }
 
 .footer-social-contact .social-links-container {
-  background-color: transparent;
+  background-color: #39475f;
 }
 
 .footer-social-contact .phone-container {
   color: white;
-  background-color: transparent;
+  background-color: #39475f;
 }
 
 .footer-social-contact .social-links-container button img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .social-links {
@@ -644,15 +745,18 @@ body {
   font-size: 14px;
   color: #718096;
   margin-top: 16px;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
+
 .scroll-to-top-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #f5f5f5;
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -661,10 +765,11 @@ body {
   align-items: center;
   z-index: 9999;
   transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .scroll-to-top-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .scroll-to-top-btn.visible {
