@@ -326,6 +326,7 @@ body {
 
 .search-input {
   width: 100%;
+  font-weight: 900;
   padding-right: 90px;
 }
 
@@ -337,14 +338,26 @@ body {
 
 .filter-btn {
   right: 45px;
+  margin-right: 1rem;
 }
 
 .search-btn {
   right: 5px;
+  margin-right: 1rem;
+  background-color: #0f1f3d;
+  border-radius: 50%;
+
+  height: 2rem;
+  width: 2rem;
+  color: white;
+  margin-bottom: 0.2rem;
 }
 
 .circle-button:hover {
-  background-color: #f5f5f5;
+  background-color: transparent;
+}
+.circle-button.search-btn:hover {
+  background-color: #5c6d8d;
 }
 
 .search-input {
@@ -360,6 +373,7 @@ body {
 .search-input:focus {
   outline: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f5f5f5;
 }
 
 .general-header-container {
@@ -613,8 +627,9 @@ body {
 }
 
 .for-whom-header {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .for-whom-description {
@@ -668,8 +683,9 @@ body {
 }
 
 .insights-header {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .insights-description {
