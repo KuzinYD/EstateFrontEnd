@@ -31,9 +31,7 @@
           <span class="brand-name">Ignatev Estate</span>
         </div>
         <div class="subnav">
-          <button class="subnavbtn">
-            Listings <i class="fa fa-caret-down"></i>
-          </button>
+          <button class="subnavbtn">Listings</button>
           <div class="subnav-content">
             <a href="#company">Primary</a>
             <a href="#team">Resale</a>
@@ -41,9 +39,7 @@
           </div>
         </div>
         <div class="subnav">
-          <button class="subnavbtn">
-            Insider Club <i class="fa fa-caret-down"></i>
-          </button>
+          <button class="subnavbtn">Insider Club</button>
           <div class="subnav-content">
             <a href="#bring">About insider club</a>
             <a href="#deliver">Insights</a>
@@ -52,18 +48,14 @@
           </div>
         </div>
         <div class="subnav">
-          <button class="subnavbtn">
-            Services <i class="fa fa-caret-down"></i>
-          </button>
+          <button class="subnavbtn">Services</button>
           <div class="subnav-content">
             <a href="#link1">For developers</a>
             <a href="#link2">For investors</a>
           </div>
         </div>
         <div class="subnav">
-          <button class="subnavbtn">
-            Tools <i class="fa fa-caret-down"></i>
-          </button>
+          <button class="subnavbtn">Tools</button>
           <div class="subnav-content">
             <a href="#bring">Master dashboard</a>
             <a href="#deliver">Luna AI</a>
@@ -71,9 +63,16 @@
           </div>
         </div>
         <!-- Currency and Language Switch -->
-        <div class="currency-language">
-          <a href="#">EN</a>
-          <a href="#">USD</a>
+        <div class="currency-language-login">
+          <a class="language-btn" href="#">EN</a>
+          <a class="currency-btn" href="#">USD</a>
+          <a class="login-btn" href="#"
+            ><img
+              src="../assets/common/login-icon.svg"
+              alt="login"
+              width="12"
+              height="12"
+          /></a>
         </div>
       </div>
     </header>
@@ -81,31 +80,32 @@
     <main class="bg-gray-100">
       <!-- Hero Section -->
       <section class="about-section">
-        <div class="topic-tag-name">
-          <div class="tag-name">Research | Topics</div>
-        </div>
-        <div class="about-header">
-          <h2>The main topic</h2>
-          <span class="time-read">~7min read time</span>
-        </div>
-
-        <div class="about-content">
-          <div class="content-wrapper">
-            <p class="text-left">
-              Buying a property with the intent to sell it later—whether in the
-              short or long term—requires strategic planning and market insight.
-              At *Ignatev Estate*, we specialize in identifying properties that
-              are not only great investments now but will also be in demand when
-              you're ready to sell. Here’s how to ensure the property you buy
-              today is something you’ll be able to sell tomorrow, for profit or
-              convenience.
-            </p>
+        <div class="about-section-inside-wrapper">
+          <h1 class="topic-tag">Research | topics</h1>
+          <div class="about-header">
+            <h2>the main topic</h2>
+            <span class="time-read">~7min</span>
           </div>
-        </div>
-        <div class="hero-tags">
-          <a class="hero-tag rounded-background"> Research </a>
-          <a class="hero-tag"> Luxury </a>
-          <a class="hero-tag"> Summer </a>
+
+          <div class="content-wrapper">
+            <div class="text-left">
+              <p1
+                >Buying a property with the intent to sell it later—whether in
+                the short or long term—requires strategic planning and market
+                insight. At <b>Ignatev Estate</b>, we specialize in identifying
+                properties that are not only great investments now but will also
+                be in demand when you're ready to sell. Here’s how to ensure the
+                property you buy today is something you’ll be able to sell
+                tomorrow, for profit or convenience.
+              </p1>
+            </div>
+          </div>
+
+          <div class="hero-tags">
+            <a class="hero-tag rounded-background"> research </a>
+            <a class="hero-tag"> luxury </a>
+            <a class="hero-tag"> summer </a>
+          </div>
         </div>
       </section>
 
@@ -116,7 +116,7 @@
             <div class="search-input-wrapper">
               <input type="text" placeholder="SEARCH" class="search-input" />
               <button class="circle-button filter-btn">
-                <i class="fas fa-filter"></i>
+                <img src="../assets/common/filter.svg" alt="Filter" />
               </button>
               <button class="circle-button search-btn">
                 <i class="fas fa-search"></i>
@@ -130,15 +130,6 @@
       <section class="topic-title-section">
         <div class="topic-title-container">
           <h1>The first title</h1>
-          <div class="left-topic-title-container">
-            <span>Aa</span>
-            <img
-              src="../assets/topic/spin.svg"
-              alt="spin"
-              width="20"
-              height="20"
-            />
-          </div>
         </div>
         <div class="topic-content">
           <p class="first-paragraph">
@@ -206,7 +197,6 @@
         </div>
       </section>
 
-      <!-- Replace the grid div with this scrollable container -->
       <div class="topics-slider-container">
         <div class="topics-slider">
           <div
@@ -333,7 +323,7 @@
       <!--Contact us section-->
       <section class="contact-us-section">
         <div class="contact-us-header-container">
-          <h1>Contact Us</h1>
+          <h1 class="contact-us-title uppercase">Contact Us</h1>
           <div class="contact-right-content">
             <div class="social-links-container">
               <button>
@@ -369,7 +359,7 @@
           </form>
         </div>
         <div class="contact-us-button-container">
-          <button id="send-message-button">Send Message</button>
+          <button id="send-message-button">Send</button>
         </div>
       </section>
     </main>
@@ -417,7 +407,11 @@
 
         <!-- Footer Bottom Text -->
         <div class="footer-bottom">
-          &copy; 2024 Your Company. All rights reserved.
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Ignatev Estate. All rights reserved.
         </div>
       </div>
     </footer>
@@ -425,7 +419,12 @@
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
     <script src="../js/topic.js"></script>
     <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Go to top">
-      <i class="fas fa-arrow-up"></i>
+      <img
+        src="../assets/home/scroll.svg"
+        alt="Arrow up"
+        width="20"
+        height="20"
+      />
     </button>
   </body>
 </html>

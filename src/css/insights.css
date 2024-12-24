@@ -241,6 +241,13 @@ body {
   text-transform: uppercase;
 }
 
+.about-header .time-read {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+
 .about-title {
   font-size: 3rem;
   max-width: 1200px;
