@@ -424,7 +424,11 @@
 
         <!-- Footer Bottom Text -->
         <div class="footer-bottom">
-          &copy; 2024 Your Company. All rights reserved.
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Ignatev Estate. All rights reserved.
         </div>
       </div>
     </footer>
@@ -432,7 +436,12 @@
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
     <script src="../js/club.js"></script>
     <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Go to top">
-      <i class="fas fa-arrow-up"></i>
+      <img
+        src="../assets/home/scroll.svg"
+        alt="Arrow up"
+        width="20"
+        height="20"
+      />
     </button>
   </body>
 </html>
