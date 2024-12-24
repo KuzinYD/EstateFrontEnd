@@ -448,7 +448,7 @@ body {
 .social-links-container {
   display: flex;
   gap: 1rem;
-
+  background-color: white;
   border-radius: 10px;
   padding: 0.1rem;
   height: 40px;
